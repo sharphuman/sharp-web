@@ -72,6 +72,21 @@
                         linear-gradient(135deg, #3b82f6, #06b6d4) border-box;
         }
         
+        /* Process step border */
+        .process-step-border {
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step-border:hover {
+            border-color: rgba(59, 130, 246, 0.6);
+        }
+        
+        /* Logo background fix */
+        nav img {
+            mix-blend-mode: lighten;
+        }
+        
         /* Mobile Menu */
         .mobile-menu {
             max-height: 0;
@@ -97,29 +112,6 @@
             25% { transform: translate(100px, -100px) scale(1.2); opacity: 0.5; }
             50% { transform: translate(-100px, -200px) scale(0.8); opacity: 0.3; }
             75% { transform: translate(150px, -150px) scale(1.1); opacity: 0.4; }
-        }
-        
-        /* Stats counter animation */
-        @keyframes countUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .stat-item {
-            animation: countUp 0.8s ease forwards;
-        }
-        
-        /* Testimonial cards */
-        .testimonial-card {
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            border-color: rgba(59, 130, 246, 0.6);
-            transform: translateY(-5px);
         }
         
         /* Smooth scroll offset for fixed nav */
@@ -148,8 +140,9 @@
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors">Services</a>
+                    <a href="#what-to-expect" class="text-gray-300 hover:text-blue-400 transition-colors">What to Expect</a>
                     <a href="#how-it-works" class="text-gray-300 hover:text-blue-400 transition-colors">How It Works</a>
+                    <a href="#faq" class="text-gray-300 hover:text-blue-400 transition-colors">FAQ</a>
                     <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
                     <a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">Blog</a>
                     <a href="#calendly-section" class="btn-primary px-6 py-3 rounded-lg font-semibold">Ready to talk?</a>
@@ -166,8 +159,9 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="mobile-menu md:hidden">
                 <div class="px-2 pt-2 pb-4 space-y-2">
-                    <a href="#services" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">Services</a>
+                    <a href="#what-to-expect" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">What to Expect</a>
                     <a href="#how-it-works" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">How It Works</a>
+                    <a href="#faq" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">FAQ</a>
                     <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">About</a>
                     <a href="https://sharphuman.ghost.io/" target="_blank" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors">Blog</a>
                     <a href="#calendly-section" class="block px-3 py-2 btn-primary rounded-lg font-semibold text-center" onclick="toggleMobileMenu()">Ready to talk?</a>
@@ -199,120 +193,8 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-16 bg-pattern relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="stat-item" style="animation-delay: 0.1s;">
-                    <div class="text-5xl font-bold text-gradient mb-2">10+</div>
-                    <div class="text-gray-400 text-lg">Years Combined Experience</div>
-                </div>
-                <div class="stat-item" style="animation-delay: 0.2s;">
-                    <div class="text-5xl font-bold text-gradient mb-2">50%+</div>
-                    <div class="text-gray-400 text-lg">Average Time Saved</div>
-                </div>
-                <div class="stat-item" style="animation-delay: 0.3s;">
-                    <div class="text-5xl font-bold text-gradient mb-2">100%</div>
-                    <div class="text-gray-400 text-lg">Custom Solutions</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Service Pillars -->
-    <section id="services" class="pt-16 pb-16 bg-pattern relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4">Our <span class="text-gradient">Services</span></h2>
-                <p class="text-xl text-gray-400">Tailored solutions to transform your business operations</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="text-5xl mb-6">🎯</div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">AI‑Enhanced Talent Sourcing</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Go beyond keyword matching to surface better candidates by skills, behavior, and fit. Our AI-powered approach identifies talent that traditional methods miss.
-                    </p>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="text-5xl mb-6">🤖</div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Bespoke AI Solutions</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Turn slow manual processes into custom AI tools and integrations built around your workflows. We create solutions that fit your business, not the other way around.
-                    </p>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="text-5xl mb-6">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Automation & Process Audit</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Identify bottlenecks in your current systems and get a practical roadmap to automate them. Stop wasting time on repetitive tasks that machines can handle.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Framework -->
-    <section id="how-it-works" class="py-24 bg-pattern relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">How does it work?</span></h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Our unique framework blends AI-powered strategies with optimization of your current tech and workflows—always respecting your existing systems, staff, and business approach.
-                </p>
-            </div>
-            
-            <div class="space-y-12">
-                <!-- Step 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white shadow-lg shadow-pink-500/50">
-                        01
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold mb-4 text-blue-400">Discovery & Mapping</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            We audit your current revenue engine—from lead sources to CRM workflows—to pinpoint exactly where you are losing time and money.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white shadow-lg shadow-pink-500/50">
-                        02
-                    </div>
-                    <div class="flex-1 md:text-right">
-                        <h3 class="text-3xl font-bold mb-4 text-blue-400">Tailored Campaigns & Recommendations</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            We build your custom Growth Infrastructure. Whether it's launching Meta Ads, deploying AI agents, or fixing your CRM, we install the systems you need to scale.
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white shadow-lg shadow-pink-500/50">
-                        03
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold mb-4 text-blue-400">Flexible Optimization & Scale</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            We don't just build it and leave. We continuously optimize your campaigns and AI tools, ensuring your system gets smarter and more profitable over time.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- What Should I Expect Section -->
-    <section class="py-24 bg-pattern relative z-10">
+    <section id="what-to-expect" class="py-24 bg-pattern relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">What Should I Expect</span></h2>
@@ -370,6 +252,65 @@
         </div>
     </section>
 
+    <!-- Process Framework - How It Works -->
+    <section id="how-it-works" class="py-24 bg-pattern relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">How does it work?</span></h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Our unique framework blends AI-powered strategies with optimization of your current tech and workflows—always respecting your existing systems, staff, and business approach.
+                </p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Step 1 -->
+                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white shadow-lg shadow-pink-500/50">
+                            01
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Discovery & Mapping</h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                We audit your current revenue engine—from lead sources to CRM workflows—to pinpoint exactly where you are losing time and money.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                        <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white shadow-lg shadow-pink-500/50">
+                            02
+                        </div>
+                        <div class="flex-1 md:text-right">
+                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Tailored Campaigns & Recommendations</h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                We build your custom Growth Infrastructure. Whether it's launching Meta Ads, deploying AI agents, or fixing your CRM, we install the systems you need to scale.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white shadow-lg shadow-pink-500/50">
+                            03
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Flexible Optimization & Scale</h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                We don't just build it and leave. We continuously optimize your campaigns and AI tools, ensuring your system gets smarter and more profitable over time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-24 bg-pattern relative z-10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -386,7 +327,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-pattern relative z-10">
+    <section id="faq" class="py-24 bg-pattern relative z-10">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-4">
                 <p class="text-gray-400 uppercase tracking-wider text-sm mb-2">STILL NOT SURE?</p>
@@ -491,8 +432,9 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-blue-400">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="#what-to-expect" class="text-gray-400 hover:text-blue-400 transition-colors">What to Expect</a></li>
                         <li><a href="#how-it-works" class="text-gray-400 hover:text-blue-400 transition-colors">How It Works</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-blue-400 transition-colors">FAQ</a></li>
                         <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors">About</a></li>
                         <li><a href="#calendly-section" class="text-gray-400 hover:text-blue-400 transition-colors">Book Consultation</a></li>
                         <li><a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">Blog</a></li>
@@ -502,7 +444,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-blue-400">Connect</h3>
                     <p class="text-gray-400 mb-4">
-                        <a href="/cdn-cgi/l/email-protection#c3b4a6a1b0aab7a683b0aba2b1b3abb6aea2adeda0acae" class="hover:text-blue-400 transition-colors"><span class="__cf_email__" data-cfemail="73041611001a071633001b1201031b061e121d5d101c1e">[email&#160;protected]</span></a>
+                        <a href="mailto:website@sharphuman.com" class="hover:text-blue-400 transition-colors">website@sharphuman.com</a>
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">𝕏</a>
@@ -519,7 +461,7 @@
     </footer>
 
     <!-- Calendly Script -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     
     <!-- Mobile Menu Script -->
     <script>
@@ -532,4 +474,12 @@
         document.addEventListener('click', function(event) {
             const menu = document.getElementById('mobile-menu');
             const button = event.target.closest('button');
-            const
+            const menuContent = event.target.closest('#mobile-menu');
+            
+            if (!button && !menuContent && menu.classList.contains('active')) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
