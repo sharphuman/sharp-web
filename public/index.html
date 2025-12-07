@@ -4,7 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Consulting | AI, Marketing & Talent Solutions</title>
+    <title>Modernize Growth and Efficiency | AI-Powered Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cyber-dark': '#0a0e27',
+                        'cyber-darker': '#050811',
+                        'cyber-blue': '#1a1f3a',
+                        'cyber-cyan': '#00f0ff',
+                        'cyber-magenta': '#ff00ff',
+                        'cyber-purple': '#8b00ff',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,439 +35,252 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --deep-black: #0a0a0f;
-            --deep-blue: #0d1b2a;
-            --mid-blue: #1b263b;
-            --electric-cyan: #00f5ff;
-            --neon-magenta: #ff006e;
-            --white: #ffffff;
-            --off-white: #f8f9fa;
-            --gray: #8892b0;
-            --accent-glow: rgba(0, 245, 255, 0.2);
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, var(--deep-black) 0%, var(--deep-blue) 100%);
-            color: var(--off-white);
-            line-height: 1.6;
+            font-family: 'Inter', sans-serif;
+            background: #0a0e27;
+            color: #ffffff;
             overflow-x: hidden;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 245, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.2rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.5px;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--electric-cyan);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--gray);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--electric-cyan);
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, var(--electric-cyan), var(--neon-magenta));
-            color: var(--white);
-            padding: 0.75rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 245, 255, 0.3);
-            font-size: 0.95rem;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(0, 245, 255, 0.5);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 180px 2rem 120px;
-            text-align: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--white), var(--electric-cyan));
+        .gradient-text {
+            background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -2px;
-            line-height: 1.1;
         }
 
-        .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.8;
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3), 0 0 40px rgba(0, 240, 255, 0.1);
         }
 
-        /* Services Section */
-        .services {
-            padding: 100px 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
+        .glow-magenta {
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), 0 0 40px rgba(255, 0, 255, 0.1);
         }
 
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            text-align: center;
-            margin-bottom: 4rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -1px;
+        .glass-card {
+            background: rgba(26, 31, 58, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .glass-card:hover {
+            background: rgba(26, 31, 58, 0.6);
+            border-color: rgba(0, 240, 255, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 240, 255, 0.2);
         }
 
-        .service-card {
-            background: rgba(27, 38, 59, 0.6);
-            border: 1px solid rgba(0, 245, 255, 0.15);
-            border-radius: 16px;
-            padding: 2.5rem;
-            transition: all 0.4s ease;
+        .btn-primary {
+            background: linear-gradient(135deg, #00f0ff 0%, #8b00ff 100%);
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .service-card::before {
+        .btn-primary::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.05), rgba(255, 0, 110, 0.05));
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            background: linear-gradient(135deg, #ff00ff 0%, #00f0ff 100%);
+            transition: left 0.5s ease;
         }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--electric-cyan);
-            box-shadow: 0 20px 60px rgba(0, 245, 255, 0.2);
+        .btn-primary:hover::before {
+            left: 0;
         }
 
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            display: block;
-            filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-            font-weight: 700;
+        .btn-primary span {
             position: relative;
+            z-index: 1;
         }
 
-        .service-card p {
-            color: var(--gray);
-            line-height: 1.8;
+        .btn-secondary {
+            border: 2px solid #00f0ff;
+            color: #00f0ff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 240, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+
+        .nav-link {
             position: relative;
-            font-size: 1.05rem;
+            transition: color 0.3s ease;
         }
 
-        /* Framework Section */
-        .framework {
-            padding: 100px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, rgba(13, 27, 42, 0.8), rgba(27, 38, 59, 0.4));
-            border-radius: 24px;
-            border: 1px solid rgba(0, 245, 255, 0.1);
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00f0ff, #ff00ff);
+            transition: width 0.3s ease;
         }
 
-        .framework-intro {
-            text-align: center;
-            margin-bottom: 4rem;
+        .nav-link:hover::after {
+            width: 100%;
         }
 
-        .framework-intro p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 800px;
-            margin: 1.5rem auto 0;
-            line-height: 1.8;
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
         }
 
-        .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
         }
 
-        .step {
-            display: flex;
-            gap: 2rem;
-            align-items: flex-start;
-            position: relative;
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
 
         .step-number {
-            min-width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--electric-cyan), var(--neon-magenta));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--white);
-            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
-            flex-shrink: 0;
-        }
-
-        .step-content h3 {
-            font-size: 1.6rem;
-            margin-bottom: 0.8rem;
-            color: var(--white);
-            font-weight: 700;
-        }
-
-        .step-content p {
-            color: var(--gray);
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-
-        /* CTA Section */
-        .final-cta {
-            padding: 120px 2rem 60px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .final-cta h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--electric-cyan), var(--neon-magenta));
+            background: linear-gradient(135deg, #00f0ff 0%, #8b00ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -1px;
+            font-weight: 800;
         }
 
-        .final-cta p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            line-height: 1.8;
-            margin-bottom: 3rem;
+        .process-card {
+            background: rgba(26, 31, 58, 0.3);
+            border-left: 3px solid transparent;
+            transition: all 0.4s ease;
         }
 
-        /* Calendly Section */
-        .calendly-section {
-            padding: 60px 2rem 100px;
-            max-width: 1000px;
-            margin: 0 auto;
+        .process-card:hover {
+            background: rgba(26, 31, 58, 0.5);
+            border-left-color: #00f0ff;
+            transform: translateX(12px);
         }
 
-        .calendly-container {
-            background: rgba(27, 38, 59, 0.4);
-            border: 1px solid rgba(0, 245, 255, 0.2);
-            border-radius: 16px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .calendly-embed {
-            width: 100%;
-            height: 700px;
-            border: none;
-            border-radius: 8px;
-            background: var(--white);
-        }
-
-        /* Footer */
-        footer {
-            padding: 60px 2rem 40px;
-            text-align: center;
-            border-top: 1px solid rgba(0, 245, 255, 0.1);
-            background: var(--deep-black);
-        }
-
-        footer p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-
-        footer .logo {
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 1rem;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero {
-                padding: 140px 1.5rem 80px;
-            }
-
-            .services, .framework {
-                padding: 60px 1.5rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .step {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-
-            .step-number {
-                margin-bottom: 1rem;
-            }
-
-            .calendly-embed {
-                height: 600px;
+            .hero-title {
+                font-size: 2.5rem;
             }
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero, .service-card, .step, .final-cta {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-
-        .step:nth-child(1) { animation-delay: 0.1s; }
-        .step:nth-child(2) { animation-delay: 0.2s; }
-        .step:nth-child(3) { animation-delay: 0.3s; }
     </style>
 </head>
-<body>
+<body class="cyber-grid">
+    
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Sharp<span>Consulting</span></a>
-            <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#framework">Framework</a>
-                <a href="https://sharphuman.ghost.io/" target="_blank" rel="noopener">Blog</a>
-                <a href="#contact" class="cta-button">Ready to talk?</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-cyber-darker/80 backdrop-blur-lg border-b border-cyan-500/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyber-cyan to-cyber-magenta rounded-lg glow-cyan"></div>
+                    <span class="text-xl font-bold gradient-text">SharpHuman</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="https://sharphuman.ghost.io/" target="_blank" class="nav-link text-gray-300 hover:text-cyber-cyan font-medium">Blog</a>
+                    <a href="#contact" class="btn-primary px-6 py-2.5 rounded-lg font-semibold"><span>Ready to talk?</span></a>
+                </div>
+                <div class="md:hidden">
+                    <a href="#contact" class="btn-primary px-5 py-2 rounded-lg font-semibold text-sm"><span>Contact</span></a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Modernize Growth and Efficiency</h1>
-        <p>Transform your business with cutting-edge AI strategies, precision marketing, and world-class talent acquisition. We help ambitious companies scale smarter.</p>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="service-icon">🎯</span>
-                <h3>Multi‑Channel Acquisition</h3>
-                <p>Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🤖</span>
-                <h3>AI‑Enhanced Talent Sourcing</h3>
-                <p>Go beyond keyword matching to surface better candidates by skills, behavior, and fit.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">⚡</span>
-                <h3>Bespoke AI Solutions</h3>
-                <p>Turn slow manual processes into custom AI tools and integrations built around your workflows.</p>
-            </div>
-            <div class="service-card">
-                <span class="service-icon">🔧</span>
-                <h3>Automation & Process Audit</h3>
-                <p>Identify bottlenecks in your current systems and get a practical roadmap to automate them.</p>
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute w-96 h-96 bg-cyber-cyan/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse-glow"></div>
+            <div class="absolute w-96 h-96 bg-cyber-magenta/20 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse-glow" style="animation-delay: 1.5s;"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-block mb-6">
+                    <span class="px-4 py-2 bg-cyber-blue/50 border border-cyber-cyan/30 rounded-full text-cyber-cyan text-sm font-semibold tracking-wide uppercase">
+                        AI-Powered Growth
+                    </span>
+                </div>
+                
+                <h1 class="hero-title text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Modernize <span class="gradient-text">Growth</span> and <span class="gradient-text">Efficiency</span>
+                </h1>
+                
+                <p class="text-xl lg:text-2xl text-gray-300 mb-4 font-light leading-relaxed">
+                    Multi‑Channel Acquisition
+                </p>
+                
+                <p class="text-lg lg:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto text-center"><span>Ready to talk?</span></a>
+                    <a href="#services" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto text-center">Explore Services</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Framework Section -->
+    <!-- Service Pillars -->
+    <section id="services" class="py-20 lg:py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    Our <span class="gradient-text">Service Pillars</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Comprehensive solutions designed to transform your business operations
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyber-cyan to-cyber-purple rounded-xl flex items-center justify-center mb-6 glow-cyan">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">AI‑Enhanced Talent Sourcing</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Go beyond keyword matching to surface better candidates by skills, behavior, and fit.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyber-magenta to-cyber-purple rounded-xl flex items-center justify-center mb-6 glow-magenta">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Bespoke AI Solutions</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Turn slow manual processes into custom AI tools and integrations built around your workflows.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16
