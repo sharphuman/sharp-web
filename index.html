@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL DYNAMICS - AI SERVICES</title>
+    <title>TalentBridge - B2B Recruitment Excellence</title>
     <style>
         * {
             margin: 0;
@@ -12,293 +12,319 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --primary-blue: #2563eb;
+            --dark-blue: #1d4ed8;
+            --light-blue: #dbeafe;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --border-gray: #e5e7eb;
+        }
+
         body {
-            font-family: 'Courier New', monospace;
-            background: #000;
-            color: #fff;
-            line-height: 1.4;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
             overflow-x: hidden;
         }
 
-        .container {
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-gray);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: #000;
-            border-bottom: 3px solid #00ff00;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 2rem;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #00ff00;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+            cursor: pointer;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 2rem;
         }
 
         .nav-links a {
-            color: #fff;
             text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            padding: 10px 15px;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
         }
 
         .nav-links a:hover {
-            border: 2px solid #00ff00;
-            background: #00ff00;
-            color: #000;
+            color: var(--primary-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(45deg, #000 0%, #1a1a1a 50%, #000 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                linear-gradient(0deg, transparent 24%, rgba(0, 255, 0, 0.05) 25%, rgba(0, 255, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 0, 0.05) 75%, rgba(0, 255, 0, 0.05) 76%, transparent 77%, transparent);
-            background-size: 50px 50px;
-        }
-
-        .hero-content {
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
             text-align: center;
-            z-index: 2;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 0 0 20px #00ff00;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            margin-bottom: 40px;
-            color: #00ff00;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .cta-button {
-            background: transparent;
-            border: 3px solid #00ff00;
-            color: #00ff00;
-            padding: 20px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            letter-spacing: 2px;
-        }
-
-        .cta-button:hover {
-            background: #00ff00;
-            color: #000;
-            box-shadow: 0 0 30px #00ff00;
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Services Section */
         .services {
-            padding: 100px 0;
-            background: #111;
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .services h2 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
             text-align: center;
-            margin-bottom: 80px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #fff;
-            border-bottom: 5px solid #00ff00;
-            padding-bottom: 20px;
-            display: inline-block;
-            width: 100%;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
-            background: #000;
-            border: 3px solid #333;
-            padding: 40px;
-            transition: all 0.3s;
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-        }
-
-        .service-card:hover {
-            border-color: #00ff00;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 255, 0, 0.2);
-        }
-
-        .service-card h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #00ff00;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .service-card p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #ccc;
+            overflow: hidden;
+            perspective: 1000px;
         }
 
         .service-card::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
+            left: -100%;
             width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, #00ff00, #fff, #00ff00);
-            opacity: 0;
-            transition: opacity 0.3s;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            transition: all 0.4s ease;
+            z-index: -1;
         }
 
         .service-card:hover::before {
-            opacity: 1;
+            left: 0;
         }
 
-        /* Stats Section */
-        .stats {
-            padding: 100px 0;
-            background: #000;
-            border-top: 5px solid #00ff00;
-            border-bottom: 5px solid #00ff00;
+        .service-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+            color: var(--white);
+            border-color: transparent;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 60px;
-            text-align: center;
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            transition: all 0.4s ease;
         }
 
-        .stat-item h3 {
-            font-size: clamp(3rem, 5vw, 5rem);
-            color: #00ff00;
-            margin-bottom: 10px;
-            font-weight: bold;
+        .service-card:hover .service-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
         }
 
-        .stat-item p {
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #fff;
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            transition: color 0.4s ease;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            transition: color 0.4s ease;
+        }
+
+        .service-card:hover p {
+            color: rgba(255, 255, 255, 0.9);
         }
 
         /* Footer */
-        footer {
-            background: #000;
-            padding: 60px 0 20px;
-            border-top: 3px solid #00ff00;
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
         }
 
-        .footer-content {
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #00ff00;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .footer-section h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
         }
 
-        .footer-section p,
-        .footer-section a {
-            color: #ccc;
+        .footer-section p, .footer-section a {
+            color: #9ca3af;
             text-decoration: none;
-            line-height: 1.6;
-            transition: color 0.3s;
+            margin-bottom: 0.5rem;
+            display: block;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: #00ff00;
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
         }
 
         .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            color: #666;
+            color: #9ca3af;
         }
 
         /* Mobile Menu */
         .mobile-menu {
             display: none;
-            flex-direction: column;
             cursor: pointer;
-            padding: 10px;
+            flex-direction: column;
+            gap: 3px;
         }
 
         .mobile-menu span {
             width: 25px;
             height: 3px;
-            background: #00ff00;
-            margin: 3px 0;
-            transition: 0.3s;
+            background: var(--text-dark);
+            transition: all 0.3s ease;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu {
                 display: flex;
             }
@@ -307,83 +333,37 @@
                 font-size: 2.5rem;
             }
 
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav-container {
+                padding: 1rem;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
             }
 
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-        }
-
-        /* Glitch Effect */
-        .glitch {
-            position: relative;
-            display: inline-block;
-        }
-
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .glitch::before {
-            animation: glitch-1 2s infinite linear alternate-reverse;
-            color: #ff00ff;
-            z-index: -1;
-        }
-
-        .glitch::after {
-            animation: glitch-2 2s infinite linear alternate-reverse;
-            color: #00ffff;
-            z-index: -2;
-        }
-
-        @keyframes glitch-1 {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(-2px); }
-            40% { transform: translateX(2px); }
-            60% { transform: translateX(-2px); }
-            80% { transform: translateX(2px); }
-            100% { transform: translateX(0); }
-        }
-
-        @keyframes glitch-2 {
-            0% { transform: translateX(0); }
-            20% { transform: translateX(2px); }
-            40% { transform: translateX(-2px); }
-            60% { transform: translateX(2px); }
-            80% { transform: translateX(-2px); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Terminal Animation */
-        .terminal-text::after {
-            content: '_';
-            animation: blink 1s infinite;
-            color: #00ff00;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">NEURAL DYNAMICS</div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">TalentBridge</a>
             <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#clients">Clients</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a href="#contact" class="cta-button">Find Talent</a>
             <div class="mobile-menu">
                 <span></span>
                 <span></span>
@@ -392,86 +372,101 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="AI SUPREMACY">AI SUPREMACY</h1>
-            <p class="terminal-text">ENTERPRISE INTELLIGENCE SOLUTIONS</p>
-            <a href="#services" class="cta-button">INITIATE TRANSFORMATION</a>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <h1>Elite Talent Acquisition for Modern Businesses</h1>
+            <p>We connect exceptional professionals with industry-leading companies through strategic recruitment solutions that drive growth and innovation.</p>
+            <a href="#services" class="cta-button">Explore Services</a>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2>CORE SYSTEMS</h2>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>MACHINE LEARNING</h3>
-                    <p>Advanced algorithmic solutions that process vast datasets with unprecedented accuracy. Our ML frameworks deliver predictive analytics that transform raw data into strategic intelligence for Fortune 500 decision-making.</p>
+                    <div class="service-icon">🔍</div>
+                    <h3>Executive Search</h3>
+                    <p>Strategic C-level and senior executive placements for transformational leadership roles.</p>
                 </div>
                 <div class="service-card">
-                    <h3>COMPUTER VISION</h3>
-                    <p>Industrial-grade visual recognition systems that automate complex visual processes. From quality control to autonomous operations, our computer vision solutions integrate seamlessly into enterprise infrastructure.</p>
+                    <div class="service-icon">⚡</div>
+                    <h3>Contract Staffing</h3>
+                    <p>Flexible workforce solutions for project-based and temporary staffing needs.</p>
                 </div>
                 <div class="service-card">
-                    <h3>NATURAL LANGUAGE</h3>
-                    <p>Sophisticated language processing engines that understand, analyze, and generate human communication. Our NLP systems handle everything from customer service automation to document intelligence at scale.</p>
+                    <div class="service-icon">🎯</div>
+                    <h3>Direct Placement</h3>
+                    <p>Permanent hiring solutions for critical full-time positions across all levels.</p>
                 </div>
                 <div class="service-card">
-                    <h3>ROBOTIC PROCESS</h3>
-                    <p>Intelligent automation systems that eliminate repetitive tasks and optimize operational workflows. Our RPA solutions integrate with existing enterprise systems to deliver immediate efficiency gains.</p>
-                </div>
-                <div class="service-card">
-                    <h3>PREDICTIVE ANALYTICS</h3>
-                    <p>Data-driven forecasting systems that anticipate market trends and business outcomes. Our predictive models provide strategic insights that enable proactive decision-making and competitive advantage.</p>
-                </div>
-                <div class="service-card">
-                    <h3>AI INTEGRATION</h3>
-                    <p>Comprehensive AI implementation strategies that seamlessly merge with existing enterprise architecture. Our integration services ensure minimal disruption while maximizing artificial intelligence adoption.</p>
+                    <div class="service-icon">📊</div>
+                    <h3>Talent Consulting</h3>
+                    <p>Strategic workforce planning and organizational development advisory services.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>500+</h3>
-                    <p>ENTERPRISES TRANSFORMED</p>
-                </div>
-                <div class="stat-item">
-                    <h3>99.9%</h3>
-                    <p>SYSTEM UPTIME</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24/7</h3>
-                    <p>GLOBAL SUPPORT</p>
-                </div>
-                <div class="stat-item">
-                    <h3>50M+</h3>
-                    <p>DATA POINTS PROCESSED</p>
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>📧 hello@talentbridge.com</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📍 123 Business Plaza, Suite 400<br>New York, NY 10001</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#clients">Clients</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💼</a>
+                    <a href="#" class="social-link">📧</a>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TalentBridge. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
 
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>HEADQUARTERS</h3>
-                    <p>NEURAL DYNAMICS CORP<br>
-                    1250 TECH BOULEVARD<br>
-                    SILICON VALLEY, CA 94025<br>
-                    UNITED STATES</p>
-                </div>
-                <div class="footer-section">
-                    <h3>GLOBAL OPERATIONS</h3>
-                    <p>NEW YORK • LONDON • TOKYO<br>
-                    SINGAPORE • FRANKFURT<br>
-                    SYDNEY • SAO PAULO<br>
-                    <a href="#">VIEW ALL LOCATIONS</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>ENTERPRISE CONTACT</h3>
-                    <p>PHONE: +1.800.
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Service cards enhanced interaction
+        document.querySelectorAll('.service-card').forEach(card => {
