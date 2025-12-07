@@ -43,6 +43,18 @@
             box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
         }
         
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #3b82f6;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+        
         .card-hover {
             transition: all 0.3s ease;
             border: 1px solid rgba(59, 130, 246, 0.3);
@@ -59,9 +71,74 @@
             background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
                         linear-gradient(135deg, #3b82f6, #06b6d4) border-box;
         }
+        
+        /* Process step border */
+        .process-step-border {
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step-border:hover {
+            border-color: rgba(59, 130, 246, 0.6);
+        }
+        
+        /* Logo background fix */
+        nav img {
+            mix-blend-mode: lighten;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+        
+        /* Floating particles effect */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 20s infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.2; }
+            25% { transform: translate(100px, -100px) scale(1.2) rotate(90deg); opacity: 0.3; }
+            50% { transform: translate(-100px, -200px) scale(0.8) rotate(180deg); opacity: 0.2; }
+            75% { transform: translate(150px, -150px) scale(1.1) rotate(270deg); opacity: 0.25; }
+        }
+        
+        /* Smooth scroll offset for fixed nav */
+        section {
+            scroll-margin-top: 80px;
+        }
     </style>
 </head>
 <body class="text-white">
+    <!-- Floating particles -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="particle" style="width: 150px; height: 150px; top: 10%; left: 10%; animation-delay: 0s;">
+            <img src="./logo1-3.png" alt="" class="w-full h-full object-contain opacity-20">
+        </div>
+        <div class="particle" style="width: 100px; height: 100px; top: 60%; left: 80%; animation-delay: 5s;">
+            <img src="./logo1-3.png" alt="" class="w-full h-full object-contain opacity-20">
+        </div>
+        <div class="particle" style="width: 120px; height: 120px; top: 80%; left: 20%; animation-delay: 10s;">
+            <img src="./logo1-3.png" alt="" class="w-full h-full object-contain opacity-20">
+        </div>
+        <div class="particle" style="width: 80px; height: 80px; top: 30%; left: 70%; animation-delay: 15s;">
+            <img src="./logo1-3.png" alt="" class="w-full h-full object-contain opacity-20">
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-blue-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,18 +147,43 @@
                     <img src="./logo1-3.png" alt="Sharp Human Logo" class="h-12 w-auto">
                     <span class="text-2xl font-bold text-white">Sharp Human</span>
                 </div>
-                <div class="flex items-center space-x-8">
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#what-to-expect" class="text-gray-300 hover:text-blue-400 transition-colors">What to Expect</a>
+                    <a href="#how-it-works" class="text-gray-300 hover:text-blue-400 transition-colors">How It Works</a>
+                    <a href="#faq" class="text-gray-300 hover:text-blue-400 transition-colors">FAQ</a>
+                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
                     <a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">Blog</a>
                     <a href="#calendly-section" class="btn-primary px-6 py-3 rounded-lg font-semibold">Ready to talk?</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-4 space-y-2">
+                    <a href="#what-to-expect" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">What to Expect</a>
+                    <a href="#how-it-works" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">How It Works</a>
+                    <a href="#faq" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">FAQ</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">About</a>
+                    <a href="https://sharphuman.ghost.io/" target="_blank" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors">Blog</a>
+                    <a href="#calendly-section" class="block px-3 py-2 btn-primary rounded-lg font-semibold text-center" onclick="toggleMobileMenu()">Ready to talk?</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-20 bg-pattern">
+    <section class="min-h-screen flex items-center justify-center pt-20 bg-pattern relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 Modernize Growth and <span class="text-gradient">Efficiency</span>
             </h1>
             <p class="text-2xl md:text-3xl text-gray-300 mb-4 max-w-4xl mx-auto">
@@ -90,98 +192,129 @@
             <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
             </p>
-            <a href="#calendly-section" class="btn-primary inline-block px-8 py-4 rounded-lg text-lg font-semibold text-white">
-                Book Your Free Consultation
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#calendly-section" class="btn-primary inline-block px-8 py-4 rounded-lg text-lg font-semibold text-white">
+                    Book Your Free Consultation
+                </a>
+                <a href="#how-it-works" class="btn-secondary inline-block px-8 py-4 rounded-lg text-lg font-semibold text-white">
+                    Learn How It Works
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Service Pillars -->
-    <section class="pt-8 pb-16 bg-pattern">
+    <!-- What Should I Expect Section -->
+    <section id="what-to-expect" class="py-16 bg-pattern relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4">Our <span class="text-gradient">Services</span></h2>
-                <p class="text-xl text-gray-400">Tailored solutions to transform your business operations</p>
+                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">What Should I Expect</span></h2>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
+            <div class="grid md:grid-cols-2 gap-8">
                 <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="text-5xl mb-6">🎯</div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">AI‑Enhanced Talent Sourcing</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Go beyond keyword matching to surface better candidates by skills, behavior, and fit. Our AI-powered approach identifies talent that traditional methods miss.
-                    </p>
+                    <div class="flex items-start mb-4">
+                        <div class="text-2xl mr-4 text-blue-400">✓</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 text-blue-400">Multi-Channel Acquisition:</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Stop relying on referrals. We deploy <strong>Ads and Smart Cold Outreach</strong> systems to fill your calendar with qualified sales meetings. Predictable lead flow, built on autopilot.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Service 2 -->
                 <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="text-5xl mb-6">🤖</div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Bespoke AI Solutions</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Turn slow manual processes into custom AI tools and integrations built around your workflows. We create solutions that fit your business, not the other way around.
-                    </p>
+                    <div class="flex items-start mb-4">
+                        <div class="text-2xl mr-4 text-blue-400">✓</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 text-blue-400">AI-Enhanced Talent Sourcing:</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                We move beyond simple keyword matching. By leveraging AI to analyze technical competency, behavioral fit. We save valuable hours searching for elite talent.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Service 3 -->
                 <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="text-5xl mb-6">⚙️</div>
-                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Automation & Process Audit</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Identify bottlenecks in your current systems and get a practical roadmap to automate them. Stop wasting time on repetitive tasks that machines can handle.
-                    </p>
+                    <div class="flex items-start mb-4">
+                        <div class="text-2xl mr-4 text-blue-400">✓</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 text-blue-400">Bespoke AI Solutions:</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Have a manual process that eats up hours? We build <strong>Custom AI Tools and Integrations</strong> specifically for your operational bottlenecks. No project too big or small.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
+                    <div class="flex items-start mb-4">
+                        <div class="text-2xl mr-4 text-blue-400">✓</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 text-blue-400">The Automation & Process Audit:</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Is your business ready to scale? We analyze your current workflows to <strong>identify the manual bottlenecks</strong>—and provide a roadmap to automate them.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Framework -->
-    <section class="py-24 bg-pattern">
+    <!-- Process Framework - How It Works -->
+    <section id="how-it-works" class="py-24 bg-pattern relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">How does it work?</span></h2>
                 <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Our framework blends AI‑powered strategies with optimization of your existing stack and workflows.
+                    Our unique framework blends AI-powered strategies with optimization of your current tech and workflows—always respecting your existing systems, staff, and business approach.
                 </p>
             </div>
             
             <div class="space-y-12">
                 <!-- Step 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white">
-                        01
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold mb-4 text-blue-400">Discovery & Mapping</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            Audit your revenue engine—from lead sources to CRM workflows—to pinpoint where you're leaking time and money. We analyze every touchpoint to uncover hidden inefficiencies.
-                        </p>
+                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/50 p-4">
+                            <img src="./logo1-3.png" alt="Step 1" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Discovery & Mapping</h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                We audit your current revenue engine—from lead sources to CRM workflows—to pinpoint exactly where you are losing time and money.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Step 2 -->
-                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white">
-                        02
-                    </div>
-                    <div class="flex-1 md:text-right">
-                        <h3 class="text-3xl font-bold mb-4 text-blue-400">Tailored Campaigns & Recommendations</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            Design campaigns, automations, and playbooks that plug directly into your systems and team. No generic templates—everything is built for your specific needs and goals.
-                        </p>
+                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                        <div class="flex-shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/50 p-4">
+                            <img src="./logo1-3.png" alt="Step 2" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex-1 md:text-right">
+                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Tailored Campaigns & Recommendations</h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                We build your custom Growth Infrastructure. Whether it's launching Meta Ads, deploying AI agents, or fixing your CRM, we install the systems you need to scale.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Step 3 -->
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-[#ec4899] flex items-center justify-center text-5xl font-bold text-white">
-                        03
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold mb-4 text-blue-400">Flexible Optimization & Scale</h3>
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                            Iterate and scale with you so campaigns, data, and AI agents get smarter and more profitable over time. We continuously refine and improve as your business evolves.
-                        </p>
+                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="flex-shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/50 p-4">
+                            <img src="./logo1-3.png" alt="Step 3" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Flexible Optimization & Scale</h3>
+                            <p class="text-gray-300 text-lg leading-relaxed">
+                                We don't just build it and leave. We continuously optimize your campaigns and AI tools, ensuring your system gets smarter and more profitable over time.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,9 +322,9 @@
     </section>
 
     <!-- About Section -->
-    <section class="py-24 bg-pattern">
+    <section id="about" class="py-24 bg-pattern relative z-10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="neon-border rounded-2xl p-12 bg-black/40 backdrop-blur-sm">
+            <div class="card-hover bg-black/40 backdrop-blur-sm rounded-xl p-12">
                 <h2 class="text-4xl font-bold mb-6 text-center"><span class="text-gradient">About Sharp Human</span></h2>
                 <p class="text-gray-300 text-lg leading-relaxed mb-6">
                     We're a team of AI specialists, growth strategists, and automation experts who believe that modern businesses shouldn't be held back by outdated processes. Our mission is to help companies leverage cutting-edge AI and automation to achieve sustainable, scalable growth.
@@ -203,8 +336,77 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-pattern relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <p class="text-gray-400 uppercase tracking-wider text-sm mb-2">STILL NOT SURE?</p>
+                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">Frequently Asked Questions</span></h2>
+                <p class="text-xl text-gray-400 mb-12">We understand that choosing a growth partner is a big decision. Here are the answers to common questions we get.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">What kind of results can we expect from your AI services?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our goal is to deliver a significant increase in qualified leads or measurable operational efficiencies within the first few months. We tailor solutions to your specific business needs and focus on delivering a clear ROI.
+                    </p>
+                </div>
+                
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">How does your implementation process work?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We follow a clear process: Discovery to understand your challenges, Strategy to design your AI solution, Implementation to build and launch your systems, and Optimization to continuously refine for best results.
+                    </p>
+                </div>
+                
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">Do we need technical expertise to use your AI solutions?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Not at all. Our solutions are designed to be user-friendly. We handle the technical setup and integration, and provide necessary training and ongoing support.
+                    </p>
+                </div>
+                
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">What types of businesses do you typically work with?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We specialize in helping Cloud and AI Startups that are looking to scale their lead generation or improve operational efficiency using AI. Our ideal clients are often established businesses with a proven product or service.
+                    </p>
+                </div>
+                
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">How long are your typical client engagements?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Initial implementation projects can take anywhere from a few weeks. For ongoing services, partnerships of at least several months allow us to deliver the most significant and sustainable results.
+                    </p>
+                </div>
+                
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">Do you offer flexible payment options?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Yes, we can discuss payment structures that work for your business, including options like milestone payments or monthly installments for ongoing services.
+                    </p>
+                </div>
+                
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">How quickly can we get started?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We can typically schedule an initial discovery call within a few days. From there, if we're a good fit, we aim to kick off the strategy and implementation phase promptly.
+                    </p>
+                </div>
+                
+                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                    <h3 class="text-xl font-bold mb-3 text-white">What if I don't have extensive experience in AI?</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        That's understandable. We focus on proven AI tools and strategies. Your commitment to learning and delivering value, combined with a well-structured offer, is key. We'll help you build an offer that leverages your strengths.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Calendly Section -->
-    <section id="calendly-section" class="py-24 bg-pattern">
+    <section id="calendly-section" class="py-24 bg-pattern relative z-10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">Ready to talk?</span></h2>
@@ -224,7 +426,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1a1a1a]/95 backdrop-blur-lg border-t border-blue-500/20 py-12">
+    <footer class="bg-[#1a1a1a]/95 backdrop-blur-lg border-t border-blue-500/20 py-12 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div>
@@ -240,6 +442,10 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-blue-400">Quick Links</h3>
                     <ul class="space-y-2">
+                        <li><a href="#what-to-expect" class="text-gray-400 hover:text-blue-400 transition-colors">What to Expect</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-blue-400 transition-colors">How It Works</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-blue-400 transition-colors">FAQ</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors">About</a></li>
                         <li><a href="#calendly-section" class="text-gray-400 hover:text-blue-400 transition-colors">Book Consultation</a></li>
                         <li><a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">Blog</a></li>
                     </ul>
@@ -248,7 +454,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4 text-blue-400">Connect</h3>
                     <p class="text-gray-400 mb-4">
-                        <a href="mailto:website@sharphuman.com" class="hover:text-blue-400 transition-colors">website@sharphuman.com</a>
+                        <a href="/cdn-cgi/l/email-protection#83f4e6e1f0eaf7e6c3f0ebe2f1f3ebf6eee2edade0ecee" class="hover:text-blue-400 transition-colors"><span class="__cf_email__" data-cfemail="700715120319041530031811020018051d111e5e131f1d">[email&#160;protected]</span></a>
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">𝕏</a>
@@ -265,6 +471,17 @@
     </footer>
 
     <!-- Calendly Script -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-</body>
-</html>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    
+    <!-- Mobile Menu Script -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const button = event.target.closest('button');
+            const
