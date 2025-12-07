@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENTINEL CORE - Autonomous AI Security Defense</title>
+    <title>NEURAL DYNAMICS - AI SERVICES</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
-        
         * {
             margin: 0;
             padding: 0;
@@ -15,22 +13,74 @@
         }
 
         body {
-            font-family: 'Roboto Mono', 'Courier New', monospace;
-            background: #050505;
-            color: #00ff9d;
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #fff;
+            line-height: 1.4;
             overflow-x: hidden;
-            line-height: 1.6;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #000;
+            border-bottom: 3px solid #00ff00;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            padding: 10px 15px;
+        }
+
+        .nav-links a:hover {
+            border: 2px solid #00ff00;
+            background: #00ff00;
+            color: #000;
+        }
+
+        /* Hero Section */
         .hero {
             height: 100vh;
+            background: linear-gradient(45deg, #000 0%, #1a1a1a 50%, #000 100%);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
+            justify-content: center;
             position: relative;
-            background: radial-gradient(ellipse at center, rgba(0, 255, 157, 0.03) 0%, #050505 70%);
+            overflow: hidden;
         }
 
         .hero::before {
@@ -41,346 +91,387 @@
             right: 0;
             bottom: 0;
             background-image: 
-                radial-gradient(circle at 25% 25%, rgba(0, 255, 157, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(255, 75, 75, 0.1) 0%, transparent 50%);
-            animation: backgroundPulse 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes backgroundPulse {
-            0% { opacity: 0.3; }
-            100% { opacity: 0.7; }
+                linear-gradient(0deg, transparent 24%, rgba(0, 255, 0, 0.05) 25%, rgba(0, 255, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 255, 0, 0.05) 75%, rgba(0, 255, 0, 0.05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
         }
 
         .hero-content {
+            text-align: center;
             z-index: 2;
-            position: relative;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
-            letter-spacing: -2px;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 0 20px #00ff00;
         }
 
         .hero p {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            margin-bottom: 3rem;
-            opacity: 0.9;
-            font-weight: 300;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            margin-bottom: 40px;
+            color: #00ff00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .pulse-button {
-            background: linear-gradient(45deg, rgba(0, 255, 157, 0.1), rgba(0, 255, 157, 0.2));
-            border: 2px solid #00ff9d;
-            color: #00ff9d;
-            font-family: inherit;
-            font-size: 1.2rem;
-            font-weight: 700;
+        .cta-button {
+            background: transparent;
+            border: 3px solid #00ff00;
+            color: #00ff00;
             padding: 20px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
             cursor: pointer;
-            text-transform: uppercase;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
             letter-spacing: 2px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(0, 255, 157, 0.8), 0 0 80px rgba(0, 255, 157, 0.4);
-            }
-            100% {
-                box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
-            }
+        .cta-button:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 30px #00ff00;
         }
 
-        .pulse-button:hover {
-            background: rgba(0, 255, 157, 0.1);
-            transform: scale(1.05);
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #111;
         }
 
-        .data-grid {
+        .services h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            border-bottom: 5px solid #00ff00;
+            padding-bottom: 20px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
         }
 
-        .data-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 157, 0.2);
-            border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .data-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 255, 157, 0.5);
-            box-shadow: 0 10px 30px rgba(0, 255, 157, 0.2);
-        }
-
-        .data-card h3 {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .data-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #00ff9d;
-            text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
-        }
-
-        .glitch {
-            position: relative;
-            animation: glitch 2s infinite;
-        }
-
-        @keyframes glitch {
-            0%, 90%, 100% {
-                transform: translate3d(0, 0, 0);
-            }
-            10% {
-                transform: translate3d(-1px, 0, 0);
-            }
-            20% {
-                transform: translate3d(1px, 0, 0);
-            }
-            30% {
-                transform: translate3d(-1px, 0, 0);
-            }
-            40% {
-                transform: translate3d(1px, 0, 0);
-            }
-            50% {
-                transform: translate3d(-1px, 0, 0);
-            }
-            60% {
-                transform: translate3d(1px, 0, 0);
-            }
-            70% {
-                transform: translate3d(-1px, 0, 0);
-            }
-            80% {
-                transform: translate3d(1px, 0, 0);
-            }
-        }
-
-        .terminal {
-            background: rgba(0, 0, 0, 0.8);
-            border: 1px solid #00ff9d;
-            margin: 4rem 2rem 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 5px;
+        .service-card {
+            background: #000;
+            border: 3px solid #333;
+            padding: 40px;
+            transition: all 0.3s;
             position: relative;
         }
 
-        .terminal::before {
-            content: '● ● ●';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            color: #ff4b4b;
-            font-size: 12px;
+        .service-card:hover {
+            border-color: #00ff00;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 0, 0.2);
         }
 
-        .terminal-header {
-            border-bottom: 1px solid rgba(0, 255, 157, 0.3);
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
-        .terminal-content {
-            height: 200px;
-            overflow-y: auto;
-            font-size: 0.85rem;
-        }
-
-        .terminal-line {
-            margin-bottom: 0.5rem;
-            opacity: 0;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        .terminal-line.warning {
-            color: #ff4b4b;
-        }
-
-        .terminal-line.success {
-            color: #00ff9d;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid rgba(0, 255, 157, 0.2);
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            opacity: 0.7;
-            color: #ff4b4b;
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #00ff00;
             text-transform: uppercase;
             letter-spacing: 2px;
+        }
+
+        .service-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #00ff00, #fff, #00ff00);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 100px 0;
+            background: #000;
+            border-top: 5px solid #00ff00;
+            border-bottom: 5px solid #00ff00;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: clamp(3rem, 5vw, 5rem);
+            color: #00ff00;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .stat-item p {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 60px 0 20px;
+            border-top: 3px solid #00ff00;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #00ff00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            line-height: 1.6;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #00ff00;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: #00ff00;
+            margin: 3px 0;
+            transition: 0.3s;
         }
 
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
-            .pulse-button {
-                padding: 15px 30px;
-                font-size: 1rem;
-            }
-            
-            .data-grid {
+
+            .services-grid {
                 grid-template-columns: 1fr;
-                padding: 2rem 1rem;
             }
-            
-            .terminal {
-                margin: 2rem 1rem;
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
+        }
+
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            animation: glitch-1 2s infinite linear alternate-reverse;
+            color: #ff00ff;
+            z-index: -1;
+        }
+
+        .glitch::after {
+            animation: glitch-2 2s infinite linear alternate-reverse;
+            color: #00ffff;
+            z-index: -2;
+        }
+
+        @keyframes glitch-1 {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-2px); }
+            40% { transform: translateX(2px); }
+            60% { transform: translateX(-2px); }
+            80% { transform: translateX(2px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes glitch-2 {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(2px); }
+            40% { transform: translateX(-2px); }
+            60% { transform: translateX(2px); }
+            80% { transform: translateX(-2px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Terminal Animation */
+        .terminal-text::after {
+            content: '_';
+            animation: blink 1s infinite;
+            color: #00ff00;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav class="container">
+            <div class="logo">NEURAL DYNAMICS</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
     <section class="hero">
         <div class="hero-content">
-            <h1>SLEEP SOUNDLY. WE DON'T.</h1>
-            <p>Autonomous Threat Neutralization at 40ms Latency</p>
-            <button class="pulse-button" onclick="initiateProtocol()">INITIATE SCAN</button>
+            <h1 class="glitch" data-text="AI SUPREMACY">AI SUPREMACY</h1>
+            <p class="terminal-text">ENTERPRISE INTELLIGENCE SOLUTIONS</p>
+            <a href="#services" class="cta-button">INITIATE TRANSFORMATION</a>
         </div>
     </section>
 
-    <section class="data-grid">
-        <div class="data-card">
-            <h3>Threats Blocked</h3>
-            <div class="data-value glitch" id="threatCounter">1,402,994</div>
-        </div>
-        <div class="data-card">
-            <h3>System Uptime</h3>
-            <div class="data-value">99.999%</div>
-        </div>
-        <div class="data-card">
-            <h3>Active Nodes</h3>
-            <div class="data-value">GLOBAL</div>
+    <section id="services" class="services">
+        <div class="container">
+            <h2>CORE SYSTEMS</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>MACHINE LEARNING</h3>
+                    <p>Advanced algorithmic solutions that process vast datasets with unprecedented accuracy. Our ML frameworks deliver predictive analytics that transform raw data into strategic intelligence for Fortune 500 decision-making.</p>
+                </div>
+                <div class="service-card">
+                    <h3>COMPUTER VISION</h3>
+                    <p>Industrial-grade visual recognition systems that automate complex visual processes. From quality control to autonomous operations, our computer vision solutions integrate seamlessly into enterprise infrastructure.</p>
+                </div>
+                <div class="service-card">
+                    <h3>NATURAL LANGUAGE</h3>
+                    <p>Sophisticated language processing engines that understand, analyze, and generate human communication. Our NLP systems handle everything from customer service automation to document intelligence at scale.</p>
+                </div>
+                <div class="service-card">
+                    <h3>ROBOTIC PROCESS</h3>
+                    <p>Intelligent automation systems that eliminate repetitive tasks and optimize operational workflows. Our RPA solutions integrate with existing enterprise systems to deliver immediate efficiency gains.</p>
+                </div>
+                <div class="service-card">
+                    <h3>PREDICTIVE ANALYTICS</h3>
+                    <p>Data-driven forecasting systems that anticipate market trends and business outcomes. Our predictive models provide strategic insights that enable proactive decision-making and competitive advantage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI INTEGRATION</h3>
+                    <p>Comprehensive AI implementation strategies that seamlessly merge with existing enterprise architecture. Our integration services ensure minimal disruption while maximizing artificial intelligence adoption.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="terminal">
-        <div class="terminal-header">SENTINEL CORE // THREAT ANALYSIS CONSOLE</div>
-        <div class="terminal-content" id="terminalContent">
-            <div class="terminal-line success">[INFO] System initialization complete...</div>
-            <div class="terminal-line">[LOG] Scanning network perimeter...</div>
-            <div class="terminal-line warning">[ALERT] Suspicious packets detected from 192.168.1.***</div>
-            <div class="terminal-line success">[BLOCKED] Threat neutralized in 23ms</div>
-            <div class="terminal-line">[LOG] Firewall reinforcement active...</div>
-            <div class="terminal-line success">[INFO] Deep packet inspection enabled</div>
-            <div class="terminal-line">[LOG] Behavioral analysis running...</div>
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>ENTERPRISES TRANSFORMED</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.9%</h3>
+                    <p>SYSTEM UPTIME</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>GLOBAL SUPPORT</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50M+</h3>
+                    <p>DATA POINTS PROCESSED</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
-        RESTRICTED ACCESS // AUTHORIZED PERSONNEL ONLY
-    </footer>
-
-    <script>
-        // Glitching threat counter
-        function updateThreatCounter() {
-            const counter = document.getElementById('threatCounter');
-            const baseNumber = 1402994;
-            const variation = Math.floor(Math.random() * 100);
-            const newNumber = baseNumber + variation;
-            counter.textContent = newNumber.toLocaleString();
-        }
-
-        // Terminal log generator
-        const terminalLogs = [
-            { text: '[LOG] Monitoring 847 active connections...', class: '' },
-            { text: '[SCAN] Port scan detected from external IP', class: 'warning' },
-            { text: '[BLOCKED] Malicious payload intercepted', class: 'success' },
-            { text: '[INFO] AI model updated with new threat signatures', class: 'success' },
-            { text: '[ALERT] Brute force attempt blocked', class: 'warning' },
-            { text: '[LOG] Quantum encryption protocols active', class: '' },
-            { text: '[SUCCESS] Threat vector eliminated', class: 'success' },
-            { text: '[INFO] Neural network learning from attack patterns', class: '' },
-            { text: '[BLOCKED] SQL injection attempt neutralized', class: 'success' },
-            { text: '[LOG] Real-time threat intelligence synchronized', class: '' }
-        ];
-
-        function addTerminalLine() {
-            const terminal = document.getElementById('terminalContent');
-            const randomLog = terminalLogs[Math.floor(Math.random() * terminalLogs.length)];
-            
-            const line = document.createElement('div');
-            line.className = `terminal-line ${randomLog.class}`;
-            line.textContent = randomLog.text;
-            
-            terminal.appendChild(line);
-            terminal.scrollTop = terminal.scrollHeight;
-            
-            // Remove old lines to prevent infinite scroll
-            if (terminal.children.length > 15) {
-                terminal.removeChild(terminal.firstChild);
-            }
-        }
-
-        function initiateProtocol() {
-            const button = document.querySelector('.pulse-button');
-            button.style.animation = 'pulse 0.5s infinite';
-            button.textContent = 'SCANNING...';
-            
-            setTimeout(() => {
-                button.textContent = 'SCAN COMPLETE';
-                button.style.background = 'rgba(0, 255, 157, 0.2)';
-                
-                setTimeout(() => {
-                    button.textContent = 'INITIATE SCAN';
-                    button.style.animation = 'pulse 2s infinite';
-                    button.style.background = 'linear-gradient(45deg, rgba(0, 255, 157, 0.1), rgba(0, 255, 157, 0.2))';
-                }, 2000);
-            }, 3000);
-        }
-
-        // Initialize animations
-        setInterval(updateThreatCounter, 3000);
-        setInterval(addTerminalLine, 4000);
-        
-        // Animate terminal lines on load
-        document.addEventListener('DOMContentLoaded', function() {
-            const lines = document.querySelectorAll('.terminal-line');
-            lines.forEach((line, index) => {
-                line.style.animationDelay = `${index * 0.5}s`;
-            });
-        });
-    </script>
-</body>
-</html>
-```
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HEADQUARTERS</h3>
+                    <p>NEURAL DYNAMICS CORP<br>
+                    1250 TECH BOULEVARD<br>
+                    SILICON VALLEY, CA 94025<br>
+                    UNITED STATES</p>
+                </div>
+                <div class="footer-section">
+                    <h3>GLOBAL OPERATIONS</h3>
+                    <p>NEW YORK • LONDON • TOKYO<br>
+                    SINGAPORE • FRANKFURT<br>
+                    SYDNEY • SAO PAULO<br>
+                    <a href="#">VIEW ALL LOCATIONS</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>ENTERPRISE CONTACT</h3>
+                    <p>PHONE: +1.800.
