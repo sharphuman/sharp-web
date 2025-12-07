@@ -3,44 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Human | Elite AI Solutions</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <script defer src="https://sharphuman.com/members/js/member-flow.min.js"></script> 
+    <title>AI Marketing Solutions | Future Ready</title>
+    <style>
+        /* --- CSS VARIABLES FOR EASY NEON COLOR EDITING --- */
+        :root {
+            --bg-color: #050505;
+            --text-color: #e0e0e0;
+            --neon-primary: #00ff9d; /* Neon Green */
+            --neon-secondary: #bd00ff; /* Neon Purple */
+            --glass-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        /* --- GLOBAL STYLES --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace; /* Tech vibe */
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* --- ANIMATIONS --- */
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100vh); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 5px var(--neon-primary), 0 0 10px var(--neon-primary); }
+            50% { box-shadow: 0 0 20px var(--neon-primary), 0 0 30px var(--neon-primary); }
+            100% { box-shadow: 0 0 5px var(--neon-primary), 0 0 10px var(--neon-primary); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* --- LAYOUT --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--neon-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-primary);
+            text-shadow: 0 0 8px var(--neon-primary);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            background: linear-gradient(90deg, #fff, var(--neon-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 40px;
+            color: #aaa;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            padding: 15px 40px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 2px solid var(--neon-primary);
+            background: transparent;
+            color: var(--neon-primary);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 3s infinite;
+        }
+
+        .btn:hover {
+            background: var(--neon-primary);
+            color: #000;
+            box-shadow: 0 0 40px var(--neon-primary);
+        }
+
+        /* --- FEATURES GRID --- */
+        .features {
+            padding: 80px 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--neon-secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(189, 0, 255, 0.3);
+        }
+
+        .card h3 {
+            color: var(--neon-secondary);
+            margin-top: 0;
+        }
+
+        /* --- MOBILE ADJUSTMENTS --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            header { padding: 20px; flex-direction: column; gap: 15px; }
+            .nav-links a { margin: 0 10px; }
+        }
+    </style>
 </head>
 <body>
 
-    <header class="main-header">
-        <h1 class="logo-text">Sharp Human</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/blog/">Blog (Ghost Feed)</a>
-            <a href="/about/">About</a>
+    <header>
+        <div class="logo">AI // MARKETING</div>
+        <nav class="nav-links">
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="/blog" style="color: var(--neon-secondary);">Read the Blog</a>
         </nav>
     </header>
 
-    <div class="hero-section">
-        <h1 class="hero-title-neon">MODERNIZE GROWTH AND EFFICIENCY</h1>
-        <p class="hero-subtitle">Bespoke AI Strategy & Implementation</p>
+    <section class="hero">
+        <h1>Autonomous Growth.<br>Powered by Neural Networks.</h1>
+        <p>We combine deep learning with high-frequency content generation to dominate search rankings. Your marketing, automated.</p>
+        <a href="/blog" class="btn">Explore Intelligence</a>
+    </section>
 
-            <img src="sharphuman_color_black-01-2.png" 
-             alt="Neon Cityscape" class="city-illustration">
-
-        <div class="subscribe-card-container">
-            <div class="sharp-subscribe-card">
-                <form data-members-form="subscribe" class="sharp-subscribe-form">
-                    <h2>Sign up for Elite AI Insights</h2>
-                    <p>Join the best minds in AI and strategy.</p>
-                    <input data-members-email type="email" placeholder="Your email" required>
-                    <button type="submit" class="subscribe-btn">Subscribe</button>
-                </form>
-            </div>
+    <section class="features">
+        <div class="card">
+            <h3>01. Auto-Blogging</h3>
+            <p>Python-driven content engines that never sleep, ensuring your SEO footprint expands daily.</p>
         </div>
-    </div>
-    
-    <section class="cta-section">
-        <h2 class="cta-heading">Ready to talk?</h2>
-        <p>Pick a time that works for you and we’ll walk through your support stack, your goals, and key hiring criteria.</p>
+        <div class="card">
+            <h3>02. Deep Sync Analysis</h3>
+            <p>Real-time data interpretation to adjust marketing strategies on the fly.</p>
+        </div>
+        <div class="card">
+            <h3>03. Neon Branding</h3>
+            <p>High-impact visuals designed to capture attention in a saturated digital landscape.</p>
+        </div>
     </section>
 
 </body>
