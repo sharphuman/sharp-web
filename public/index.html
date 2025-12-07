@@ -1,10 +1,10 @@
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modernize Growth and Efficiency | AI-Powered Business Solutions</title>
+    <title>Modernize Growth and Efficiency | Sharp Human</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,14 +12,20 @@
                 extend: {
                     colors: {
                         'cyber-dark': '#0a0e27',
-                        'cyber-darker': '#050811',
+                        'cyber-darker': '#050816',
                         'cyber-blue': '#1a1f3a',
-                        'cyber-cyan': '#00f0ff',
-                        'cyber-magenta': '#ff00ff',
-                        'cyber-purple': '#8b00ff',
+                        'neon-cyan': '#00f0ff',
+                        'neon-magenta': '#ff00ff',
+                        'neon-pink': '#ff0080',
+                        'neon-purple': '#8b00ff',
                     },
                     fontFamily: {
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-cyan': '0 0 20px rgba(0, 240, 255, 0.5)',
+                        'neon-magenta': '0 0 20px rgba(255, 0, 255, 0.5)',
+                        'neon-glow': '0 0 30px rgba(0, 240, 255, 0.3), 0 0 60px rgba(255, 0, 255, 0.2)',
                     },
                 }
             }
@@ -27,7 +33,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -35,13 +41,9 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            background: #0a0e27;
+            background: linear-gradient(135deg, #0a0e27 0%, #050816 100%);
             color: #ffffff;
             overflow-x: hidden;
         }
@@ -53,234 +55,252 @@
             background-clip: text;
         }
 
-        .glow-cyan {
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3), 0 0 40px rgba(0, 240, 255, 0.1);
+        .glow-border {
+            position: relative;
+            border: 1px solid transparent;
+            background: linear-gradient(#0a0e27, #0a0e27) padding-box,
+                        linear-gradient(135deg, #00f0ff, #ff00ff) border-box;
         }
 
-        .glow-magenta {
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.3), 0 0 40px rgba(255, 0, 255, 0.1);
-        }
-
-        .glass-card {
-            background: rgba(26, 31, 58, 0.4);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 240, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-card:hover {
+        .cyber-card {
             background: rgba(26, 31, 58, 0.6);
-            border-color: rgba(0, 240, 255, 0.3);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 240, 255, 0.2);
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #00f0ff 0%, #8b00ff 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 240, 255, 0.2);
             transition: all 0.3s ease;
+        }
+
+        .cyber-card:hover {
+            border-color: rgba(0, 240, 255, 0.6);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .neon-button {
             position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 100%);
+            border: none;
+            color: #0a0e27;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
         }
 
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #ff00ff 0%, #00f0ff 100%);
-            transition: left 0.5s ease;
+        .neon-button:hover {
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
+            transform: translateY(-2px);
         }
 
-        .btn-primary:hover::before {
-            left: 0;
-        }
-
-        .btn-primary span {
+        .neon-button-outline {
             position: relative;
-            z-index: 1;
-        }
-
-        .btn-secondary {
+            background: transparent;
             border: 2px solid #00f0ff;
             color: #00f0ff;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .btn-secondary:hover {
+        .neon-button-outline:hover {
             background: rgba(0, 240, 255, 0.1);
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+            border-color: #ff00ff;
+            color: #ff00ff;
         }
 
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #00f0ff, #ff00ff);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .cyber-grid {
+        .hero-grid {
             background-image: 
                 linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
             background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
         }
 
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 50px 50px;
+            }
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        .floating-animation {
+            animation: floating 6s ease-in-out infinite;
         }
 
-        .animate-pulse-glow {
-            animation: pulse-glow 3s ease-in-out infinite;
+        @keyframes floating {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
-        @keyframes pulse-glow {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
         }
 
-        .step-number {
-            background: linear-gradient(135deg, #00f0ff 0%, #8b00ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0, 240, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.6);
+            }
         }
 
-        .process-card {
-            background: rgba(26, 31, 58, 0.3);
-            border-left: 3px solid transparent;
-            transition: all 0.4s ease;
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00f0ff, #ff00ff, transparent);
         }
 
-        .process-card:hover {
-            background: rgba(26, 31, 58, 0.5);
-            border-left-color: #00f0ff;
-            transform: translateX(12px);
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        .process-step {
+            position: relative;
+            padding-left: 60px;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: -40px;
+            width: 2px;
+            background: linear-gradient(180deg, #00f0ff, #ff00ff);
+        }
+
+        .process-step:last-child::before {
+            bottom: 0;
+        }
+
+        .process-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00f0ff, #ff00ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #0a0e27;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+        }
+
+        .calendly-container {
+            background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(10, 14, 39, 0.9) 100%);
+            border: 2px solid rgba(0, 240, 255, 0.3);
+            min-height: 600px;
         }
 
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
+            .process-step {
+                padding-left: 50px;
+            }
+            
+            .process-number {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
-<body class="cyber-grid">
-    
+<body>
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-cyber-darker/80 backdrop-blur-lg border-b border-cyan-500/10">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-gradient-to-br from-cyber-cyan to-cyber-magenta rounded-lg glow-cyan"></div>
-                    <span class="text-xl font-bold gradient-text">SharpHuman</span>
+    <nav class="fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl sm:text-3xl font-bold gradient-text">Sharp Human</h1>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="https://sharphuman.ghost.io/" target="_blank" class="nav-link text-gray-300 hover:text-cyber-cyan font-medium">Blog</a>
-                    <a href="#contact" class="btn-primary px-6 py-2.5 rounded-lg font-semibold"><span>Ready to talk?</span></a>
-                </div>
-                <div class="md:hidden">
-                    <a href="#contact" class="btn-primary px-5 py-2 rounded-lg font-semibold text-sm"><span>Contact</span></a>
+                <div class="flex items-center space-x-4 sm:space-x-8">
+                    <a href="https://sharphuman.ghost.io/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-gray-300 hover:text-neon-cyan transition-colors duration-300">Blog</a>
+                    <a href="#calendly-section" class="neon-button px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base">Ready to talk?</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
-        <div class="absolute inset-0 overflow-hidden">
-            <div class="absolute w-96 h-96 bg-cyber-cyan/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse-glow"></div>
-            <div class="absolute w-96 h-96 bg-cyber-magenta/20 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse-glow" style="animation-delay: 1.5s;"></div>
-        </div>
+    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-grid overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-radial from-transparent to-cyber-darker opacity-60"></div>
         
-        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center max-w-4xl mx-auto">
-                <div class="inline-block mb-6">
-                    <span class="px-4 py-2 bg-cyber-blue/50 border border-cyber-cyan/30 rounded-full text-cyber-cyan text-sm font-semibold tracking-wide uppercase">
-                        AI-Powered Growth
-                    </span>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+            <div class="text-center">
+                <div class="mb-8 floating-animation">
+                    <div class="inline-block">
+                        <span class="inline-block px-6 py-2 rounded-full text-sm font-semibold glow-border text-neon-cyan">
+                            Transform Your Revenue Engine
+                        </span>
+                    </div>
                 </div>
                 
-                <h1 class="hero-title text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-                    Modernize <span class="gradient-text">Growth</span> and <span class="gradient-text">Efficiency</span>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black mb-8 leading-tight">
+                    <span class="gradient-text">Modernize Growth</span><br>
+                    <span class="text-white">and Efficiency</span>
                 </h1>
                 
-                <p class="text-xl lg:text-2xl text-gray-300 mb-4 font-light leading-relaxed">
-                    Multi‑Channel Acquisition
-                </p>
+                <div class="max-w-4xl mx-auto mb-12">
+                    <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light leading-relaxed mb-6">
+                        Multi‑Channel Acquisition
+                    </p>
+                    <p class="text-lg sm:text-xl lg:text-2xl text-gray-400 leading-relaxed">
+                        Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
+                    </p>
+                </div>
                 
-                <p class="text-lg lg:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-                    Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#contact" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto text-center"><span>Ready to talk?</span></a>
-                    <a href="#services" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg w-full sm:w-auto text-center">Explore Services</a>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#calendly-section" class="neon-button px-8 sm:px-12 py-4 sm:py-5 rounded-lg text-base sm:text-lg pulse-glow w-full sm:w-auto text-center">
+                        Ready to talk?
+                    </a>
+                    <a href="#services" class="neon-button-outline px-8 sm:px-12 py-4 sm:py-5 rounded-lg text-base sm:text-lg w-full sm:w-auto text-center">
+                        Explore Services
+                    </a>
                 </div>
             </div>
         </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/4 left-10 w-2 h-2 bg-neon-cyan rounded-full animate-ping"></div>
+        <div class="absolute top-1/3 right-20 w-3 h-3 bg-neon-magenta rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-2 h-2 bg-neon-pink rounded-full animate-ping" style="animation-delay: 1s;"></div>
     </section>
 
-    <!-- Service Pillars -->
-    <section id="services" class="py-20 lg:py-32 relative">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
-                    Our <span class="gradient-text">Service Pillars</span>
+    <div class="section-divider"></div>
+
+    <!-- Service Pillars Section -->
+    <section id="services" class="py-20 sm:py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 sm:mb-20">
+                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black mb-6">
+                    <span class="gradient-text">Service Pillars</span>
                 </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                    Comprehensive solutions designed to transform your business operations
+                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
+                    Comprehensive solutions designed to transform your business operations and accelerate growth
                 </p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="glass-card rounded-2xl p-8">
-                    <div class="w-16 h-16 bg-gradient-to-br from-cyber-cyan to-cyber-purple rounded-xl flex items-center justify-center mb-6 glow-cyan">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">AI‑Enhanced Talent Sourcing</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Go beyond keyword matching to surface better candidates by skills, behavior, and fit.
-                    </p>
-                </div>
 
-                <!-- Service Card 2 -->
-                <div class="glass-card rounded-2xl p-8">
-                    <div class="w-16 h-16 bg-gradient-to-br from-cyber-magenta to-cyber-purple rounded-xl flex items-center justify-center mb-6 glow-magenta">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <!-- Pillar 1 -->
+                <div class="cyber-card rounded-2xl p-8 sm:p-10">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-neon-cyan to-neon-magenta flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-cyber-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold text-neon-cyan mb-4">
+                            AI‑Enhanced Talent Sourcing
+                        </h3>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Bespoke AI Solutions</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Turn slow manual processes into custom AI tools and integrations built around your workflows.
-                    </p>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="glass-card rounded-2xl p-8">
-                    <div class="w-16 h-16
+                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
+                        Go beyond keyword matching to surface better candidates by skills, behavior, and fit. Our AI-powered approach analyzes multidimensional data points to identify candidates who don't just meet job requirements, but align with your company culture and growth trajectory. We leverage advanced machine learning algorithms to uncover hidden talent pools an
