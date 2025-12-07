@@ -1,1 +1,110 @@
+/* --- Global Reset & Base --- */
+:root {
+    --color-neon-cyan: #00e5ff;
+    --color-neon-magenta: #d500f9;
+    --color-neon-green: #00ffab;
+    --color-bg-dark: #0e1117;
+    --color-text-light: #f8f8ff;
+}
 
+body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-family: 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- Keyframes for Subtle Neon Pulse --- */
+@keyframes neon-pulse {
+    0% { text-shadow: 0 0 5px var(--color-neon-cyan); }
+    50% { text-shadow: 0 0 10px var(--color-neon-cyan), 0 0 20px var(--color-neon-magenta); }
+    100% { text-shadow: 0 0 5px var(--color-neon-cyan); }
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+    animation: neon-pulse 5s infinite alternate ease-in-out;
+}
+.logo-text {
+    font-size: 1.5em;
+    color: var(--color-neon-cyan);
+    margin: 0;
+}
+.main-header a {
+    color: var(--color-neon-green);
+    margin-left: 25px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.main-header a:hover {
+    color: var(--color-neon-magenta);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.hero-title-neon {
+    font-size: 4em;
+    font-weight: 900;
+    margin-bottom: 5px;
+    /* Pink and Blue Neon Gradient */
+    background: -webkit-linear-gradient(45deg, var(--color-neon-cyan), var(--color-neon-magenta)); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: neon-pulse 6s infinite alternate ease-in-out;
+}
+
+.hero-subtitle {
+    color: var(--color-neon-green);
+    font-size: 1.5em;
+    margin-bottom: 60px;
+}
+
+.city-illustration {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+}
+
+/* --- Subscription Card Styling (Transparent Look) --- */
+.subscribe-card-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.sharp-subscribe-card {
+    background-color: transparent;
+    border: 2px solid var(--color-neon-cyan);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.sharp-subscribe-card h2 { color: var(--color-neon-cyan); }
+.sharp-subscribe-card p { color: var(--color-neon-magenta); }
+
+.sharp-subscribe-form input {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(28, 28, 28, 0.9);
+    color: var(--color-neon-cyan);
+    border: 1px solid var(--color-neon-green);
+}
+
+.subscribe-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: linear-gradient(45deg, var(--color-neon-magenta), #ff007f); 
+    color: #000000;
+    font-weight: 800;
+}
