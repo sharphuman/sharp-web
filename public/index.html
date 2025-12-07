@@ -5,38 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharp Human - AI-Powered Business Transformation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+<style>
         :root {
-            --color-primary: #bd00ff; /* Magenta/Electric Pink */
-            --color-secondary: #00ff9d; /* Electric Cyan/Lime Green */
-            --color-bg: #0e1117; /* Deep Blue/Black Base */
-            --color-text: #e0e0e0;
+            --color-primary: #0077b6; /* Trustworthy Corporate Blue */
+            --color-secondary: #00b4d8; /* Brighter Accent Cyan/Sky */
+            --color-bg: #FFFFFF; /* White Base */
+            --color-text: #222222; /* Dark Gray Text */
+            --color-card-bg: #f8f9fa; /* Off-White/Light Gray Card */
+            --color-shadow: rgba(0, 119, 182, 0.3); /* Soft Blue Shadow */
         }
         body {
             background-color: var(--color-bg);
             color: var(--color-text);
             scroll-behavior: smooth;
         }
-        .text-neon-pink { color: var(--color-primary); }
-        .bg-neon-pink { background-color: var(--color-primary); }
-        .text-neon-cyan { color: var(--color-secondary); }
+        /* Update Tailwind classes to reflect new colors for elements */
+        .text-neon-pink, .text-neon-cyan { color: var(--color-primary); }
         .btn-primary {
             background-color: var(--color-primary);
-            color: var(--color-bg);
+            color: white;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px var(--color-primary);
+            box-shadow: 0 0 10px var(--color-shadow);
         }
         .btn-primary:hover {
-            background-color: #00ff9d; /* Hover to Cyan */
-            box-shadow: 0 0 15px #00ff9d;
+            background-color: var(--color-secondary); /* Hover to Cyan */
+            box-shadow: 0 0 15px var(--color-secondary);
             transform: translateY(-2px);
         }
         .card-glow {
-            border: 1px solid rgba(189, 0, 255, 0.3);
+            border: 1px solid #e0e0e0;
+            background-color: var(--color-card-bg);
             transition: all 0.3s ease;
         }
         .card-glow:hover {
-            box-shadow: 0 0 20px rgba(189, 0, 255, 0.5);
+            box-shadow: 0 5px 15px var(--color-shadow);
             transform: translateY(-5px);
         }
         /* Smooth scrolling for anchor links */
