@@ -1,6 +1,8 @@
 ### Old /blog/* https://sharphuman.ghost.io/blog/:splat    200
 # Redirect /blog to the Ghost instance
-/blog/* https://sharphuman.ghost.io/:splat  301
+# /blog/* https://sharphuman.ghost.io/:splat  301
 
 # Fallback (Optional: keeps the back button working smoothly)
-/admin/* https://sharphuman.ghost.io/ghost/:splat 301
+# /admin/* https://sharphuman.ghost.io/ghost/:splat 301
+# CLaude's recommendation
+/blog/* https://sharphuman.ghost.io/:splat 200
