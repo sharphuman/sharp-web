@@ -1,306 +1,165 @@
-```html
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modernize Growth and Efficiency | Sharp Human</title>
+    <title>Sharp Human - AI-Powered Business Transformation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'cyber-dark': '#0a0e27',
-                        'cyber-darker': '#050816',
-                        'cyber-blue': '#1a1f3a',
-                        'neon-cyan': '#00f0ff',
-                        'neon-magenta': '#ff00ff',
-                        'neon-pink': '#ff0080',
-                        'neon-purple': '#8b00ff',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'neon-cyan': '0 0 20px rgba(0, 240, 255, 0.5)',
-                        'neon-magenta': '0 0 20px rgba(255, 0, 255, 0.5)',
-                        'neon-glow': '0 0 30px rgba(0, 240, 255, 0.3), 0 0 60px rgba(255, 0, 255, 0.2)',
-                    },
-                }
-            }
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --color-primary: #bd00ff; /* Magenta/Electric Pink */
+            --color-secondary: #00ff9d; /* Electric Cyan/Lime Green */
+            --color-bg: #0e1117; /* Deep Blue/Black Base */
+            --color-text: #e0e0e0;
         }
-
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0a0e27 0%, #050816 100%);
-            color: #ffffff;
-            overflow-x: hidden;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            scroll-behavior: smooth;
         }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .glow-border {
-            position: relative;
-            border: 1px solid transparent;
-            background: linear-gradient(#0a0e27, #0a0e27) padding-box,
-                        linear-gradient(135deg, #00f0ff, #ff00ff) border-box;
-        }
-
-        .cyber-card {
-            background: rgba(26, 31, 58, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 240, 255, 0.2);
+        .text-neon-pink { color: var(--color-primary); }
+        .bg-neon-pink { background-color: var(--color-primary); }
+        .text-neon-cyan { color: var(--color-secondary); }
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-bg);
             transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--color-primary);
         }
-
-        .cyber-card:hover {
-            border-color: rgba(0, 240, 255, 0.6);
-            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .neon-button {
-            position: relative;
-            background: linear-gradient(135deg, #00f0ff 0%, #ff00ff 100%);
-            border: none;
-            color: #0a0e27;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
-        }
-
-        .neon-button:hover {
-            box-shadow: 0 0 40px rgba(0, 240, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
+        .btn-primary:hover {
+            background-color: #00ff9d; /* Hover to Cyan */
+            box-shadow: 0 0 15px #00ff9d;
             transform: translateY(-2px);
         }
-
-        .neon-button-outline {
-            position: relative;
-            background: transparent;
-            border: 2px solid #00f0ff;
-            color: #00f0ff;
-            font-weight: 600;
+        .card-glow {
+            border: 1px solid rgba(189, 0, 255, 0.3);
             transition: all 0.3s ease;
         }
-
-        .neon-button-outline:hover {
-            background: rgba(0, 240, 255, 0.1);
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
-            border-color: #ff00ff;
-            color: #ff00ff;
+        .card-glow:hover {
+            box-shadow: 0 0 20px rgba(189, 0, 255, 0.5);
+            transform: translateY(-5px);
         }
-
-        .hero-grid {
-            background-image: 
-                linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
-        }
-
-        @keyframes gridMove {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 50px 50px;
-            }
-        }
-
-        .floating-animation {
-            animation: floating 6s ease-in-out infinite;
-        }
-
-        @keyframes floating {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .pulse-glow {
-            animation: pulseGlow 2s ease-in-out infinite;
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(0, 240, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.6);
-            }
-        }
-
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #00f0ff, #ff00ff, transparent);
-        }
-
-        nav {
-            background: rgba(10, 14, 39, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
-        }
-
-        .process-step {
-            position: relative;
-            padding-left: 60px;
-        }
-
-        .process-step::before {
-            content: '';
-            position: absolute;
-            left: 20px;
-            top: 0;
-            bottom: -40px;
-            width: 2px;
-            background: linear-gradient(180deg, #00f0ff, #ff00ff);
-        }
-
-        .process-step:last-child::before {
-            bottom: 0;
-        }
-
-        .process-number {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #00f0ff, #ff00ff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #0a0e27;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
-        }
-
-        .calendly-container {
-            background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(10, 14, 39, 0.9) 100%);
-            border: 2px solid rgba(0, 240, 255, 0.3);
-            min-height: 600px;
-        }
-
-        @media (max-width: 768px) {
-            .process-step {
-                padding-left: 50px;
-            }
-            
-            .process-number {
-                width: 35px;
-                height: 35px;
-                font-size: 14px;
-            }
-        }
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-50">
+
+    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg border-b border-neon-pink">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <h1 class="text-2xl sm:text-3xl font-bold gradient-text">Sharp Human</h1>
+                    <span class="text-2xl font-bold text-neon-pink">Sharp<span class="text-neon-cyan">Human</span></span>
                 </div>
-                <div class="flex items-center space-x-4 sm:space-x-8">
-                    <a href="https://sharphuman.ghost.io/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base text-gray-300 hover:text-neon-cyan transition-colors duration-300">Blog</a>
-                    <a href="#calendly-section" class="neon-button px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base">Ready to talk?</a>
+                <div class="flex items-center space-x-4">
+                    <a href="https://sharphuman.ghost.io/" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white transition duration-150">Blog</a>
+                    <a href="#calendly-section" class="px-4 py-2 rounded-lg btn-primary text-sm font-semibold">⚡ Ready to talk?</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 hero-grid overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-radial from-transparent to-cyber-darker opacity-60"></div>
-        
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-            <div class="text-center">
-                <div class="mb-8 floating-animation">
-                    <div class="inline-block">
-                        <span class="inline-block px-6 py-2 rounded-full text-sm font-semibold glow-border text-neon-cyan">
-                            Transform Your Revenue Engine
-                        </span>
-                    </div>
+    <header class="py-24 md:py-36 text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb197135?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="max-w-4xl mx-auto px-4 bg-gray-900/70 p-8 rounded-xl border border-neon-cyan">
+            <h1 class="text-6xl font-extrabold tracking-tight text-white mb-4">Modernize <span class="text-neon-pink">Growth</span> and <span class="text-neon-cyan">Efficiency</span></h1>
+            <p class="mt-4 text-xl text-gray-200">
+                Multi‑Channel Acquisition. Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
+            </p>
+            <a href="#calendly-section" class="mt-8 inline-block px-8 py-3 rounded-lg btn-primary text-lg font-bold shadow-2xl">Book Your Strategy Session</a>
+        </div>
+    </header>
+
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 text-white">Our <span class="text-neon-cyan">Service Pillars</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="card-glow p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800">
+                    <div class="text-4xl text-neon-pink mb-4">🤖</div>
+                    <h3 class="text-xl font-bold text-white mb-2">AI‑Enhanced Talent Sourcing</h3>
+                    <p class="text-gray-400">Go beyond keyword matching to surface better candidates by skills, behavior, and fit.</p>
                 </div>
                 
-                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black mb-8 leading-tight">
-                    <span class="gradient-text">Modernize Growth</span><br>
-                    <span class="text-white">and Efficiency</span>
-                </h1>
-                
-                <div class="max-w-4xl mx-auto mb-12">
-                    <p class="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light leading-relaxed mb-6">
-                        Multi‑Channel Acquisition
-                    </p>
-                    <p class="text-lg sm:text-xl lg:text-2xl text-gray-400 leading-relaxed">
-                        Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
-                    </p>
+                <div class="card-glow p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800">
+                    <div class="text-4xl text-neon-pink mb-4">🛠️</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Bespoke AI Solutions</h3>
+                    <p class="text-gray-400">Turn slow manual processes into custom AI tools and integrations built around your workflows.</p>
                 </div>
                 
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <a href="#calendly-section" class="neon-button px-8 sm:px-12 py-4 sm:py-5 rounded-lg text-base sm:text-lg pulse-glow w-full sm:w-auto text-center">
-                        Ready to talk?
-                    </a>
-                    <a href="#services" class="neon-button-outline px-8 sm:px-12 py-4 sm:py-5 rounded-lg text-base sm:text-lg w-full sm:w-auto text-center">
-                        Explore Services
-                    </a>
+                <div class="card-glow p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800">
+                    <div class="text-4xl text-neon-pink mb-4">🔍</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Automation & Process Audit</h3>
+                    <p class="text-gray-400">Identify bottlenecks in your current systems and get a practical roadmap to automate them.</p>
                 </div>
+
             </div>
         </div>
-
-        <!-- Decorative Elements -->
-        <div class="absolute top-1/4 left-10 w-2 h-2 bg-neon-cyan rounded-full animate-ping"></div>
-        <div class="absolute top-1/3 right-20 w-3 h-3 bg-neon-magenta rounded-full animate-ping" style="animation-delay: 0.5s;"></div>
-        <div class="absolute bottom-1/4 left-1/4 w-2 h-2 bg-neon-pink rounded-full animate-ping" style="animation-delay: 1s;"></div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Service Pillars Section -->
-    <section id="services" class="py-20 sm:py-32 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 sm:mb-20">
-                <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black mb-6">
-                    <span class="gradient-text">Service Pillars</span>
-                </h2>
-                <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
-                    Comprehensive solutions designed to transform your business operations and accelerate growth
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                <!-- Pillar 1 -->
-                <div class="cyber-card rounded-2xl p-8 sm:p-10">
-                    <div class="mb-6">
-                        <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-neon-cyan to-neon-magenta flex items-center justify-center mb-6">
-                            <svg class="w-8 h-8 text-cyber-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-bold text-neon-cyan mb-4">
-                            AI‑Enhanced Talent Sourcing
-                        </h3>
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4 text-white">How does <span class="text-neon-pink">it work?</span></h2>
+            <p class="text-xl text-center text-gray-300 mb-12">Our framework blends AI‑powered strategies with optimization of your existing stack and workflows.</p>
+            
+            <ol class="space-y-12">
+                <li class="relative flex items-start">
+                    <div class="flex flex-col items-center mr-4">
+                        <span class="w-10 h-10 flex items-center justify-center rounded-full bg-neon-pink text-white font-bold text-lg">1</span>
+                        <div class="w-px h-full bg-gray-600 my-2"></div>
                     </div>
-                    <p class="text-base sm:text-lg text-gray-300 leading-relaxed">
-                        Go beyond keyword matching to surface better candidates by skills, behavior, and fit. Our AI-powered approach analyzes multidimensional data points to identify candidates who don't just meet job requirements, but align with your company culture and growth trajectory. We leverage advanced machine learning algorithms to uncover hidden talent pools an
+                    <div>
+                        <h3 class="text-2xl font-semibold text-neon-cyan mb-1">Discovery & Mapping</h3>
+                        <p class="text-lg text-gray-300">Audit your revenue engine—from lead sources to CRM workflows—to pinpoint where you’re leaking time and money.</p>
+                    </div>
+                </li>
+                
+                <li class="relative flex items-start">
+                    <div class="flex flex-col items-center mr-4">
+                        <span class="w-10 h-10 flex items-center justify-center rounded-full bg-neon-pink text-white font-bold text-lg">2</span>
+                        <div class="w-px h-full bg-gray-600 my-2"></div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-neon-cyan mb-1">Tailored Campaigns & Recommendations</h3>
+                        <p class="text-lg text-gray-300">Design campaigns, automations, and playbooks that plug directly into your systems and team.</p>
+                    </div>
+                </li>
+
+                <li class="relative flex items-start">
+                    <div class="flex flex-col items-center mr-4">
+                        <span class="w-10 h-10 flex items-center justify-center rounded-full bg-neon-pink text-white font-bold text-lg">3</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-neon-cyan mb-1">Flexible Optimization & Scale</h3>
+                        <p class="text-lg text-gray-300">Iterate and scale with you so campaigns, data, and AI agents get smarter and more profitable over time.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="calendly-section" class="py-20 bg-gray-900 border-t border-neon-cyan">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-neon-pink mb-4">Ready to talk?</h2>
+            <p class="text-xl text-gray-300 mb-12">Pick a time that works for you and we’ll walk through your current stack, funnels, and hiring challenges.</p>
+
+            <iframe 
+                src="https://calendly.com/YOUR_USERNAME/30min-consult?embed_domain=sharphuman.com" 
+                width="100%" 
+                height="800px" 
+                frameborder="0" 
+                class="rounded-xl shadow-2xl shadow-neon-cyan/30"
+            ></iframe>
+            <p class="mt-4 text-sm text-gray-500">
+                ⚠️ **ACTION REQUIRED:** Please replace the placeholder link above with your actual Calendly URL!
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-black/50 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+            &copy; 2025 Sharp Human. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
