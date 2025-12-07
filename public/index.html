@@ -82,9 +82,21 @@
             border-color: rgba(59, 130, 246, 0.6);
         }
         
+        /* Logo blending for dark backgrounds */
+        nav img {
+            mix-blend-mode: screen;
+            filter: brightness(1.1) contrast(1.2);
+        }
+        
+        footer img {
+            mix-blend-mode: screen;
+            filter: brightness(1.1) contrast(1.2);
+        }
+        
         /* Process step logo styling */
         .process-step-logo {
-            filter: brightness(1.2) contrast(1.1);
+            mix-blend-mode: screen;
+            filter: brightness(1.1) contrast(1.2);
         }
         
         /* Mobile Menu */
@@ -111,6 +123,8 @@
             height: 100%;
             object-fit: contain;
             background: transparent !important;
+            mix-blend-mode: screen;
+            filter: brightness(1.1) contrast(1.2);
         }
         
         @keyframes float {
@@ -281,7 +295,7 @@
                 <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
                     <div class="flex flex-col md:flex-row items-center gap-8">
                         <div class="flex-shrink-0 w-40 h-40 flex items-center justify-center">
-                            <img src="./logo1-3.png" alt="Step 1" class="w-full h-full object-contain">
+                            <img src="./logo1-3.png" alt="Step 1" class="w-full h-full object-contain process-step-logo">
                         </div>
                         <div class="flex-1">
                             <h3 class="text-3xl font-bold mb-4 text-blue-400">Discovery & Mapping</h3>
@@ -296,7 +310,7 @@
                 <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
                     <div class="flex flex-col md:flex-row-reverse items-center gap-8">
                         <div class="flex-shrink-0 w-40 h-40 flex items-center justify-center">
-                            <img src="./logo1-3.png" alt="Step 2" class="w-full h-full object-contain">
+                            <img src="./logo1-3.png" alt="Step 2" class="w-full h-full object-contain process-step-logo">
                         </div>
                         <div class="flex-1 md:text-right">
                             <h3 class="text-3xl font-bold mb-4 text-blue-400">Tailored Campaigns & Recommendations</h3>
@@ -311,7 +325,7 @@
                 <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
                     <div class="flex flex-col md:flex-row items-center gap-8">
                         <div class="flex-shrink-0 w-40 h-40 flex items-center justify-center">
-                            <img src="./logo1-3.png" alt="Step 3" class="w-full h-full object-contain">
+                            <img src="./logo1-3.png" alt="Step 3" class="w-full h-full object-contain process-step-logo">
                         </div>
                         <div class="flex-1">
                             <h3 class="text-3xl font-bold mb-4 text-blue-400">Flexible Optimization & Scale</h3>
