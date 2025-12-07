@@ -1,167 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Human - AI-Powered Business Transformation</title>
+    <title>Sharp Human - Modernize Growth and Efficiency</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<style>
-        :root {
-            --color-primary: #0077b6; /* Trustworthy Corporate Blue */
-            --color-secondary: #00b4d8; /* Brighter Accent Cyan/Sky */
-            --color-bg: #FFFFFF; /* White Base */
-            --color-text: #222222; /* Dark Gray Text */
-            --color-card-bg: #f8f9fa; /* Off-White/Light Gray Card */
-            --color-shadow: rgba(0, 119, 182, 0.3); /* Soft Blue Shadow */
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Aptos', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
+        
         body {
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            scroll-behavior: smooth;
+            background: #000;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23000000" width="1920" height="1080"/></svg>');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
         }
-        /* Update Tailwind classes to reflect new colors for elements */
-        .text-neon-pink, .text-neon-cyan { color: var(--color-primary); }
+        
+        .bg-pattern {
+            background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 50%, rgba(0,0,0,0.95) 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
         .btn-primary {
-            background-color: var(--color-primary);
-            color: white;
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px var(--color-shadow);
         }
+        
         .btn-primary:hover {
-            background-color: var(--color-secondary); /* Hover to Cyan */
-            box-shadow: 0 0 15px var(--color-secondary);
             transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
         }
-        .card-glow {
-            border: 1px solid #e0e0e0;
-            background-color: var(--color-card-bg);
+        
+        .card-hover {
             transition: all 0.3s ease;
+            border: 1px solid rgba(168, 85, 247, 0.2);
         }
-        .card-glow:hover {
-            box-shadow: 0 5px 15px var(--color-shadow);
+        
+        .card-hover:hover {
+            border-color: rgba(168, 85, 247, 0.6);
             transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
         }
-        /* Smooth scrolling for anchor links */
-        html { scroll-behavior: smooth; }
+        
+        .neon-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#000, #000) padding-box,
+                        linear-gradient(135deg, #a855f7, #ec4899) border-box;
+        }
     </style>
 </head>
-<body>
-
-    <nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg border-b border-neon-pink">
+<body class="text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-purple-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <span class="text-2xl font-bold text-neon-pink">Sharp<span class="text-neon-cyan">Human</span></span>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23a855f7;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23ec4899;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M100 20 Q140 40 140 80 Q140 100 125 110 L100 125 L75 110 Q60 100 60 80 Q60 40 100 20 Z M85 70 Q90 60 100 55 Q110 60 115 70 Q115 80 105 90 L100 95 L95 90 Q85 80 85 70 Z M100 145 L120 155 L120 180 L100 170 L80 180 L80 155 Z' fill='url(%23grad)' stroke='url(%23grad)' stroke-width='3'/%3E%3Ctext x='135' y='125' font-family='Aptos, sans-serif' font-size='48' font-weight='bold' fill='url(%23grad)'%3E%23%3C/text%3E%3C/svg%3E" alt="Sharp Human Logo" class="h-12 w-12">
+                    <span class="text-2xl font-bold text-gradient">Sharp Human</span>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <a href="https://sharphuman.ghost.io/" target="_blank" class="text-sm font-medium text-gray-300 hover:text-white transition duration-150">Blog</a>
-                    <a href="#calendly-section" class="px-4 py-2 rounded-lg btn-primary text-sm font-semibold">⚡ Ready to talk?</a>
+                <div class="flex items-center space-x-8">
+                    <a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-300 hover:text-purple-400 transition-colors">Blog</a>
+                    <a href="#calendly-section" class="btn-primary px-6 py-3 rounded-lg font-semibold">Ready to talk?</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="py-24 md:py-36 text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb197135?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-        <div class="max-w-4xl mx-auto px-4 bg-gray-900/70 p-8 rounded-xl border border-neon-cyan">
-            <h1 class="text-6xl font-extrabold tracking-tight text-white mb-4">Modernize <span class="text-neon-pink">Growth</span> and <span class="text-neon-cyan">Efficiency</span></h1>
-            <p class="mt-4 text-xl text-gray-200">
-                Multi‑Channel Acquisition. Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">
+                Modernize Growth and <span class="text-gradient">Efficiency</span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-gray-300 mb-4 max-w-4xl mx-auto">
+                Multi‑Channel Acquisition
             </p>
-            <a href="#calendly-section" class="mt-8 inline-block px-8 py-3 rounded-lg btn-primary text-lg font-bold shadow-2xl">Book Your Strategy Session</a>
+            <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
+            </p>
+            <a href="#calendly-section" class="btn-primary inline-block px-8 py-4 rounded-lg text-lg font-semibold">
+                Book Your Free Consultation
+            </a>
         </div>
-    </header>
+    </section>
 
-    <section class="py-20 bg-gray-900">
+    <!-- Service Pillars -->
+    <section class="py-24 bg-pattern">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16 text-white">Our <span class="text-neon-cyan">Service Pillars</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="card-glow p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800">
-                    <div class="text-4xl text-neon-pink mb-4">🤖</div>
-                    <h3 class="text-xl font-bold text-white mb-2">AI‑Enhanced Talent Sourcing</h3>
-                    <p class="text-gray-400">Go beyond keyword matching to surface better candidates by skills, behavior, and fit.</p>
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">Our <span class="text-gradient">Services</span></h2>
+                <p class="text-xl text-gray-400">Tailored solutions to transform your business operations</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
+                    <div class="text-5xl mb-6">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">AI‑Enhanced Talent Sourcing</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Go beyond keyword matching to surface better candidates by skills, behavior, and fit. Our AI-powered approach identifies talent that traditional methods miss.
+                    </p>
                 </div>
                 
-                <div class="card-glow p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800">
-                    <div class="text-4xl text-neon-pink mb-4">🛠️</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Bespoke AI Solutions</h3>
-                    <p class="text-gray-400">Turn slow manual processes into custom AI tools and integrations built around your workflows.</p>
+                <!-- Service 2 -->
+                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
+                    <div class="text-5xl mb-6">🤖</div>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">Bespoke AI Solutions</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Turn slow manual processes into custom AI tools and integrations built around your workflows. We create solutions that fit your business, not the other way around.
+                    </p>
                 </div>
                 
-                <div class="card-glow p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800">
-                    <div class="text-4xl text-neon-pink mb-4">🔍</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Automation & Process Audit</h3>
-                    <p class="text-gray-400">Identify bottlenecks in your current systems and get a practical roadmap to automate them.</p>
+                <!-- Service 3 -->
+                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
+                    <div class="text-5xl mb-6">⚙️</div>
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">Automation & Process Audit</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Identify bottlenecks in your current systems and get a practical roadmap to automate them. Stop wasting time on repetitive tasks that machines can handle.
+                    </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gray-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-4 text-white">How does <span class="text-neon-pink">it work?</span></h2>
-            <p class="text-xl text-center text-gray-300 mb-12">Our framework blends AI‑powered strategies with optimization of your existing stack and workflows.</p>
+    <!-- Process Framework -->
+    <section class="py-24 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">How does it work?</span></h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Our framework blends AI‑powered strategies with optimization of your existing stack and workflows.
+                </p>
+            </div>
             
-            <ol class="space-y-12">
-                <li class="relative flex items-start">
-                    <div class="flex flex-col items-center mr-4">
-                        <span class="w-10 h-10 flex items-center justify-center rounded-full bg-neon-pink text-white font-bold text-lg">1</span>
-                        <div class="w-px h-full bg-gray-600 my-2"></div>
+            <div class="space-y-12">
+                <!-- Step 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-5xl font-bold">
+                        01
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-neon-cyan mb-1">Discovery & Mapping</h3>
-                        <p class="text-lg text-gray-300">Audit your revenue engine—from lead sources to CRM workflows—to pinpoint where you’re leaking time and money.</p>
+                    <div class="flex-1">
+                        <h3 class="text-3xl font-bold mb-4 text-purple-400">Discovery & Mapping</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Audit your revenue engine—from lead sources to CRM workflows—to pinpoint where you're leaking time and money. We analyze every touchpoint to uncover hidden inefficiencies.
+                        </p>
                     </div>
-                </li>
+                </div>
                 
-                <li class="relative flex items-start">
-                    <div class="flex flex-col items-center mr-4">
-                        <span class="w-10 h-10 flex items-center justify-center rounded-full bg-neon-pink text-white font-bold text-lg">2</span>
-                        <div class="w-px h-full bg-gray-600 my-2"></div>
+                <!-- Step 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-5xl font-bold">
+                        02
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-neon-cyan mb-1">Tailored Campaigns & Recommendations</h3>
-                        <p class="text-lg text-gray-300">Design campaigns, automations, and playbooks that plug directly into your systems and team.</p>
+                    <div class="flex-1 md:text-right">
+                        <h3 class="text-3xl font-bold mb-4 text-purple-400">Tailored Campaigns & Recommendations</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Design campaigns, automations, and playbooks that plug directly into your systems and team. No generic templates—everything is built for your specific needs and goals.
+                        </p>
                     </div>
-                </li>
-
-                <li class="relative flex items-start">
-                    <div class="flex flex-col items-center mr-4">
-                        <span class="w-10 h-10 flex items-center justify-center rounded-full bg-neon-pink text-white font-bold text-lg">3</span>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0 w-32 h-32 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-5xl font-bold">
+                        03
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-neon-cyan mb-1">Flexible Optimization & Scale</h3>
-                        <p class="text-lg text-gray-300">Iterate and scale with you so campaigns, data, and AI agents get smarter and more profitable over time.</p>
+                    <div class="flex-1">
+                        <h3 class="text-3xl font-bold mb-4 text-purple-400">Flexible Optimization & Scale</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Iterate and scale with you so campaigns, data, and AI agents get smarter and more profitable over time. We continuously refine and improve as your business evolves.
+                        </p>
                     </div>
-                </li>
-            </ol>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="calendly-section" class="py-20 bg-gray-900 border-t border-neon-cyan">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-neon-pink mb-4">Ready to talk?</h2>
-            <p class="text-xl text-gray-300 mb-12">Pick a time that works for you and we’ll walk through your current stack, funnels, and hiring challenges.</p>
-
-            <iframe 
-                src="https://calendly.com/YOUR_USERNAME/30min-consult?embed_domain=sharphuman.com" 
-                width="100%" 
-                height="800px" 
-                frameborder="0" 
-                class="rounded-xl shadow-2xl shadow-neon-cyan/30"
-            ></iframe>
-            <p class="mt-4 text-sm text-gray-500">
-                ⚠️ **ACTION REQUIRED:** Please replace the placeholder link above with your actual Calendly URL!
-            </p>
+    <!-- About Section -->
+    <section class="py-24 bg-pattern">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="neon-border rounded-2xl p-12 bg-black/40 backdrop-blur-sm">
+                <h2 class="text-4xl font-bold mb-6 text-center"><span class="text-gradient">About Sharp Human</span></h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                    We're a team of AI specialists, growth strategists, and automation experts who believe that modern businesses shouldn't be held back by outdated processes. Our mission is to help companies leverage cutting-edge AI and automation to achieve sustainable, scalable growth.
+                </p>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    Whether you're struggling with manual recruitment processes, drowning in repetitive tasks, or simply not seeing the ROI from your current marketing efforts—we've got you covered. Let's build something remarkable together.
+                </p>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-black/50 py-8 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
-            &copy; 2025 Sharp Human. All rights reserved.
+    <!-- Calendly Section -->
+    <section id="calendly-section" class="py-24 bg-pattern">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">Ready to talk?</span></h2>
+                <p class="text-xl text-gray-400 mb-2">
+                    Book your free 60-minute consultation
+                </p>
+                <p class="text-gray-500">
+                    No sales pitch. Just an honest conversation about your challenges and how we can help.
+                </p>
+            </div>
+            
+            <!-- Calendly Embed -->
+            <div class="neon-border rounded-2xl overflow-hidden bg-black/40 backdrop-blur-sm">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/sharphuman/60min" style="min-width:320px;height:700px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/60 backdrop-blur-lg border-t border-purple-500/20 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23a855f7;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23ec4899;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M100 20 Q140 40 140 80 Q140 100 125 110 L100 125 L75 110 Q60 100 60 80 Q60 40 100 20 Z M85 70 Q90 60 100 55 Q110 60 115 70 Q115 80 105 90 L100 95 L95 90 Q85 80 85 70 Z M100 145 L120 155 L120 180 L100 170 L80 180 L80 155 Z' fill='url(%23grad)' stroke='url(%23grad)' stroke-width='3'/%3E%3Ctext x='135' y='125' font-family='Aptos, sans-serif' font-size='48' font-weight='bold' fill='url(%23grad)'%3E%23%3C/text%3E%3C/svg%3E" alt="Sharp Human" class="h-10 w-10">
+                        <span class="text-xl font-bold text-gradient">Sharp Human</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Modernizing growth and efficiency through AI-powered solutions.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-purple-400">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#calendly-section" class="text-gray-400 hover:text-purple-400 transition-colors">Book Consultation</a></li>
+                        <li><a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-400 hover:text-purple-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-purple-400">Connect</h3>
+                    <p class="text-gray-400 mb-4">
+                        <a href="mailto:hello@sharphuman.com" class="hover:text-purple-400 transition-colors">hello@sharphuman.com</a>
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-2xl">𝕏</a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-2xl">in</a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-2xl">📧</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-purple-500/20 pt-8 text-center text-gray-500">
+                <p>&copy; 2024 Sharp Human. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Calendly Script -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
