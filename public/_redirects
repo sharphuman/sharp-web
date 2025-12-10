@@ -1,8 +1,13 @@
-### Old /blog/* https://sharphuman.ghost.io/blog/:splat    200
-# Redirect /blog to the Ghost instance
-# /blog/* https://sharphuman.ghost.io/:splat  301
+# Sharp Human - Cloudflare Pages Redirects
+# 
+# NOTE: /blog, /rss, /sitemap are handled by Cloudflare Worker
+# See CLOUDFLARE_WORKER_SETUP.md for setup instructions
+#
+# If Worker is NOT set up yet, uncomment these lines:
+# /blog/* https://sharphuman.ghost.io/:splat 200
+# /blog https://sharphuman.ghost.io/ 200
+# /rss/* https://sharphuman.ghost.io/rss/:splat 200
+# /sitemap.xml https://sharphuman.ghost.io/sitemap.xml 200
 
-# Fallback (Optional: keeps the back button working smoothly)
-# /admin/* https://sharphuman.ghost.io/ghost/:splat 301
-# CLaude's recommendation
-/blog/* https://sharphuman.ghost.io/:splat 200
+# SPA fallback - all other routes
+/* /index.html 200
