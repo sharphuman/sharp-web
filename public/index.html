@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharp Human - AI-Powered Growth, Recruiting & Automation</title>
     
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM04LFY3FJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BM04LFY3FJ');
+    </script>
+    
     <!-- SEO Meta Tags -->
     <meta name="description" content="Sharp Human helps businesses grow faster with AI. We offer Sharp Suite (AI recruiting toolkit), automated cold email outreach, META advertising, and custom AI solutions.">
     <meta name="keywords" content="AI recruiting, cold email outreach, META ads, Facebook ads, AI automation, Sharp Suite, lead generation, hiring automation, custom AI solutions">
@@ -58,8 +67,15 @@
             background-image: url('./sharphuman_blue.png');
             background-attachment: fixed;
             background-size: cover;
-            background-position: center;
+            background-position: center top;
             background-blend-mode: lighten;
+        }
+        
+        /* Responsive background positioning */
+        @media (min-width: 1024px) {
+            body {
+                background-position: 45% top;
+            }
         }
         
         .bg-pattern {
@@ -213,8 +229,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section (Pushed down - starts after full viewport) -->
-    <section class="min-h-screen flex items-end pb-16 px-4 bg-pattern relative z-10">
+    <!-- Hero Section (Starts below the cloud in background) -->
+    <section class="min-h-[70vh] flex items-end pb-12 px-4 bg-pattern relative z-10 pt-20">
         <div class="max-w-5xl mx-auto text-center w-full">
             <p class="text-blue-400 font-semibold mb-3 text-lg">AI-Powered Growth Solutions</p>
             <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
@@ -618,4 +634,3 @@
     </footer>
 
     <!-- Calendly Script -->
-    
