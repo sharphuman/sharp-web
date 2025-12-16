@@ -3,26 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Human - Modernize Growth and Efficiency</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./logo1-3.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./logo1-3.png">
+    <title>Sharp Human - AI-Powered Growth, Recruiting & Automation</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sharp Human helps businesses grow faster with AI. We offer Sharp Suite (AI recruiting toolkit), automated cold email outreach, META advertising, and custom AI solutions.">
+    <meta name="keywords" content="AI recruiting, cold email outreach, META ads, Facebook ads, AI automation, Sharp Suite, lead generation, hiring automation, custom AI solutions">
+    <meta name="author" content="Sharp Human">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sharphuman.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharphuman.com">
+    <meta property="og:title" content="Sharp Human - AI-Powered Growth, Recruiting & Automation">
+    <meta property="og:description" content="Hire faster. Sell smarter. Scale efficiently. AI solutions that actually deliver results.">
+    <meta property="og:image" content="https://sharphuman.com/logo1-3.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sharp Human - AI-Powered Growth & Automation">
+    <meta name="twitter:description" content="Hire faster. Sell smarter. Scale efficiently.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sharp Human",
+        "url": "https://sharphuman.com",
+        "logo": "https://sharphuman.com/logo1-3.png",
+        "description": "AI-powered solutions for recruiting, lead generation, and business automation.",
+        "offers": [
+            {"@type": "Offer", "name": "Sharp Suite", "description": "AI-powered recruiting toolkit"},
+            {"@type": "Offer", "name": "Cold Email Outreach", "description": "Automated personalized email campaigns"},
+            {"@type": "Offer", "name": "META Advertising", "description": "Facebook and Instagram ad management"},
+            {"@type": "Offer", "name": "Bespoke AI Solutions", "description": "Custom AI tools and automation"}
+        ]
+    }
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./logo1-3.png">
     <link rel="apple-touch-icon" href="./logo1-3.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
+        * { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif; }
         
         body {
             background: #1a1a1a;
             background-image: url('./sharphuman_blue.png');
             background-attachment: fixed;
             background-size: cover;
-            background-position: center;
+            background-position: center top;
             background-blend-mode: lighten;
+        }
+        
+        /* Responsive background positioning */
+        @media (min-width: 1024px) {
+            body {
+                background-position: 45% top;
+            }
         }
         
         .bg-pattern {
@@ -40,7 +84,6 @@
             background: #ec4899;
             transition: all 0.3s ease;
         }
-        
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
@@ -51,66 +94,42 @@
             border: 2px solid #3b82f6;
             transition: all 0.3s ease;
         }
-        
         .btn-secondary:hover {
             background: #3b82f6;
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
         }
         
-        .card-hover {
-            transition: all 0.3s ease;
+        .service-card {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
         }
-        
-        .card-hover:hover {
+        .service-card:hover {
             border-color: rgba(59, 130, 246, 0.8);
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
         }
         
-        .neon-border {
-            border: 2px solid transparent;
-            background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                        linear-gradient(135deg, #3b82f6, #06b6d4) border-box;
-        }
-        
-        /* Process step border */
-        .process-step-border {
-            border: 2px solid rgba(59, 130, 246, 0.3);
+        .faq-item {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
         }
-        
-        .process-step-border:hover {
-            border-color: rgba(59, 130, 246, 0.6);
+        .faq-item:hover {
+            border-color: rgba(59, 130, 246, 0.5);
         }
         
-        /* Logo blending for dark backgrounds */
-        nav img {
-            mix-blend-mode: screen;
-            filter: brightness(1.1) contrast(1.2);
+        .process-step {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
         
-        footer img {
-            mix-blend-mode: screen;
-            filter: brightness(1.1) contrast(1.2);
-        }
-        
-        /* Process step logo styling */
-        .process-step-logo {
-            mix-blend-mode: screen;
-            filter: brightness(1.1) contrast(1.2);
-        }
-        
-        /* Mobile Menu */
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        
-        .mobile-menu.active {
-            max-height: 500px;
+        .feature-badge {
+            background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
         }
         
         /* Floating particles effect */
@@ -137,10 +156,13 @@
             75% { transform: translate(150px, -150px) scale(1.1) rotate(270deg); opacity: 0.16; }
         }
         
-        /* Smooth scroll offset for fixed nav */
-        section {
-            scroll-margin-top: 80px;
+        /* Logo blending for dark backgrounds */
+        nav img, footer img {
+            mix-blend-mode: screen;
+            filter: brightness(1.1) contrast(1.2);
         }
+        
+        section { scroll-margin-top: 80px; }
     </style>
 </head>
 <body class="text-white">
@@ -169,340 +191,437 @@
                     <span class="text-2xl font-bold text-white">Sharp Human</span>
                 </div>
                 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#what-to-expect" class="text-gray-300 hover:text-blue-400 transition-colors">What to Expect</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#sharp-suite" class="text-gray-300 hover:text-blue-400 transition-colors">Sharp Suite</a>
+                    <a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors">Services</a>
                     <a href="#how-it-works" class="text-gray-300 hover:text-blue-400 transition-colors">How It Works</a>
                     <a href="#faq" class="text-gray-300 hover:text-blue-400 transition-colors">FAQ</a>
-                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">About</a>
-                    <a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-300 hover:text-blue-400 transition-colors">Blog</a>
-                    <a href="#calendly-section" class="btn-primary px-6 py-3 rounded-lg font-semibold">Ready to talk?</a>
+                    <a href="https://demo.sharphuman.com" target="_blank" class="btn-primary px-5 py-2 rounded-lg font-semibold">Demo</a>
+                    <a href="https://sharphuman.com/blog" target="_blank" class="btn-primary px-5 py-2 rounded-lg font-semibold">Blog</a>
+                    <a href="#calendly-section" class="btn-secondary px-5 py-2 rounded-lg font-semibold">Let's Talk</a>
                 </div>
                 
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-white focus:outline-none" onclick="toggleMobileMenu()">
+                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
                     </svg>
                 </button>
             </div>
             
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="mobile-menu md:hidden">
-                <div class="px-2 pt-2 pb-4 space-y-2">
-                    <a href="#what-to-expect" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">What to Expect</a>
-                    <a href="#how-it-works" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">How It Works</a>
-                    <a href="#faq" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">FAQ</a>
-                    <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors" onclick="toggleMobileMenu()">About</a>
-                    <a href="https://sharphuman.ghost.io/" target="_blank" class="block px-3 py-2 text-gray-300 hover:text-blue-400 transition-colors">Blog</a>
-                    <a href="#calendly-section" class="block px-3 py-2 btn-primary rounded-lg font-semibold text-center" onclick="toggleMobileMenu()">Ready to talk?</a>
-                </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#sharp-suite" class="block py-2 text-gray-300">Sharp Suite</a>
+                <a href="#services" class="block py-2 text-gray-300">Services</a>
+                <a href="#how-it-works" class="block py-2 text-gray-300">How It Works</a>
+                <a href="#faq" class="block py-2 text-gray-300">FAQ</a>
+                <a href="https://demo.sharphuman.com" target="_blank" class="block py-2 btn-primary rounded-lg text-center mt-2">Demo</a>
+                <a href="https://sharphuman.com/blog" target="_blank" class="block py-2 btn-primary rounded-lg text-center mt-2">Blog</a>
+                <a href="#calendly-section" class="block py-2 btn-secondary rounded-lg text-center mt-2">Let's Talk</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-20 bg-pattern relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                Modernize Growth and <span class="text-gradient">Efficiency</span>
+    <!-- Hero Section (Starts below the cloud in background) -->
+    <section class="min-h-[70vh] flex items-end pb-12 px-4 bg-pattern relative z-10 pt-20">
+        <div class="max-w-5xl mx-auto text-center w-full">
+            <p class="text-blue-400 font-semibold mb-3 text-lg">AI-Powered Growth Solutions</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                Hire Faster. Sell Smarter.<br><span class="text-gradient">Scale Efficiently.</span>
             </h1>
-            <p class="text-2xl md:text-3xl text-gray-300 mb-4 max-w-4xl mx-auto">
-                Multi‑Channel Acquisition
+            <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-3xl mx-auto leading-relaxed">
+                We help businesses grow with AI — from recruiting tools that cut hiring time in half, 
+                to outreach systems that book meetings on autopilot.
             </p>
-            <p class="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
-                Stop relying on referrals. Use ads, outbound, and automation to consistently fill your calendar with qualified meetings.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#calendly-section" class="btn-primary inline-block px-8 py-4 rounded-lg text-lg font-semibold text-white">
-                    Book Your Free Consultation
+            <div class="flex flex-wrap gap-4 justify-center items-center">
+                <a href="https://demo.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold">
+                    Try Sharp Suite Demo
                 </a>
-                <a href="#how-it-works" class="btn-secondary inline-block px-8 py-4 rounded-lg text-lg font-semibold text-white">
-                    Learn How It Works
+                <a href="#calendly-section" class="btn-secondary px-8 py-4 rounded-xl text-lg font-semibold">
+                    Book a Free Consultation
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- What Should I Expect Section -->
-    <section id="what-to-expect" class="py-16 bg-pattern relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Sharp Suite Feature Section (FIRST - Featured Product) -->
+    <section id="sharp-suite" class="py-16 px-4 bg-pattern relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="feature-badge px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">FEATURED PRODUCT</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Sharp Suite</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Your AI recruiting co-pilot. Purpose-built tools for every stage of the hiring process.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6 mb-12">
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">📝</div>
+                    <h4 class="font-bold mb-2">JD Writer</h4>
+                    <p class="text-gray-400 text-sm">Create compelling job descriptions in seconds</p>
+                </div>
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">🔍</div>
+                    <h4 class="font-bold mb-2">CV Screener</h4>
+                    <p class="text-gray-400 text-sm">Automatically rank candidates against requirements</p>
+                </div>
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">🎯</div>
+                    <h4 class="font-bold mb-2">Interview Prep</h4>
+                    <p class="text-gray-400 text-sm">Generate role-specific questions & scorecards</p>
+                </div>
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">🎣</div>
+                    <h4 class="font-bold mb-2">Sourcing</h4>
+                    <p class="text-gray-400 text-sm">Boolean strings & outreach sequences</p>
+                </div>
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">✍️</div>
+                    <h4 class="font-bold mb-2">Content</h4>
+                    <p class="text-gray-400 text-sm">Blogs, social posts, employer branding</p>
+                </div>
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">💰</div>
+                    <h4 class="font-bold mb-2">Sales Analysis</h4>
+                    <p class="text-gray-400 text-sm">Analyze calls & extract insights</p>
+                </div>
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">🚀</div>
+                    <h4 class="font-bold mb-2">BD Outreach</h4>
+                    <p class="text-gray-400 text-sm">Multi-channel business development</p>
+                </div>
+                <div class="service-card rounded-xl p-6 text-center">
+                    <div class="text-3xl mb-3">🤖</div>
+                    <h4 class="font-bold mb-2">AI Assistant</h4>
+                    <p class="text-gray-400 text-sm">Your intelligent recruiting partner</p>
+                </div>
+            </div>
+            
+            <div class="text-center mb-8">
+                <p class="text-gray-400 mb-4">Powered by Claude, OpenAI & Perplexity</p>
+                <a href="https://demo.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold inline-block">
+                    Try Sharp Suite →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-pattern relative z-10">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">What Should I Expect</span></h2>
+                <p class="text-blue-400 font-semibold mb-2">WHAT WE DO</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Four Ways We Help You Grow</h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Whether you need more hires, more leads, or more hours in your day — we've got a solution.
+                </p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="flex items-start mb-4">
-                        <div class="text-2xl mr-4 text-blue-400">✓</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-blue-400">Multi-Channel Acquisition:</h3>
-                            <p class="text-gray-300 leading-relaxed">
-                                Stop relying on referrals. We deploy <strong>Ads and Smart Cold Outreach</strong> systems to fill your calendar with qualified sales meetings. Predictable lead flow, built on autopilot.
-                            </p>
-                        </div>
+                <!-- Sharp Suite Card -->
+                <div class="service-card rounded-2xl p-8 relative overflow-hidden">
+                    <div class="feature-badge absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold">
+                        PRODUCT
                     </div>
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Sharp Suite</h3>
+                    <p class="text-lg text-blue-400 mb-4">AI Recruiting Toolkit</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        A complete suite of AI tools for recruiters and HR teams. Write job descriptions in seconds, 
+                        screen CVs automatically, generate interview questions, craft outreach sequences, and more.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> 8 specialized recruiting apps</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Powered by Claude, OpenAI & Perplexity</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Cut hiring time by 50%+</li>
+                    </ul>
+                    <a href="#sharp-suite" class="text-blue-400 font-semibold hover:text-blue-300 transition-colors">
+                        Learn more →
+                    </a>
                 </div>
                 
-                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="flex items-start mb-4">
-                        <div class="text-2xl mr-4 text-blue-400">✓</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-blue-400">AI-Enhanced Talent Sourcing:</h3>
-                            <p class="text-gray-300 leading-relaxed">
-                                We move beyond simple keyword matching. By leveraging AI to analyze technical competency, behavioral fit. We save valuable hours searching for elite talent.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Cold Email Outreach -->
+                <div class="service-card rounded-2xl p-8">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Cold Email Outreach</h3>
+                    <p class="text-lg text-blue-400 mb-4">Meetings Booked on Autopilot</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        We build and run AI-powered email campaigns that book qualified meetings while you sleep. 
+                        Personalized at scale, delivered to the right inboxes.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Targeted prospect lists</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> AI-written personalized sequences</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Full campaign management</li>
+                    </ul>
+                    <p class="text-gray-500 text-sm">
+                        <strong class="text-white">You get:</strong> Qualified meetings on your calendar
+                    </p>
                 </div>
                 
-                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="flex items-start mb-4">
-                        <div class="text-2xl mr-4 text-blue-400">✓</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-blue-400">Bespoke AI Solutions:</h3>
-                            <p class="text-gray-300 leading-relaxed">
-                                Have a manual process that eats up hours? We build <strong>Custom AI Tools and Integrations</strong> specifically for your operational bottlenecks. No project too big or small.
-                            </p>
-                        </div>
-                    </div>
+                <!-- META Advertising -->
+                <div class="service-card rounded-2xl p-8">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">META Advertising</h3>
+                    <p class="text-lg text-blue-400 mb-4">Facebook & Instagram Ads That Convert</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Done-for-you ad campaigns that generate qualified leads. We handle strategy, creative, 
+                        targeting, and optimization — you just close the deals.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> AI-optimized creative & copy</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Precision audience targeting</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Continuous optimization</li>
+                    </ul>
+                    <p class="text-gray-500 text-sm">
+                        <strong class="text-white">You get:</strong> Qualified leads flowing consistently
+                    </p>
                 </div>
                 
-                <div class="card-hover bg-black/40 backdrop-blur-sm p-8 rounded-xl">
-                    <div class="flex items-start mb-4">
-                        <div class="text-2xl mr-4 text-blue-400">✓</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-3 text-blue-400">The Automation & Process Audit:</h3>
-                            <p class="text-gray-300 leading-relaxed">
-                                Is your business ready to scale? We analyze your current workflows to <strong>identify the manual bottlenecks</strong>—and provide a roadmap to automate them.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Bespoke AI Solutions -->
+                <div class="service-card rounded-2xl p-8">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Bespoke AI Solutions</h3>
+                    <p class="text-lg text-blue-400 mb-4">Custom Tools Built for You</p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Got a manual process that eats up hours? We build custom AI tools and automations 
+                        specifically for your workflows. If you can describe it, we can build it.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 mb-6">
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Custom AI chatbots & agents</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> Workflow automation</li>
+                        <li class="flex items-center gap-2"><span class="text-blue-400">→</span> System integrations</li>
+                    </ul>
+                    <p class="text-gray-500 text-sm">
+                        <strong class="text-white">You get:</strong> A custom AI solution you own
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Framework - How It Works -->
-    <section id="how-it-works" class="py-24 bg-pattern relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 px-4 bg-pattern relative z-10">
+        <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">How does it work?</span></h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Our unique framework blends AI-powered strategies with optimization of your current tech and workflows—always respecting your existing systems, staff, and business approach.
-                </p>
+                <p class="text-blue-400 font-semibold mb-2">THE PROCESS</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">How We Work Together</h2>
+                <p class="text-xl text-gray-400">Simple, transparent, and focused on results.</p>
             </div>
             
-            <div class="space-y-12">
-                <!-- Step 1 -->
-                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
-                    <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="flex-shrink-0 w-40 h-40 flex items-center justify-center">
-                            <img src="./logo1-3.png" alt="Step 1" class="w-full h-full object-contain process-step-logo">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Discovery & Mapping</h3>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                We audit your current revenue engine—from lead sources to CRM workflows—to pinpoint exactly where you are losing time and money.
-                            </p>
-                        </div>
+            <div class="space-y-8">
+                <div class="process-step rounded-xl p-8 flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Discovery Call</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            We hop on a call to understand your challenges, goals, and current setup. 
+                            No sales pitch — just an honest conversation about whether we can help.
+                        </p>
                     </div>
                 </div>
                 
-                <!-- Step 2 -->
-                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
-                    <div class="flex flex-col md:flex-row-reverse items-center gap-8">
-                        <div class="flex-shrink-0 w-40 h-40 flex items-center justify-center">
-                            <img src="./logo1-3.png" alt="Step 2" class="w-full h-full object-contain process-step-logo">
-                        </div>
-                        <div class="flex-1 md:text-right">
-                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Tailored Campaigns & Recommendations</h3>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                We build your custom Growth Infrastructure. Whether it's launching Meta Ads, deploying AI agents, or fixing your CRM, we install the systems you need to scale.
-                            </p>
-                        </div>
+                <div class="process-step rounded-xl p-8 flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Custom Strategy</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            We design a solution tailored to your specific needs — whether that's Sharp Suite access, 
+                            a lead gen campaign, or a custom AI build. You'll know exactly what you're getting.
+                        </p>
                     </div>
                 </div>
                 
-                <!-- Step 3 -->
-                <div class="process-step-border bg-black/40 backdrop-blur-sm rounded-xl p-8">
-                    <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="flex-shrink-0 w-40 h-40 flex items-center justify-center">
-                            <img src="./logo1-3.png" alt="Step 3" class="w-full h-full object-contain process-step-logo">
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-3xl font-bold mb-4 text-blue-400">Flexible Optimization & Scale</h3>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                We don't just build it and leave. We continuously optimize your campaigns and AI tools, ensuring your system gets smarter and more profitable over time.
-                            </p>
-                        </div>
+                <div class="process-step rounded-xl p-8 flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">We Build & Launch</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            We handle the heavy lifting. You get regular updates and can provide feedback as we go. 
+                            Most projects launch within 2-4 weeks.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="process-step rounded-xl p-8 flex gap-6 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Optimize & Scale</h3>
+                        <p class="text-gray-400 leading-relaxed">
+                            We don't disappear after launch. We monitor performance, make improvements, 
+                            and help you scale what's working. Your success is our success.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-pattern relative z-10">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="card-hover bg-black/40 backdrop-blur-sm rounded-xl p-12">
-                <h2 class="text-4xl font-bold mb-6 text-center"><span class="text-gradient">About Sharp Human</span></h2>
-                <p class="text-gray-300 text-lg leading-relaxed mb-6">
-                    We're a team of AI specialists, growth strategists, and automation experts who believe that modern businesses shouldn't be held back by outdated processes. Our mission is to help companies leverage cutting-edge AI and automation to achieve sustainable, scalable growth.
-                </p>
-                <p class="text-gray-300 text-lg leading-relaxed">
-                    Whether you're struggling with manual recruitment processes, drowning in repetitive tasks, or simply not seeing the ROI from your current marketing efforts—we've got you covered. Let's build something remarkable together.
-                </p>
+    <!-- Why Work With Us -->
+    <section class="py-24 px-4 bg-pattern relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-semibold mb-2">WHY SHARP HUMAN</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">We're Not Just Another Agency</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-2">We Move Fast</h3>
+                    <p class="text-gray-400">
+                        What takes agencies months, we do in weeks. AI lets us work at a different speed.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-2">Results, Not Retainers</h3>
+                    <p class="text-gray-400">
+                        We're focused on outcomes — hires made, meetings booked, time saved. Not billable hours.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-bold mb-2">We Actually Build</h3>
+                    <p class="text-gray-400">
+                        We don't just consult. We build real products and systems that you own and can use forever.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-24 bg-pattern relative z-10">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-4">
-                <p class="text-gray-400 uppercase tracking-wider text-sm mb-2">STILL NOT SURE?</p>
-                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">Frequently Asked Questions</span></h2>
-                <p class="text-xl text-gray-400 mb-12">We understand that choosing a growth partner is a big decision. Here are the answers to common questions we get.</p>
+    <section id="faq" class="py-24 px-4 bg-pattern relative z-10">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-semibold mb-2">QUESTIONS?</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked</h2>
             </div>
             
-            <div class="space-y-6">
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">What kind of results can we expect from your AI services?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Our goal is to deliver a significant increase in qualified leads or measurable operational efficiencies within the first few months. We tailor solutions to your specific business needs and focus on delivering a clear ROI.
+            <div class="space-y-4">
+                <div class="faq-item rounded-xl p-6">
+                    <h3 class="text-lg font-bold mb-2 text-white">What results can I expect?</h3>
+                    <p class="text-gray-400">
+                        It depends on the service. Sharp Suite users typically cut recruiting admin time by 50%+. 
+                        Our outreach clients see 10-30 qualified meetings per month. META ad clients see 3-5x ROAS 
+                        within the first quarter. We'll set realistic expectations on our discovery call.
                     </p>
                 </div>
                 
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">How does your implementation process work?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        We follow a clear process: Discovery to understand your challenges, Strategy to design your AI solution, Implementation to build and launch your systems, and Optimization to continuously refine for best results.
+                <div class="faq-item rounded-xl p-6">
+                    <h3 class="text-lg font-bold mb-2 text-white">How quickly can we start?</h3>
+                    <p class="text-gray-400">
+                        We can usually hop on a discovery call within a few days. From there, Sharp Suite access is 
+                        immediate. Outreach and ad campaigns typically launch within 2 weeks. Custom AI projects 
+                        vary but usually take 2-6 weeks depending on complexity.
                     </p>
                 </div>
                 
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">Do we need technical expertise to use your AI solutions?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Not at all. Our solutions are designed to be user-friendly. We handle the technical setup and integration, and provide necessary training and ongoing support.
+                <div class="faq-item rounded-xl p-6">
+                    <h3 class="text-lg font-bold mb-2 text-white">Do I need technical skills?</h3>
+                    <p class="text-gray-400">
+                        Nope. Sharp Suite is designed to be as simple as typing a prompt. For our services, 
+                        we handle all the technical work — you just provide input on strategy and review results.
                     </p>
                 </div>
                 
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">What types of businesses do you typically work with?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        We specialize in helping Cloud and AI Startups that are looking to scale their lead generation or improve operational efficiency using AI. Our ideal clients are often established businesses with a proven product or service.
+                <div class="faq-item rounded-xl p-6">
+                    <h3 class="text-lg font-bold mb-2 text-white">What's the pricing?</h3>
+                    <p class="text-gray-400">
+                        Sharp Suite is a monthly subscription. Outreach and META services are typically monthly 
+                        retainers plus ad spend. Bespoke AI projects are fixed-price based on scope. 
+                        We'll give you clear pricing after understanding your needs — no hidden fees.
                     </p>
                 </div>
                 
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">How long are your typical client engagements?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Initial implementation projects can take anywhere from a few weeks. For ongoing services, partnerships of at least several months allow us to deliver the most significant and sustainable results.
+                <div class="faq-item rounded-xl p-6">
+                    <h3 class="text-lg font-bold mb-2 text-white">What if it doesn't work?</h3>
+                    <p class="text-gray-400">
+                        We're upfront if we don't think we can help. Most of our services are month-to-month, 
+                        so if you're not seeing value, you can walk away.
                     </p>
                 </div>
                 
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">Do you offer flexible payment options?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Yes, we can discuss payment structures that work for your business, including options like milestone payments or monthly installments for ongoing services.
-                    </p>
-                </div>
-                
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">How quickly can we get started?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        We can typically schedule an initial discovery call within a few days. From there, if we're a good fit, we aim to kick off the strategy and implementation phase promptly.
-                    </p>
-                </div>
-                
-                <div class="bg-black/40 backdrop-blur-sm p-6 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-colors">
-                    <h3 class="text-xl font-bold mb-3 text-white">What if I don't have extensive experience in AI?</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        That's understandable. We focus on proven AI tools and strategies. Your commitment to learning and delivering value, combined with a well-structured offer, is key. We'll help you build an offer that leverages your strengths.
+                <div class="faq-item rounded-xl p-6">
+                    <h3 class="text-lg font-bold mb-2 text-white">Who do you typically work with?</h3>
+                    <p class="text-gray-400">
+                        Mostly B2B companies — startups, agencies, recruiting firms, and SMBs looking to scale. 
+                        Our sweet spot is businesses that have product-market fit but need help with lead gen, 
+                        hiring, or operational efficiency.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calendly Section -->
-    <section id="calendly-section" class="py-24 bg-pattern relative z-10">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- CTA / Calendly Section -->
+    <section id="calendly-section" class="py-24 px-4 bg-pattern relative z-10">
+        <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-5xl font-bold mb-4"><span class="text-gradient">Ready to talk?</span></h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-gradient">Ready to Talk?</span>
+                </h2>
                 <p class="text-xl text-gray-400 mb-2">
-                    Book your free 60-minute consultation
+                    Book a free 30-minute consultation
                 </p>
                 <p class="text-gray-500">
-                    No sales pitch. Just an honest conversation about your challenges and how we can help.
+                    No commitment. No sales pitch. Just an honest conversation about your challenges.
                 </p>
             </div>
             
-            <!-- Calendly Embed -->
-            <div class="neon-border rounded-2xl overflow-hidden bg-black/40 backdrop-blur-sm">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/sharphuman/60min" style="min-width:320px;height:700px;"></div>
+            <div class="service-card rounded-2xl overflow-hidden">
+                <!-- Calendly inline widget with dark theme -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/sharphuman/60min?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=ec4899" style="min-width:320px;height:700px;"></div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#1a1a1a]/95 backdrop-blur-lg border-t border-blue-500/20 py-12 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
+    <footer class="bg-[#1a1a1a]/95 backdrop-blur-lg border-t border-blue-500/20 py-12 px-4 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <img src="./logo1-3.png" alt="Sharp Human" class="h-10 w-auto">
-                        <span class="text-xl font-bold text-white">Sharp Human</span>
+                        <span class="text-xl font-bold">Sharp Human</span>
                     </div>
-                    <p class="text-gray-400">
-                        Modernizing growth and efficiency through AI-powered solutions.
+                    <p class="text-gray-400 text-sm">
+                        AI-powered solutions for growth, recruiting, and automation.
                     </p>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 text-blue-400">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#what-to-expect" class="text-gray-400 hover:text-blue-400 transition-colors">What to Expect</a></li>
-                        <li><a href="#how-it-works" class="text-gray-400 hover:text-blue-400 transition-colors">How It Works</a></li>
-                        <li><a href="#faq" class="text-gray-400 hover:text-blue-400 transition-colors">FAQ</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors">About</a></li>
-                        <li><a href="#calendly-section" class="text-gray-400 hover:text-blue-400 transition-colors">Book Consultation</a></li>
-                        <li><a href="https://sharphuman.ghost.io/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors">Blog</a></li>
+                    <h3 class="font-semibold mb-4 text-blue-400">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#sharp-suite" class="text-gray-400 hover:text-white transition-colors">Sharp Suite</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Cold Email Outreach</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">META Advertising</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Custom AI Solutions</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 text-blue-400">Connect</h3>
-                    <p class="text-gray-400 mb-4">
-                        <a href="/cdn-cgi/l/email-protection#83f4e6e1f0eaf7e6c3f0ebe2f1f3ebf6eee2edade0ecee" class="hover:text-blue-400 transition-colors"><span class="__cf_email__" data-cfemail="700715120319041530031811020018051d111e5e131f1d">[email&#160;protected]</span></a>
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">𝕏</a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">in</a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">📧</a>
-                    </div>
+                    <h3 class="font-semibold mb-4 text-blue-400">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="https://sharphuman.com/blog" target="_blank" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4 text-blue-400">Get in Touch</h3>
+                    <p class="text-gray-400 text-sm mb-4"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a626f6666654a79626b787a627f676b6424696567">[email&#160;protected]</a></p>
+                    <a href="#calendly-section" class="btn-primary px-4 py-2 rounded-lg text-sm font-semibold inline-block">
+                        Book a Call
+                    </a>
                 </div>
             </div>
             
-            <div class="border-t border-blue-500/20 pt-8 text-center text-gray-500">
-                <p>&copy; 2024 Sharp Human. All rights reserved.</p>
+            <div class="border-t border-blue-500/20 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2024 Sharp Human. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Calendly Script -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    
-    <!-- Mobile Menu Script -->
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('active');
-        }
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const menu = document.getElementById('mobile-menu');
-            const button = event.target.closest('button');
-            const
