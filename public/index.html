@@ -71,10 +71,16 @@
             background-blend-mode: lighten;
         }
         
-        /* Responsive background positioning */
+        /* Responsive background positioning - shift right on wide screens */
         @media (min-width: 1024px) {
             body {
-                background-position: 55% top;
+                background-position: 60% top;
+            }
+        }
+        
+        @media (min-width: 1400px) {
+            body {
+                background-position: 65% top;
             }
         }
         
@@ -251,14 +257,16 @@
         </div>
     </section>
 
-    <!-- Sharp Suite Feature Section (FIRST - Featured Product) -->
+    <!-- Sharp Suite Feature Section -->
     <section id="sharp-suite" class="py-16 px-4 bg-pattern relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <span class="feature-badge px-4 py-1 rounded-full text-sm font-semibold mb-4 inline-block">FEATURED PRODUCT</span>
+                <a href="https://demo.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold inline-block mb-6">
+                    Try Sharp Suite →
+                </a>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Sharp Suite</h2>
                 <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                    Your AI recruiting co-pilot. Purpose-built tools for every stage of the hiring process.
+                    <span class="text-pink-500 font-semibold">Your AI recruiting co-pilot.</span> Purpose-built tools for every stage of the hiring process.
                 </p>
             </div>
             
@@ -303,13 +311,6 @@
                     <h4 class="font-bold mb-2">AI Assistant</h4>
                     <p class="text-gray-400 text-sm">Your intelligent recruiting partner</p>
                 </div>
-            </div>
-            
-            <div class="text-center mb-8">
-                <p class="text-gray-400 mb-4">Powered by Claude, OpenAI & Perplexity</p>
-                <a href="https://demo.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold inline-block">
-                    Try Sharp Suite →
-                </a>
             </div>
         </div>
     </section>
