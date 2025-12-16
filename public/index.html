@@ -67,21 +67,8 @@
             background-image: url('./sharphuman_blue.png');
             background-attachment: fixed;
             background-size: cover;
-            background-position: center top;
+            background-position: center;
             background-blend-mode: lighten;
-        }
-        
-        /* Responsive background positioning - shift right on wide screens */
-        @media (min-width: 1024px) {
-            body {
-                background-position: 60% top;
-            }
-        }
-        
-        @media (min-width: 1400px) {
-            body {
-                background-position: 65% top;
-            }
         }
         
         .bg-pattern {
@@ -238,13 +225,12 @@
     <!-- Hero Section (Starts below the cloud in background) -->
     <section class="min-h-[70vh] flex items-end pb-12 px-4 bg-pattern relative z-10 pt-20">
         <div class="max-w-5xl mx-auto text-center w-full">
-            <p class="text-blue-400 font-semibold mb-3 text-lg">AI-Powered Growth Solutions</p>
             <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
                 Hire Faster. Sell Smarter.<br><span class="text-gradient">Scale Efficiently.</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-3xl mx-auto leading-relaxed">
-                We help businesses grow with AI — from recruiting tools that cut hiring time in half, 
-                to outreach systems that book meetings on autopilot.
+                We help businesses grow with AI — from recruiting tools that <span class="text-pink-500 font-semibold">cut hiring time in half</span>, 
+                to outreach systems that <span class="text-pink-500 font-semibold">book meetings on autopilot</span>.
             </p>
             <div class="flex flex-wrap gap-4 justify-center items-center">
                 <a href="https://demo.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold">
