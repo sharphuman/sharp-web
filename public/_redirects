@@ -9,5 +9,11 @@
 # /rss/* https://sharphuman.ghost.io/rss/:splat 200
 # /sitemap.xml https://sharphuman.ghost.io/sitemap.xml 200
 
+# Comparison pages - serve HTML without extension
+/vs/manatal /vs/manatal.html 200
+/vs/loxo /vs/loxo.html 200
+/vs/workable /vs/workable.html 200
+/vs /vs/index.html 200
+
 # SPA fallback - all other routes
 /* /index.html 200

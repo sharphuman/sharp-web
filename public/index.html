@@ -41,6 +41,15 @@
     <!-- Additional SEO Tags -->
     <meta name="theme-color" content="#1a1a1a">
     <meta name="msapplication-TileColor" content="#1a1a1a">
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="United States">
+    <meta http-equiv="content-language" content="en-US">
+    
+    <!-- Performance hints -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
@@ -78,9 +87,9 @@
         "offers": {
             "@type": "AggregateOffer",
             "lowPrice": "0",
-            "highPrice": "199",
+            "highPrice": "79",
             "priceCurrency": "USD",
-            "offerCount": "4"
+            "offerCount": "3"
         },
         "featureList": [
             "AI Job Description Writer",
@@ -128,7 +137,7 @@
                 "name": "What is the pricing for Sharp Recruit?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sharp Recruit offers a free tier, Solo plan at $29/month, Pro at $79/month, and Team at $199/month for small agencies."
+                    "text": "Sharp Recruit offers a free tier, Solo plan at $29/month, and Elite at $79/month."
                 }
             }
         ]
@@ -186,7 +195,7 @@
                     <a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors">Services</a>
                     <a href="#how-it-works" class="text-gray-300 hover:text-blue-400 transition-colors">How It Works</a>
                     <a href="#faq" class="text-gray-300 hover:text-blue-400 transition-colors">FAQ</a>
-                    <a href="https://portal.sharphuman.com" target="_blank" class="btn-primary px-5 py-2 rounded-lg font-semibold">Try Free</a>
+                    <a href="https://app.sharphuman.com" target="_blank" class="btn-primary px-5 py-2 rounded-lg font-semibold">Try Free</a>
                     <a href="https://sharphuman.com/blog" target="_blank" class="btn-primary px-5 py-2 rounded-lg font-semibold">Blog</a>
                     <a href="#calendly-section" class="btn-secondary px-5 py-2 rounded-lg font-semibold">Let's Talk</a>
                 </div>
@@ -199,7 +208,7 @@
                 <a href="#services" class="block py-2 text-gray-300">Services</a>
                 <a href="#how-it-works" class="block py-2 text-gray-300">How It Works</a>
                 <a href="#faq" class="block py-2 text-gray-300">FAQ</a>
-                <a href="https://portal.sharphuman.com" target="_blank" class="block py-2 btn-primary rounded-lg text-center mt-2">Try Free</a>
+                <a href="https://app.sharphuman.com" target="_blank" class="block py-2 btn-primary rounded-lg text-center mt-2">Try Free</a>
                 <a href="https://sharphuman.com/blog" target="_blank" class="block py-2 btn-primary rounded-lg text-center mt-2">Blog</a>
                 <a href="#calendly-section" class="block py-2 btn-secondary rounded-lg text-center mt-2">Let's Talk</a>
             </div>
@@ -211,7 +220,7 @@
             <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Hire Faster. Sell Smarter.<br><span class="text-gradient">Scale Efficiently.</span></h1>
             <p class="text-lg md:text-xl text-gray-400 mb-6 max-w-3xl mx-auto leading-relaxed">We help businesses <span class="text-pink-500 font-semibold">grow with AI</span> — from recruiting tools that <span class="text-pink-500 font-semibold">cut hiring time in half</span>, to outreach systems that <span class="text-pink-500 font-semibold">book meetings on autopilot</span>.</p>
             <div class="flex flex-wrap gap-4 justify-center items-center">
-                <a href="https://portal.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold">Try Sharp Recruit Free</a>
+                <a href="https://app.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold">Try Sharp Recruit Free</a>
                 <a href="#calendly-section" class="btn-secondary px-8 py-4 rounded-xl text-lg font-semibold">Book a Free Consultation</a>
             </div>
         </div>
@@ -220,9 +229,14 @@
     <section id="sharp-recruit" class="py-16 px-4 bg-pattern relative z-10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <a href="https://portal.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold inline-block mb-6">Try Sharp Recruit Free →</a>
+                <a href="https://app.sharphuman.com" target="_blank" class="btn-primary px-8 py-4 rounded-xl text-lg font-semibold inline-block mb-6">Try Sharp Recruit Free →</a>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Sharp Recruit</h2>
                 <p class="text-xl text-gray-400 max-w-2xl mx-auto"><span class="text-pink-500 font-semibold">Your AI recruiting co-pilot.</span> Purpose-built tools for every stage of the hiring process. Write JDs in 2 minutes. Screen 50 CVs in 10 minutes.</p>
+                <div class="mt-6 inline-flex items-center gap-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/30 rounded-full px-6 py-3">
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span class="text-white font-semibold">GitHub-Native Sourcing</span>
+                    <span class="text-gray-400">— Analyze candidates' actual code, not just their LinkedIn</span>
+                </div>
             </div>
             <div class="grid md:grid-cols-4 gap-6 mb-12">
                 <a href="https://jd.sharphuman.com" target="_blank" class="service-card rounded-xl p-6 text-center block">
@@ -268,7 +282,7 @@
             </div>
             <div class="text-center mt-8 p-6 service-card rounded-xl max-w-2xl mx-auto">
                 <p class="text-gray-400 mb-2">Pricing that works for independent recruiters & small agencies</p>
-                <p class="text-2xl font-bold"><span class="text-green-400">Free</span> · <span class="text-blue-400">$29</span>/mo Solo · <span class="text-pink-400">$79</span>/mo Pro · <span class="text-purple-400">$199</span>/mo Team</p>
+                <p class="text-2xl font-bold"><span class="text-green-400">Free</span> · <span class="text-blue-400">$29</span>/mo Solo · <span class="text-pink-400">$79</span>/mo Elite</p>
                 <p class="text-sm text-gray-500 mt-2">Not $169/mo like the enterprise tools. Built for you.</p>
             </div>
         </div>
@@ -347,7 +361,7 @@
                 <div class="process-step rounded-xl p-8 text-center">
                     <div class="text-5xl font-bold text-blue-400/20 mb-4">01</div>
                     <h3 class="text-xl font-bold mb-3">Discovery Call</h3>
-                    <p class="text-gray-400">30 minutes. We learn about your challenges, goals, and what's not working. No pitch, just conversation.</p>
+                    <p class="text-gray-400">30-60 minutes. We learn about your challenges, goals, and what's not working. No pitch, just conversation.</p>
                 </div>
                 <div class="process-step rounded-xl p-8 text-center">
                     <div class="text-5xl font-bold text-blue-400/20 mb-4">02</div>
@@ -410,7 +424,7 @@
                 </div>
                 <div class="faq-item rounded-xl p-6">
                     <h3 class="text-lg font-bold mb-2 text-white">What's the pricing?</h3>
-                    <p class="text-gray-400">Sharp Recruit has a free tier, then $29/mo (Solo), $79/mo (Pro), or $199/mo (Team). Outreach and META services are monthly retainers plus ad spend. Bespoke AI projects are fixed-price based on scope.</p>
+                    <p class="text-gray-400">Sharp Recruit has a free tier, then $29/mo (Solo) or $79/mo (Elite). Outreach and META services are monthly retainers plus ad spend. Bespoke AI projects are fixed-price based on scope.</p>
                 </div>
                 <div class="faq-item rounded-xl p-6">
                     <h3 class="text-lg font-bold mb-2 text-white">What if it doesn't work?</h3>
@@ -428,7 +442,7 @@
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4"><span class="text-gradient">Ready to Talk?</span></h2>
-                <p class="text-xl text-gray-400 mb-2">Book a free 30-minute consultation</p>
+                <p class="text-xl text-gray-400 mb-2">Book a free 60-minute consultation</p>
                 <p class="text-gray-500">No commitment. No sales pitch. Just an honest conversation about your challenges.</p>
             </div>
             <div class="service-card rounded-2xl overflow-hidden">
@@ -453,7 +467,7 @@
                         <li><a href="https://jd.sharphuman.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">AI JD Writer</a></li>
                         <li><a href="https://screen.sharphuman.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">AI CV Screener</a></li>
                         <li><a href="https://interview.sharphuman.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">Interview Prep</a></li>
-                        <li><a href="https://portal.sharphuman.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">All Tools →</a></li>
+                        <li><a href="https://app.sharphuman.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">All Tools →</a></li>
                     </ul>
                 </div>
                 <div>
@@ -471,7 +485,7 @@
                 </div>
             </div>
             <div class="border-t border-blue-500/20 pt-8 text-center text-gray-500 text-sm">
-                <p>© 2024 Sharp Human. All rights reserved.</p>
+                <p>© 2025 Sharp Human. All rights reserved.</p>
             </div>
         </div>
     </footer>
