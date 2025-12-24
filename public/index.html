@@ -18,47 +18,54 @@
     <meta property="og:description" content="AI recruiting tools + done-for-you growth marketing. Built by a technologist for people who hate clunky software.">
     <meta property="og:image" content="https://sharphuman.com/logo1-3.png">
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sharp Human | AI Recruiting Tools & Growth Marketing">
-    <meta name="twitter:description" content="AI recruiting tools + done-for-you growth marketing.">
-    
     <link rel="icon" type="image/png" href="./logo1-3.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-        body { background: #0f0f0f; }
-        .gradient-border { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); padding: 1px; }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card { background: #1a1a1a; border: 1px solid #2a2a2a; transition: all 0.3s ease; }
-        .card:hover { border-color: #3b82f6; transform: translateY(-2px); }
-        .btn-primary { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); transition: all 0.3s ease; }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3); }
-        .btn-secondary { background: transparent; border: 1px solid #3b82f6; transition: all 0.3s ease; }
-        .btn-secondary:hover { background: rgba(59, 130, 246, 0.1); }
-        .comparison-table th, .comparison-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #2a2a2a; }
-        .comparison-table tr:hover { background: #1f1f1f; }
-        .winner { color: #22c55e; font-weight: 600; }
+        * { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif; }
+        body { background: #1a1a1a; background-image: url('./sharphuman_blue.png'); background-attachment: fixed; background-size: cover; background-position: center; background-blend-mode: lighten; }
+        .bg-pattern { background: linear-gradient(180deg, rgba(26,26,26,0.85) 0%, rgba(26,26,26,0.75) 50%, rgba(26,26,26,0.85) 100%); }
+        .text-gradient { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn-primary { background: #ec4899; transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4); }
+        .btn-secondary { background: transparent; border: 1px solid #ec4899; transition: all 0.3s ease; }
+        .btn-secondary:hover { background: rgba(236, 72, 153, 0.1); }
+        .card { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(236, 72, 153, 0.2); transition: all 0.3s ease; }
+        .card:hover { border-color: rgba(236, 72, 153, 0.5); transform: translateY(-2px); }
+        .particle { position: absolute; pointer-events: none; animation: float 25s infinite; }
+        .particle img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: screen; filter: brightness(1.1) contrast(1.2); opacity: 0.08; }
+        @keyframes float { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(80px, -80px) rotate(90deg); } 50% { transform: translate(-60px, -160px) rotate(180deg); } 75% { transform: translate(100px, -100px) rotate(270deg); } }
         section { scroll-margin-top: 80px; }
+        .comparison-table th, .comparison-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(236, 72, 153, 0.1); }
+        .comparison-table tr:hover { background: rgba(236, 72, 153, 0.05); }
+        .winner { color: #22c55e; font-weight: 600; }
     </style>
 </head>
-<body class="text-gray-100">
+<body class="text-white">
+
+    <!-- Floating particles -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="particle" style="width: 180px; height: 180px; top: 10%; left: 10%; animation-delay: 0s;"><img src="./logo1-3.png" alt=""></div>
+        <div class="particle" style="width: 140px; height: 140px; top: 60%; left: 85%; animation-delay: 6s;"><img src="./logo1-3.png" alt=""></div>
+        <div class="particle" style="width: 160px; height: 160px; top: 75%; left: 15%; animation-delay: 12s;"><img src="./logo1-3.png" alt=""></div>
+        <div class="particle" style="width: 120px; height: 120px; top: 25%; left: 75%; animation-delay: 18s;"><img src="./logo1-3.png" alt=""></div>
+    </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#0f0f0f]/95 backdrop-blur-lg border-b border-gray-800">
+    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-pink-500/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16">
                 <a href="/" class="flex items-center space-x-2">
-                    <img src="./logo1-3.png" alt="Sharp Human" class="h-8 w-auto">
+                    <img src="./logo1-3.png" alt="Sharp Human" class="h-8 w-auto" style="mix-blend-mode: screen;">
                     <span class="text-lg font-bold">Sharp Human</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#sharp-recruit" class="text-gray-400 hover:text-white text-sm">Sharp Recruit</a>
-                    <a href="#compare" class="text-gray-400 hover:text-white text-sm">Compare</a>
-                    <a href="#services" class="text-gray-400 hover:text-white text-sm">Services</a>
-                    <a href="https://sharphuman.com/blog" class="text-gray-400 hover:text-white text-sm">Blog</a>
-                    <a href="https://app.sharphuman.com" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Try Free</a>
+                    <a href="#sharp-recruit" class="text-gray-400 hover:text-pink-400 text-sm">Sharp Recruit</a>
+                    <a href="#compare" class="text-gray-400 hover:text-pink-400 text-sm">Compare</a>
+                    <a href="#services" class="text-gray-400 hover:text-pink-400 text-sm">Services</a>
+                    <a href="https://sharphuman.com/blog" class="text-gray-400 hover:text-pink-400 text-sm">Blog</a>
+                    <a href="https://app.sharphuman.com" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">Try Free</a>
                 </div>
                 <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path></svg>
@@ -74,22 +81,22 @@
     </nav>
 
     <!-- Hero -->
-    <section class="pt-28 pb-16 px-4">
+    <section class="pt-28 pb-20 px-4 bg-pattern relative z-10">
         <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-flex items-center bg-blue-500/10 border border-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
-                Early Access · Indie Pricing
+            <div class="inline-flex items-center bg-pink-500/10 border border-pink-500/30 text-pink-400 px-3 py-1 rounded-full text-xs font-medium mb-6">
+                🚀 Early Access · Indie Pricing
             </div>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                AI Recruiting Tools<br><span class="gradient-text">& Growth Marketing</span>
+                AI Recruiting Tools<br><span class="text-gradient">& Growth Marketing</span>
             </h1>
             <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Use Sharp Recruit to hire faster with AI. Or let us handle your cold email, META ads, and custom AI builds. Your choice.
+                Use <span class="text-pink-400 font-semibold">Sharp Recruit</span> to hire faster with AI. Or let us handle your cold email, META ads, and custom AI builds.
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
-                <a href="https://app.sharphuman.com" class="btn-primary text-white px-6 py-3 rounded-lg font-medium">
+                <a href="https://app.sharphuman.com" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
                     Try Sharp Recruit Free →
                 </a>
-                <a href="#services" class="btn-secondary text-white px-6 py-3 rounded-lg font-medium">
+                <a href="#services" class="btn-secondary text-pink-400 px-6 py-3 rounded-lg font-semibold">
                     View Services
                 </a>
             </div>
@@ -97,32 +104,32 @@
     </section>
 
     <!-- Sharp Recruit Section -->
-    <section id="sharp-recruit" class="py-20 px-4">
+    <section id="sharp-recruit" class="py-20 px-4 bg-pattern relative z-10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-blue-400 text-sm font-medium mb-2">THE PRODUCT</p>
+                <p class="text-pink-400 text-sm font-semibold mb-2">THE PRODUCT</p>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Sharp Recruit</h2>
                 <p class="text-gray-400 max-w-xl mx-auto">AI tools for every stage of recruiting. Write JDs in 2 minutes. Screen 50 CVs in 10 minutes. No enterprise bloat.</p>
             </div>
             
             <!-- Features Grid -->
             <div class="grid md:grid-cols-4 gap-4 mb-12">
-                <div class="card rounded-xl p-5">
+                <div class="card rounded-xl p-5 text-center">
                     <div class="text-2xl mb-3">📝</div>
                     <h3 class="font-semibold mb-1">JD Writer</h3>
                     <p class="text-gray-500 text-sm">Generate job descriptions in under 2 minutes</p>
                 </div>
-                <div class="card rounded-xl p-5">
+                <div class="card rounded-xl p-5 text-center">
                     <div class="text-2xl mb-3">🔍</div>
                     <h3 class="font-semibold mb-1">CV Screener</h3>
                     <p class="text-gray-500 text-sm">Screen 50 resumes in 10 minutes with AI</p>
                 </div>
-                <div class="card rounded-xl p-5">
+                <div class="card rounded-xl p-5 text-center">
                     <div class="text-2xl mb-3">🎯</div>
                     <h3 class="font-semibold mb-1">Interview Prep</h3>
                     <p class="text-gray-500 text-sm">AI questions and scorecards for any role</p>
                 </div>
-                <div class="card rounded-xl p-5">
+                <div class="card rounded-xl p-5 text-center">
                     <div class="text-2xl mb-3">📧</div>
                     <h3 class="font-semibold mb-1">Outreach</h3>
                     <p class="text-gray-500 text-sm">Personalized candidate sequences</p>
@@ -130,7 +137,7 @@
             </div>
 
             <!-- GitHub Callout -->
-            <div class="card rounded-xl p-6 mb-12 border-blue-500/30">
+            <div class="card rounded-xl p-6 mb-12 border-pink-500/30">
                 <div class="flex flex-col md:flex-row md:items-center gap-4">
                     <div class="flex items-center gap-3">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -140,45 +147,45 @@
                         </div>
                     </div>
                     <div class="md:ml-auto">
-                        <span class="text-xs text-blue-400 bg-blue-500/10 px-2 py-1 rounded">Coming Soon</span>
+                        <span class="text-xs text-pink-400 bg-pink-500/10 px-2 py-1 rounded">Coming Soon</span>
                     </div>
                 </div>
             </div>
 
             <!-- Pricing -->
             <div class="grid md:grid-cols-3 gap-6 mb-8">
-                <div class="card rounded-xl p-6">
+                <div class="card rounded-xl p-6 text-center">
                     <h3 class="font-semibold mb-1">Free</h3>
                     <p class="text-3xl font-bold mb-4">$0<span class="text-sm text-gray-500 font-normal">/mo</span></p>
-                    <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
                         <li>✓ 5 JDs per month</li>
                         <li>✓ 10 CV screens</li>
                         <li>✓ Basic features</li>
                     </ul>
-                    <a href="https://app.sharphuman.com" class="block text-center btn-secondary text-white px-4 py-2 rounded-lg text-sm">Get Started</a>
+                    <a href="https://app.sharphuman.com" class="block text-center btn-secondary text-pink-400 px-4 py-2 rounded-lg text-sm font-semibold">Get Started</a>
                 </div>
-                <div class="card rounded-xl p-6 border-blue-500/50 relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs px-2 py-1 rounded">Popular</div>
+                <div class="card rounded-xl p-6 text-center border-pink-500/50 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-pink-500 text-white text-xs px-2 py-1 rounded font-semibold">Popular</div>
                     <h3 class="font-semibold mb-1">Solo</h3>
                     <p class="text-3xl font-bold mb-4">$29<span class="text-sm text-gray-500 font-normal">/mo</span></p>
-                    <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
                         <li>✓ Unlimited JDs</li>
                         <li>✓ 100 CV screens</li>
                         <li>✓ Full interview tools</li>
                         <li>✓ Export to DOCX/PDF</li>
                     </ul>
-                    <a href="https://app.sharphuman.com" class="block text-center btn-primary text-white px-4 py-2 rounded-lg text-sm">Start Free Trial</a>
+                    <a href="https://app.sharphuman.com" class="block text-center btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">Start Free Trial</a>
                 </div>
-                <div class="card rounded-xl p-6">
+                <div class="card rounded-xl p-6 text-center">
                     <h3 class="font-semibold mb-1">Elite</h3>
                     <p class="text-3xl font-bold mb-4">$79<span class="text-sm text-gray-500 font-normal">/mo</span></p>
-                    <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
                         <li>✓ Everything unlimited</li>
                         <li>✓ Team features</li>
                         <li>✓ Priority support</li>
                         <li>✓ API access</li>
                     </ul>
-                    <a href="https://app.sharphuman.com" class="block text-center btn-secondary text-white px-4 py-2 rounded-lg text-sm">Start Free Trial</a>
+                    <a href="https://app.sharphuman.com" class="block text-center btn-secondary text-pink-400 px-4 py-2 rounded-lg text-sm font-semibold">Start Free Trial</a>
                 </div>
             </div>
             <p class="text-center text-gray-500 text-sm">No credit card required · Cancel anytime</p>
@@ -186,10 +193,10 @@
     </section>
 
     <!-- Comparison Section -->
-    <section id="compare" class="py-20 px-4 bg-[#0a0a0a]">
+    <section id="compare" class="py-20 px-4 bg-[#151515] relative z-10">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-blue-400 text-sm font-medium mb-2">COMPARE</p>
+                <p class="text-pink-400 text-sm font-semibold mb-2">COMPARE</p>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">How We Stack Up</h2>
                 <p class="text-gray-400">Honest comparison. We're not the right fit for everyone.</p>
             </div>
@@ -199,7 +206,7 @@
                     <thead>
                         <tr class="text-gray-400">
                             <th class="text-left">Feature</th>
-                            <th class="text-center text-blue-400">Sharp Recruit</th>
+                            <th class="text-center text-pink-400">Sharp Recruit</th>
                             <th class="text-center">Manatal</th>
                             <th class="text-center">Loxo</th>
                             <th class="text-center">Workable</th>
@@ -226,13 +233,6 @@
                             <td class="text-center">$75-275/mo</td>
                             <td class="text-center">???</td>
                             <td class="text-center">$313+/mo</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">Pricing Model</td>
-                            <td class="text-center winner">Flat rate</td>
-                            <td class="text-center">Per seat</td>
-                            <td class="text-center">Custom</td>
-                            <td class="text-center">Per seat</td>
                         </tr>
                         <tr>
                             <td class="font-medium">Free Trial</td>
@@ -264,7 +264,7 @@
                         </tr>
                         <tr>
                             <td class="font-medium">Best For</td>
-                            <td class="text-center text-blue-400">Indie recruiters, AI workflow</td>
+                            <td class="text-center text-pink-400">Indie recruiters</td>
                             <td class="text-center text-gray-500">Small agencies</td>
                             <td class="text-center text-gray-500">Enterprise</td>
                             <td class="text-center text-gray-500">Mid-market HR</td>
@@ -276,19 +276,19 @@
             <div class="mt-8 text-center">
                 <p class="text-gray-500 text-sm mb-4">Want the deep dive?</p>
                 <div class="flex flex-wrap gap-3 justify-center">
-                    <a href="/vs/manatal" class="text-sm text-gray-400 hover:text-white border border-gray-700 px-4 py-2 rounded-lg hover:border-gray-500">vs Manatal →</a>
-                    <a href="/vs/loxo" class="text-sm text-gray-400 hover:text-white border border-gray-700 px-4 py-2 rounded-lg hover:border-gray-500">vs Loxo →</a>
-                    <a href="/vs/workable" class="text-sm text-gray-400 hover:text-white border border-gray-700 px-4 py-2 rounded-lg hover:border-gray-500">vs Workable →</a>
+                    <a href="/vs/manatal" class="text-sm text-gray-400 hover:text-pink-400 border border-gray-700 px-4 py-2 rounded-lg hover:border-pink-500/50 transition-colors">vs Manatal →</a>
+                    <a href="/vs/loxo" class="text-sm text-gray-400 hover:text-pink-400 border border-gray-700 px-4 py-2 rounded-lg hover:border-pink-500/50 transition-colors">vs Loxo →</a>
+                    <a href="/vs/workable" class="text-sm text-gray-400 hover:text-pink-400 border border-gray-700 px-4 py-2 rounded-lg hover:border-pink-500/50 transition-colors">vs Workable →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 px-4">
+    <section id="services" class="py-20 px-4 bg-pattern relative z-10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-blue-400 text-sm font-medium mb-2">DONE-FOR-YOU</p>
+                <p class="text-pink-400 text-sm font-semibold mb-2">DONE-FOR-YOU</p>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Growth Services</h2>
                 <p class="text-gray-400 max-w-xl mx-auto">Don't want to DIY? We'll handle it. Cold email, META ads, custom AI builds.</p>
             </div>
@@ -297,44 +297,44 @@
                 <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-4">📧</div>
                     <h3 class="text-xl font-semibold mb-2">Cold Email Outreach</h3>
-                    <p class="text-gray-500 text-sm mb-4">We build and run AI-powered email campaigns that book meetings while you sleep.</p>
+                    <p class="text-gray-500 text-sm mb-4">AI-powered email campaigns that book meetings while you sleep.</p>
                     <ul class="text-sm text-gray-400 space-y-2 mb-6">
                         <li>→ Targeted prospect lists</li>
                         <li>→ AI-written sequences</li>
                         <li>→ Full campaign management</li>
                     </ul>
-                    <a href="#contact" class="text-blue-400 text-sm font-medium hover:text-blue-300">Let's talk →</a>
+                    <a href="#contact" class="text-pink-400 text-sm font-semibold hover:text-pink-300">Let's talk →</a>
                 </div>
                 <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-4">📱</div>
                     <h3 class="text-xl font-semibold mb-2">META Advertising</h3>
-                    <p class="text-gray-500 text-sm mb-4">Facebook & Instagram ads that actually convert. Strategy, creative, optimization.</p>
+                    <p class="text-gray-500 text-sm mb-4">Facebook & Instagram ads that actually convert.</p>
                     <ul class="text-sm text-gray-400 space-y-2 mb-6">
                         <li>→ Creative development</li>
                         <li>→ Audience targeting</li>
                         <li>→ Conversion tracking</li>
                     </ul>
-                    <a href="#contact" class="text-blue-400 text-sm font-medium hover:text-blue-300">Let's talk →</a>
+                    <a href="#contact" class="text-pink-400 text-sm font-semibold hover:text-pink-300">Let's talk →</a>
                 </div>
                 <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-4">⚙️</div>
                     <h3 class="text-xl font-semibold mb-2">Bespoke AI Solutions</h3>
-                    <p class="text-gray-500 text-sm mb-4">Custom AI workflows, chatbots, automations built for your specific needs.</p>
+                    <p class="text-gray-500 text-sm mb-4">Custom AI workflows, chatbots, and automations.</p>
                     <ul class="text-sm text-gray-400 space-y-2 mb-6">
                         <li>→ Custom AI agents</li>
                         <li>→ Workflow automation</li>
                         <li>→ System integrations</li>
                     </ul>
-                    <a href="#contact" class="text-blue-400 text-sm font-medium hover:text-blue-300">Let's talk →</a>
+                    <a href="#contact" class="text-pink-400 text-sm font-semibold hover:text-pink-300">Let's talk →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About/Story Section -->
-    <section class="py-20 px-4 bg-[#0a0a0a]">
+    <!-- Story Section -->
+    <section class="py-20 px-4 bg-[#151515] relative z-10">
         <div class="max-w-3xl mx-auto text-center">
-            <p class="text-blue-400 text-sm font-medium mb-2">THE STORY</p>
+            <p class="text-pink-400 text-sm font-semibold mb-2">THE STORY</p>
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Built by a Technologist</h2>
             <p class="text-gray-400 leading-relaxed mb-6">
                 I'm not a recruiter. I'm an IT guy who watched recruiting teams struggle with bloated enterprise software that costs a fortune and does too much.
@@ -352,17 +352,17 @@
         </div>
     </section>
 
-    <!-- Contact/CTA Section -->
-    <section id="contact" class="py-20 px-4">
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 px-4 bg-pattern relative z-10">
         <div class="max-w-4xl mx-auto">
             <div class="card rounded-2xl p-8 md:p-12 text-center">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Get Started?</h2>
                 <p class="text-gray-400 mb-8 max-w-lg mx-auto">Try Sharp Recruit free, or book a call to discuss done-for-you services.</p>
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="https://app.sharphuman.com" class="btn-primary text-white px-6 py-3 rounded-lg font-medium">
+                    <a href="https://app.sharphuman.com" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
                         Try Sharp Recruit Free
                     </a>
-                    <a href="https://calendly.com/sharphuman/60min" target="_blank" class="btn-secondary text-white px-6 py-3 rounded-lg font-medium">
+                    <a href="https://calendly.com/sharphuman/60min" target="_blank" class="btn-secondary text-pink-400 px-6 py-3 rounded-lg font-semibold">
                         Book a Call
                     </a>
                 </div>
@@ -372,42 +372,42 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-gray-800">
+    <footer class="py-12 px-4 border-t border-pink-500/20 relative z-10">
         <div class="max-w-6xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <img src="./logo1-3.png" alt="Sharp Human" class="h-6 w-auto">
+                        <img src="./logo1-3.png" alt="Sharp Human" class="h-6 w-auto" style="mix-blend-mode: screen;">
                         <span class="font-semibold">Sharp Human</span>
                     </div>
                     <p class="text-gray-500 text-sm">AI recruiting tools & growth marketing for people who hate bloated software.</p>
                 </div>
                 <div>
-                    <h4 class="font-medium mb-3 text-sm">Product</h4>
+                    <h4 class="font-semibold mb-3 text-sm">Product</h4>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li><a href="#sharp-recruit" class="hover:text-white">Sharp Recruit</a></li>
-                        <li><a href="#compare" class="hover:text-white">Compare</a></li>
-                        <li><a href="https://app.sharphuman.com" class="hover:text-white">Login</a></li>
+                        <li><a href="#sharp-recruit" class="hover:text-pink-400">Sharp Recruit</a></li>
+                        <li><a href="#compare" class="hover:text-pink-400">Compare</a></li>
+                        <li><a href="https://app.sharphuman.com" class="hover:text-pink-400">Login</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-medium mb-3 text-sm">Compare</h4>
+                    <h4 class="font-semibold mb-3 text-sm">Compare</h4>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li><a href="/vs/manatal" class="hover:text-white">vs Manatal</a></li>
-                        <li><a href="/vs/loxo" class="hover:text-white">vs Loxo</a></li>
-                        <li><a href="/vs/workable" class="hover:text-white">vs Workable</a></li>
+                        <li><a href="/vs/manatal" class="hover:text-pink-400">vs Manatal</a></li>
+                        <li><a href="/vs/loxo" class="hover:text-pink-400">vs Loxo</a></li>
+                        <li><a href="/vs/workable" class="hover:text-pink-400">vs Workable</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-medium mb-3 text-sm">Company</h4>
+                    <h4 class="font-semibold mb-3 text-sm">Company</h4>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li><a href="#services" class="hover:text-white">Services</a></li>
-                        <li><a href="https://sharphuman.com/blog" class="hover:text-white">Blog</a></li>
-                        <li><a href="mailto:website@sharphuman.com" class="hover:text-white">Contact</a></li>
+                        <li><a href="#services" class="hover:text-pink-400">Services</a></li>
+                        <li><a href="https://sharphuman.com/blog" class="hover:text-pink-400">Blog</a></li>
+                        <li><a href="mailto:website@sharphuman.com" class="hover:text-pink-400">Contact</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-600 text-sm">
+            <div class="border-t border-pink-500/10 pt-8 text-center text-gray-600 text-sm">
                 <p>&copy; 2025 Sharp Human. All rights reserved.</p>
             </div>
         </div>
