@@ -22,6 +22,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
     <style>
         * { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif; }
         body { background: #1a1a1a; background-image: url('./sharphuman_blue.png'); background-attachment: fixed; background-size: cover; background-position: center; background-blend-mode: lighten; }
@@ -37,7 +42,7 @@
         .particle img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: screen; filter: brightness(1.1) contrast(1.2); opacity: 0.08; }
         @keyframes float { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(80px, -80px) rotate(90deg); } 50% { transform: translate(-60px, -160px) rotate(180deg); } 75% { transform: translate(100px, -100px) rotate(270deg); } }
         section { scroll-margin-top: 80px; }
-        .comparison-table th, .comparison-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(236, 72, 153, 0.1); }
+        .comparison-table th, .comparison-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(236, 72, 153, 0.1); font-size: 0.85rem; }
         .comparison-table tr:hover { background: rgba(236, 72, 153, 0.05); }
         .winner { color: #22c55e; font-weight: 600; }
     </style>
@@ -105,11 +110,11 @@
 
     <!-- Sharp Recruit Section -->
     <section id="sharp-recruit" class="py-20 px-4 bg-pattern relative z-10">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <p class="text-pink-400 text-sm font-semibold mb-2">THE PRODUCT</p>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Sharp Recruit</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">AI tools for every stage of recruiting. Write JDs in 2 minutes. Screen 50 CVs in 10 minutes. No enterprise bloat.</p>
+                <p class="text-gray-400 max-w-xl mx-auto">AI tools for every stage of recruiting. Write JDs in 2 minutes. Screen 50 CVs in 10 minutes.</p>
             </div>
             
             <!-- Features Grid -->
@@ -137,7 +142,7 @@
             </div>
 
             <!-- GitHub Callout -->
-            <div class="card rounded-xl p-6 mb-12 border-pink-500/30">
+            <div class="card rounded-xl p-6 mb-12 border-pink-500/30 max-w-2xl mx-auto">
                 <div class="flex flex-col md:flex-row md:items-center gap-4">
                     <div class="flex items-center gap-3">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -153,7 +158,7 @@
             </div>
 
             <!-- Pricing -->
-            <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <div class="card rounded-xl p-6 text-center">
                     <h3 class="font-semibold mb-1">Free</h3>
                     <p class="text-3xl font-bold mb-4">$0<span class="text-sm text-gray-500 font-normal">/mo</span></p>
@@ -188,199 +193,164 @@
                     <a href="https://app.sharphuman.com" class="block text-center btn-secondary text-pink-400 px-4 py-2 rounded-lg text-sm font-semibold">Start Free Trial</a>
                 </div>
             </div>
-            <p class="text-center text-gray-500 text-sm">No credit card required · Cancel anytime</p>
         </div>
     </section>
 
     <!-- Comparison Section -->
     <section id="compare" class="py-20 px-4 bg-[#151515] relative z-10">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-10">
                 <p class="text-pink-400 text-sm font-semibold mb-2">COMPARE</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">How We Stack Up</h2>
-                <p class="text-gray-400">Honest comparison. We're not the right fit for everyone.</p>
+                <h2 class="text-2xl md:text-3xl font-bold">Sharp Recruit vs The Competition</h2>
             </div>
             
-            <div class="overflow-x-auto">
-                <table class="comparison-table w-full text-sm">
-                    <thead>
-                        <tr class="text-gray-400">
-                            <th class="text-left">Feature</th>
-                            <th class="text-center text-pink-400">Sharp Recruit</th>
-                            <th class="text-center">Manatal</th>
-                            <th class="text-center">Loxo</th>
-                            <th class="text-center">Workable</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-gray-300">
-                        <tr>
-                            <td class="font-medium">Starting Price</td>
-                            <td class="text-center winner">$0 (free tier)</td>
-                            <td class="text-center">$15/user/mo</td>
-                            <td class="text-center">Custom (sales call)</td>
-                            <td class="text-center">$189/mo</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">Solo Recruiter Cost</td>
-                            <td class="text-center winner">$29/mo flat</td>
-                            <td class="text-center">$15/mo</td>
-                            <td class="text-center">???</td>
-                            <td class="text-center">$189/mo</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">5-Person Team</td>
-                            <td class="text-center winner">$79/mo flat</td>
-                            <td class="text-center">$75-275/mo</td>
-                            <td class="text-center">???</td>
-                            <td class="text-center">$313+/mo</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">Free Trial</td>
-                            <td class="text-center winner">Forever free tier</td>
-                            <td class="text-center">14 days</td>
-                            <td class="text-center">Demo required</td>
-                            <td class="text-center">15 days</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">GitHub Integration</td>
-                            <td class="text-center winner">Native (coming)</td>
-                            <td class="text-center">❌</td>
-                            <td class="text-center">Basic</td>
-                            <td class="text-center">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">Full ATS/CRM</td>
-                            <td class="text-center">❌</td>
-                            <td class="text-center winner">✓</td>
-                            <td class="text-center winner">✓</td>
-                            <td class="text-center winner">✓</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">Job Board Posting</td>
-                            <td class="text-center">❌</td>
-                            <td class="text-center winner">2,500+ boards</td>
-                            <td class="text-center winner">✓</td>
-                            <td class="text-center winner">✓</td>
-                        </tr>
-                        <tr>
-                            <td class="font-medium">Best For</td>
-                            <td class="text-center text-pink-400">Indie recruiters</td>
-                            <td class="text-center text-gray-500">Small agencies</td>
-                            <td class="text-center text-gray-500">Enterprise</td>
-                            <td class="text-center text-gray-500">Mid-market HR</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="mt-8 text-center">
-                <p class="text-gray-500 text-sm mb-4">Want the deep dive?</p>
-                <div class="flex flex-wrap gap-3 justify-center">
-                    <a href="/vs/manatal" class="text-sm text-gray-400 hover:text-pink-400 border border-gray-700 px-4 py-2 rounded-lg hover:border-pink-500/50 transition-colors">vs Manatal →</a>
-                    <a href="/vs/loxo" class="text-sm text-gray-400 hover:text-pink-400 border border-gray-700 px-4 py-2 rounded-lg hover:border-pink-500/50 transition-colors">vs Loxo →</a>
-                    <a href="/vs/workable" class="text-sm text-gray-400 hover:text-pink-400 border border-gray-700 px-4 py-2 rounded-lg hover:border-pink-500/50 transition-colors">vs Workable →</a>
+            <div class="card rounded-xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="comparison-table w-full">
+                        <thead>
+                            <tr class="text-gray-400 bg-black/30">
+                                <th class="text-left"></th>
+                                <th class="text-center text-pink-400 font-semibold">Sharp Recruit</th>
+                                <th class="text-center">Manatal</th>
+                                <th class="text-center">Loxo</th>
+                                <th class="text-center">Workable</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr>
+                                <td class="font-medium text-gray-400">Starting Price</td>
+                                <td class="text-center winner">Free</td>
+                                <td class="text-center">$15/user</td>
+                                <td class="text-center">Sales call</td>
+                                <td class="text-center">$189/mo</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium text-gray-400">Solo Cost</td>
+                                <td class="text-center winner">$29/mo</td>
+                                <td class="text-center">$15/mo</td>
+                                <td class="text-center">???</td>
+                                <td class="text-center">$189/mo</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium text-gray-400">Team (5 users)</td>
+                                <td class="text-center winner">$79/mo flat</td>
+                                <td class="text-center">$75-275/mo</td>
+                                <td class="text-center">???</td>
+                                <td class="text-center">$313+/mo</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium text-gray-400">Free Trial</td>
+                                <td class="text-center winner">Forever free</td>
+                                <td class="text-center">14 days</td>
+                                <td class="text-center">Demo only</td>
+                                <td class="text-center">15 days</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium text-gray-400">GitHub Integration</td>
+                                <td class="text-center winner">Native</td>
+                                <td class="text-center">❌</td>
+                                <td class="text-center">Basic</td>
+                                <td class="text-center">❌</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium text-gray-400">Full ATS</td>
+                                <td class="text-center">❌</td>
+                                <td class="text-center winner">✓</td>
+                                <td class="text-center winner">✓</td>
+                                <td class="text-center winner">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium text-gray-400">Job Boards</td>
+                                <td class="text-center">❌</td>
+                                <td class="text-center winner">2,500+</td>
+                                <td class="text-center winner">✓</td>
+                                <td class="text-center winner">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+            
+            <p class="text-center text-gray-500 text-sm mt-6">Sharp Recruit focuses on AI workflow tools. Need a full ATS? Check out the others.</p>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 px-4 bg-pattern relative z-10">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
                 <p class="text-pink-400 text-sm font-semibold mb-2">DONE-FOR-YOU</p>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Growth Services</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">Don't want to DIY? We'll handle it. Cold email, META ads, custom AI builds.</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Growth Services</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Don't want to DIY? We'll handle it.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-4">📧</div>
-                    <h3 class="text-xl font-semibold mb-2">Cold Email Outreach</h3>
+                    <h3 class="text-lg font-semibold mb-2">Cold Email Outreach</h3>
                     <p class="text-gray-500 text-sm mb-4">AI-powered email campaigns that book meetings while you sleep.</p>
-                    <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <ul class="text-sm text-gray-400 space-y-1 mb-4">
                         <li>→ Targeted prospect lists</li>
                         <li>→ AI-written sequences</li>
-                        <li>→ Full campaign management</li>
+                        <li>→ Campaign management</li>
                     </ul>
-                    <a href="#contact" class="text-pink-400 text-sm font-semibold hover:text-pink-300">Let's talk →</a>
                 </div>
                 <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-4">📱</div>
-                    <h3 class="text-xl font-semibold mb-2">META Advertising</h3>
+                    <h3 class="text-lg font-semibold mb-2">META Advertising</h3>
                     <p class="text-gray-500 text-sm mb-4">Facebook & Instagram ads that actually convert.</p>
-                    <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <ul class="text-sm text-gray-400 space-y-1 mb-4">
                         <li>→ Creative development</li>
                         <li>→ Audience targeting</li>
                         <li>→ Conversion tracking</li>
                     </ul>
-                    <a href="#contact" class="text-pink-400 text-sm font-semibold hover:text-pink-300">Let's talk →</a>
                 </div>
                 <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-4">⚙️</div>
-                    <h3 class="text-xl font-semibold mb-2">Bespoke AI Solutions</h3>
+                    <h3 class="text-lg font-semibold mb-2">Bespoke AI Solutions</h3>
                     <p class="text-gray-500 text-sm mb-4">Custom AI workflows, chatbots, and automations.</p>
-                    <ul class="text-sm text-gray-400 space-y-2 mb-6">
+                    <ul class="text-sm text-gray-400 space-y-1 mb-4">
                         <li>→ Custom AI agents</li>
                         <li>→ Workflow automation</li>
                         <li>→ System integrations</li>
                     </ul>
-                    <a href="#contact" class="text-pink-400 text-sm font-semibold hover:text-pink-300">Let's talk →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section class="py-20 px-4 bg-[#151515] relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-pink-400 text-sm font-semibold mb-2">THE STORY</p>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Built by a Technologist</h2>
-            <p class="text-gray-400 leading-relaxed mb-6">
-                I'm not a recruiter. I'm an IT guy who watched recruiting teams struggle with bloated enterprise software that costs a fortune and does too much.
-            </p>
-            <p class="text-gray-400 leading-relaxed mb-6">
-                Sharp Recruit is the opposite: focused AI tools that do one thing well. No ATS. No CRM. No 6-month implementation. Just the AI parts that actually save you time.
-            </p>
-            <p class="text-gray-400 leading-relaxed mb-8">
-                It's still early days. If you're okay being an early adopter, you'll get locked-in pricing and direct access to shape the product.
-            </p>
-            <div class="inline-flex items-center gap-2 text-sm text-gray-500">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Currently in beta
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="contact" class="py-20 px-4 bg-pattern relative z-10">
-        <div class="max-w-4xl mx-auto">
-            <div class="card rounded-2xl p-8 md:p-12 text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Get Started?</h2>
-                <p class="text-gray-400 mb-8 max-w-lg mx-auto">Try Sharp Recruit free, or book a call to discuss done-for-you services.</p>
-                <div class="flex flex-wrap gap-4 justify-center">
-                    <a href="https://app.sharphuman.com" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">
-                        Try Sharp Recruit Free
+    <!-- CTA + Calendly Section -->
+    <section id="contact" class="py-20 px-4 bg-[#151515] relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <!-- Left: CTA -->
+                <div class="card rounded-xl p-8">
+                    <h2 class="text-2xl font-bold mb-4">Ready to Get Started?</h2>
+                    <p class="text-gray-400 mb-6">Try Sharp Recruit free, or book a call to discuss services.</p>
+                    <a href="https://app.sharphuman.com" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block mb-4">
+                        Try Sharp Recruit Free →
                     </a>
-                    <a href="https://calendly.com/sharphuman/60min" target="_blank" class="btn-secondary text-pink-400 px-6 py-3 rounded-lg font-semibold">
-                        Book a Call
-                    </a>
+                    <p class="text-gray-500 text-sm">Or book a time that works for you →</p>
                 </div>
-                <p class="mt-6 text-gray-500 text-sm">No credit card required · 60-minute consultation · No pressure</p>
+                
+                <!-- Right: Calendly Widget -->
+                <div class="card rounded-xl p-4 overflow-hidden">
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/sharphuman/60min?hide_gdpr_banner=1&background_color=151515&text_color=ffffff&primary_color=ec4899" style="min-width:280px;height:580px;"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-12 px-4 border-t border-pink-500/20 relative z-10">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <img src="./logo1-3.png" alt="Sharp Human" class="h-6 w-auto" style="mix-blend-mode: screen;">
                         <span class="font-semibold">Sharp Human</span>
                     </div>
-                    <p class="text-gray-500 text-sm">AI recruiting tools & growth marketing for people who hate bloated software.</p>
+                    <p class="text-gray-500 text-sm">AI recruiting tools & growth marketing.</p>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-3 text-sm">Product</h4>
@@ -391,17 +361,16 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-3 text-sm">Compare</h4>
+                    <h4 class="font-semibold mb-3 text-sm">Services</h4>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li><a href="/vs/manatal" class="hover:text-pink-400">vs Manatal</a></li>
-                        <li><a href="/vs/loxo" class="hover:text-pink-400">vs Loxo</a></li>
-                        <li><a href="/vs/workable" class="hover:text-pink-400">vs Workable</a></li>
+                        <li><a href="#services" class="hover:text-pink-400">Cold Email</a></li>
+                        <li><a href="#services" class="hover:text-pink-400">META Ads</a></li>
+                        <li><a href="#services" class="hover:text-pink-400">Bespoke AI</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-3 text-sm">Company</h4>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li><a href="#services" class="hover:text-pink-400">Services</a></li>
                         <li><a href="https://sharphuman.com/blog" class="hover:text-pink-400">Blog</a></li>
                         <li><a href="mailto:website@sharphuman.com" class="hover:text-pink-400">Contact</a></li>
                     </ul>
@@ -413,6 +382,5 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
