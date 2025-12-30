@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Recruit | Evidence-Backed Hiring Intelligence</title>
+    <title>Sharp Human | AI Hiring Intelligence + Growth Services</title>
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM04LFY3FJ"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BM04LFY3FJ');</script>
     
-    <!-- SEO Meta -->
-    <meta name="description" content="Sharp Recruit: AI-powered interview analysis, CV screening, and pipeline intelligence. Evidence-backed hiring decisions for recruiters and hiring managers.">
-    <meta name="keywords" content="AI recruiting, interview analysis, CV screening, hiring intelligence, recruitment software, evidence-based hiring">
+    <meta name="description" content="Sharp Recruit: AI-powered interview analysis, CV screening, and hiring intelligence. Evidence-backed decisions for recruiters and hiring managers. Plus done-for-you growth services.">
+    <meta name="keywords" content="AI recruiting software, interview analysis, CV screening, hiring intelligence, recruitment automation, evidence-based hiring">
     <link rel="canonical" href="https://sharphuman.com">
     
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sharphuman.com">
-    <meta property="og:title" content="Sharp Recruit | Evidence-Backed Hiring Intelligence">
-    <meta property="og:description" content="Turn interviews into structured insight. Screen CVs with confidence. Make every hiring decision defensible.">
+    <meta property="og:title" content="Sharp Human | AI Hiring Intelligence">
+    <meta property="og:description" content="Evidence-backed hiring decisions. AI-powered interview analysis, CV screening, and pipeline intelligence.">
     <meta property="og:image" content="https://sharphuman.com/logo1-3.png">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sharp Recruit | Evidence-Backed Hiring Intelligence">
-    <meta name="twitter:description" content="Turn interviews into structured insight. Evidence-backed hiring for recruiters and hiring managers.">
+    <meta name="twitter:title" content="Sharp Human | AI Hiring Intelligence">
+    <meta name="twitter:description" content="Evidence-backed hiring. AI interview analysis, CV screening, pipeline intelligence.">
     
     <link rel="icon" type="image/png" href="./logo1-3.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Calendly -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     
@@ -45,87 +41,43 @@
             background-size: cover;
             background-position: center;
             background-blend-mode: lighten;
-            overflow-x: hidden; 
         }
         
-        /* Overlay for readability */
-        .bg-overlay {
-            background: linear-gradient(180deg, rgba(26,26,26,0.85) 0%, rgba(26,26,26,0.75) 50%, rgba(26,26,26,0.85) 100%);
-        }
+        .text-gradient-pink { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .text-gradient { background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         
-        .text-gradient { 
-            background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #3b82f6 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-            background-clip: text; 
-        }
+        .btn-pink { background: #ec4899; transition: all 0.3s ease; }
+        .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4); }
         
-        .btn-primary { 
-            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); 
-            transition: all 0.3s ease; 
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3); 
-        }
-        .btn-primary:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.5); 
-        }
+        .btn-outline { background: transparent; border: 1px solid #ec4899; color: #ec4899; transition: all 0.3s ease; }
+        .btn-outline:hover { background: rgba(236, 72, 153, 0.1); }
         
-        .btn-secondary { 
-            background: transparent; 
-            border: 1px solid rgba(236, 72, 153, 0.5); 
-            color: #ec4899; 
-            transition: all 0.3s ease; 
-        }
-        .btn-secondary:hover { 
-            background: rgba(236, 72, 153, 0.1); 
-            border-color: #ec4899;
-        }
+        .card { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .card:hover { border-color: rgba(236, 72, 153, 0.5); transform: translateY(-2px); }
         
-        .card { 
-            background: rgba(0, 0, 0, 0.6); 
+        .card-flagship { 
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.08) 100%);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            transition: all 0.3s ease; 
+            border: 2px solid rgba(236, 72, 153, 0.4); 
         }
-        .card:hover { 
-            border-color: rgba(236, 72, 153, 0.5); 
-            transform: translateY(-2px); 
-        }
-        
-        .card-flagship {
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(236, 72, 153, 0.4);
-        }
-        .card-flagship:hover {
-            border-color: #ec4899;
-            transform: translateY(-4px);
-        }
+        .card-flagship:hover { border-color: #ec4899; }
         
         section { scroll-margin-top: 80px; }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
         
         /* Floating Logos */
         .floating-logo {
             position: absolute;
-            opacity: 0.08;
+            opacity: 0.07;
             pointer-events: none;
             animation: float 20s ease-in-out infinite;
             filter: brightness(1.2);
         }
-        .floating-logo:nth-child(1) { top: 10%; left: 3%; animation-delay: 0s; animation-duration: 28s; }
-        .floating-logo:nth-child(2) { top: 20%; right: 5%; animation-delay: -5s; animation-duration: 24s; }
-        .floating-logo:nth-child(3) { top: 55%; left: 8%; animation-delay: -10s; animation-duration: 30s; }
-        .floating-logo:nth-child(4) { top: 65%; right: 3%; animation-delay: -15s; animation-duration: 26s; }
-        .floating-logo:nth-child(5) { top: 35%; left: 1%; animation-delay: -8s; animation-duration: 32s; }
-        .floating-logo:nth-child(6) { top: 80%; right: 10%; animation-delay: -12s; animation-duration: 25s; }
+        .floating-logo:nth-child(1) { top: 8%; left: 3%; animation-delay: 0s; animation-duration: 28s; }
+        .floating-logo:nth-child(2) { top: 22%; right: 5%; animation-delay: -5s; animation-duration: 24s; }
+        .floating-logo:nth-child(3) { top: 50%; left: 5%; animation-delay: -10s; animation-duration: 30s; }
+        .floating-logo:nth-child(4) { top: 68%; right: 4%; animation-delay: -15s; animation-duration: 26s; }
+        .floating-logo:nth-child(5) { top: 35%; left: 2%; animation-delay: -8s; animation-duration: 32s; }
+        .floating-logo:nth-child(6) { top: 82%; right: 8%; animation-delay: -12s; animation-duration: 25s; }
         
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -133,14 +85,9 @@
             50% { transform: translateY(0px) rotate(0deg); }
             75% { transform: translateY(20px) rotate(-2deg); }
         }
-        
-        /* Flow arrows */
-        .flow-arrow {
-            color: rgba(236, 72, 153, 0.4);
-        }
     </style>
 </head>
-<body class="text-white antialiased">
+<body class="text-white">
 
     <!-- Floating Logos Background -->
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
@@ -152,265 +99,96 @@
         <img src="./logo1-3.png" alt="" class="floating-logo w-14 md:w-24" style="mix-blend-mode: screen;">
     </div>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-white/5">
+    <!-- Navigation (Same as before) -->
+    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16">
                 <a href="/" class="flex items-center space-x-2">
-                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-8 w-auto" style="mix-blend-mode: screen;">
-                    <span class="text-lg font-bold">Sharp Recruit</span>
+                    <img src="./logo1-3.png" alt="Sharp Human" class="h-8 w-auto" style="mix-blend-mode: screen;">
+                    <span class="text-lg font-bold">Sharp Human</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#interview-analyzer" class="text-gray-400 hover:text-white text-sm transition-colors">Interview Analyzer</a>
-                    <a href="#how-it-works" class="text-gray-400 hover:text-white text-sm transition-colors">How It Works</a>
-                    <a href="/pricing.html" class="text-gray-400 hover:text-white text-sm transition-colors">Pricing</a>
-                    <a href="https://sharphuman.com/blog" class="text-gray-400 hover:text-white text-sm transition-colors">Blog</a>
-                    <a href="https://recruit.sharphuman.com" class="btn-primary text-white px-5 py-2 rounded-lg text-sm font-semibold">
-                        Analyze Your First Interview →
-                    </a>
+                    <a href="#products" class="text-gray-400 hover:text-white text-sm">Products</a>
+                    <a href="#services" class="text-gray-400 hover:text-white text-sm">Services</a>
+                    <a href="/pricing.html" class="text-gray-400 hover:text-white text-sm">Pricing</a>
+                    <a href="https://sharphuman.com/blog" class="text-gray-400 hover:text-white text-sm">Blog</a>
+                    <a href="https://recruit.sharphuman.com" class="btn-pink text-white px-4 py-2 rounded-lg text-sm font-semibold">Try Free</a>
                 </div>
                 <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path></svg>
                 </button>
             </div>
             <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-                <a href="#interview-analyzer" class="block py-2 text-gray-400 text-sm">Interview Analyzer</a>
-                <a href="#how-it-works" class="block py-2 text-gray-400 text-sm">How It Works</a>
+                <a href="#products" class="block py-2 text-gray-400 text-sm">Products</a>
+                <a href="#services" class="block py-2 text-gray-400 text-sm">Services</a>
                 <a href="/pricing.html" class="block py-2 text-gray-400 text-sm">Pricing</a>
                 <a href="https://sharphuman.com/blog" class="block py-2 text-gray-400 text-sm">Blog</a>
-                <a href="https://recruit.sharphuman.com" class="block py-2 btn-primary text-white text-center rounded-lg text-sm">Start Free</a>
+                <a href="https://recruit.sharphuman.com" class="block py-2 btn-pink text-white text-center rounded-lg text-sm">Try Free</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero (Updated messaging per ChatGPT) -->
     <section class="pt-32 pb-20 px-4 relative z-10">
-        <div class="max-w-4xl mx-auto text-center fade-in">
-            <div class="inline-flex items-center bg-white/5 border border-white/10 text-gray-300 px-4 py-1.5 rounded-full text-xs font-medium mb-8">
-                🚀 Early Access · Indie Pricing · Free Forever Plan
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center bg-white/5 border border-white/10 text-gray-300 px-3 py-1 rounded-full text-xs font-medium mb-6">
+                🚀 AI Hiring Intelligence + Growth Services
             </div>
-            
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Evidence-backed hiring.<br>
                 <span class="text-gradient">Every time.</span>
             </h1>
-            
-            <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                Sharp Recruit turns interviews into structured insight, screens CVs with precision, and keeps intelligence connected across your entire hiring flow. For recruiters and hiring managers who want decisions they can defend.
+            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Sharp Recruit gives recruiters structured insight across CVs, interviews, and pipelines — so every hire is defensible, consistent, and confident.
             </p>
-            
-            <div class="flex flex-wrap gap-4 justify-center mb-6">
-                <a href="https://recruit.sharphuman.com" class="btn-primary text-white px-8 py-3.5 rounded-xl font-semibold text-lg">
-                    Analyze Your First Interview →
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://recruit.sharphuman.com" class="btn-pink text-white px-6 py-3 rounded-lg font-semibold">
+                    Try Sharp Recruit Free →
                 </a>
-                <a href="#sample-report" class="btn-secondary px-8 py-3.5 rounded-xl font-semibold text-lg">
-                    See a Sample Analysis
+                <a href="#services" class="btn-outline px-6 py-3 rounded-lg font-semibold">
+                    View Services
                 </a>
             </div>
-            
-            <p class="text-gray-500 text-sm">Free forever · No credit card required · 5 minute setup</p>
+            <p class="text-gray-500 text-sm mt-4">Free forever plan • No credit card required</p>
         </div>
     </section>
 
-    <!-- Interview Analyzer - FLAGSHIP (60% of real estate) -->
-    <section id="interview-analyzer" class="py-20 px-4 bg-black/40 relative z-10">
+    <!-- Products Section (ChatGPT's "One System" narrative) -->
+    <section id="products" class="py-20 px-4 relative z-10">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <div class="inline-flex items-center bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs font-semibold mb-4">
-                    ⭐ FLAGSHIP PRODUCT
-                </div>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Interview Analyzer</h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                    Turn conversations into structured insight. Every score backed by evidence. Every recommendation defensible.
-                </p>
-            </div>
-            
-            <div class="card-flagship rounded-2xl p-8 md:p-10 mb-8">
-                <div class="grid md:grid-cols-2 gap-10">
-                    <!-- Left: 6 Pillars -->
-                    <div>
-                        <h3 class="font-bold text-xl mb-6 flex items-center gap-2">
-                            <span class="text-pink-400">●</span> 6-Pillar Analysis
-                        </h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-pink-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-sm">🎯</span>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-white">Technical Competency</p>
-                                    <p class="text-gray-400 text-sm">Role-specific skills validated against requirements</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-sm">💬</span>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-white">Communication Clarity</p>
-                                    <p class="text-gray-400 text-sm">How well they articulate complex ideas</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-sm">🤝</span>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-white">Culture Fit Signals</p>
-                                    <p class="text-gray-400 text-sm">Values alignment and team dynamics indicators</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-sm">🧩</span>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-white">Problem-Solving Approach</p>
-                                    <p class="text-gray-400 text-sm">How they think through challenges</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-yellow-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-sm">👔</span>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-white">Leadership Indicators</p>
-                                    <p class="text-gray-400 text-sm">Initiative, ownership, and influence patterns</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <span class="text-sm">📚</span>
-                                </div>
-                                <div>
-                                    <p class="font-semibold text-white">Domain Knowledge Depth</p>
-                                    <p class="text-gray-400 text-sm">Industry and functional expertise level</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Right: Sample Output -->
-                    <div>
-                        <h3 class="font-bold text-xl mb-6 flex items-center gap-2">
-                            <span class="text-pink-400">●</span> Evidence-Based Output
-                        </h3>
-                        <div id="sample-report" class="bg-black/50 rounded-xl p-6 border border-white/10">
-                            <p class="text-xs text-gray-500 uppercase tracking-wide mb-4">Sample Analysis Output</p>
-                            
-                            <div class="space-y-4">
-                                <div class="border-l-2 border-green-500 pl-4">
-                                    <p class="text-green-400 text-sm font-semibold mb-1">✓ HIRE IF</p>
-                                    <p class="text-gray-300 text-sm">Team values collaborative problem-solving and can provide mentorship structure for first 90 days.</p>
-                                </div>
-                                
-                                <div class="border-l-2 border-yellow-500 pl-4">
-                                    <p class="text-yellow-400 text-sm font-semibold mb-1">⚡ KEY RISK</p>
-                                    <p class="text-gray-300 text-sm">Limited experience with enterprise-scale systems. Consider pairing with senior architect initially.</p>
-                                </div>
-                                
-                                <div class="border-l-2 border-blue-500 pl-4">
-                                    <p class="text-blue-400 text-sm font-semibold mb-1">→ FOLLOW-UP QUESTIONS</p>
-                                    <p class="text-gray-300 text-sm">"Walk me through a time you inherited a failing project. What was your first move?"</p>
-                                </div>
-                                
-                                <div class="border-l-2 border-purple-500 pl-4">
-                                    <p class="text-purple-400 text-sm font-semibold mb-1">📌 EVIDENCE</p>
-                                    <p class="text-gray-400 text-sm italic">"At 14:32 — Candidate deflected when asked about production incident handling. Pivoted to process rather than personal action."</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-500 text-sm mt-4 text-center">
-                            Every insight tied to specific moments in the conversation.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://recruit.sharphuman.com" class="btn-primary text-white px-8 py-3.5 rounded-xl font-semibold text-center">
-                        Analyze Your First Interview — Free →
-                    </a>
-                </div>
-            </div>
-            
-            <!-- What experienced recruiters already do -->
-            <div class="text-center mt-8">
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Good recruiters already think this way. Sharp Recruit makes it <span class="text-white font-semibold">consistent, documented, and shareable</span>.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Flow: How It Works -->
-    <section id="how-it-works" class="py-20 px-4 relative z-10">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <p class="text-pink-400 text-sm font-semibold mb-3 tracking-wide">THE FLOW</p>
+                <p class="text-pink-400 text-sm font-semibold mb-2">SHARP RECRUIT</p>
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">One connected system. Not four tools.</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Insight compounds when it flows. From job description to final offer, Sharp Recruit keeps intelligence connected.
-                </p>
+                <p class="text-gray-400 max-w-2xl mx-auto">Hiring thrives when insight flows. From job description to final offer, intelligence carries forward.</p>
             </div>
             
-            <!-- Flow Visualization -->
-            <div class="grid md:grid-cols-7 gap-4 items-center mb-12">
-                <!-- JD Writer -->
-                <div class="card rounded-xl p-5 text-center md:col-span-1">
+            <!-- The Flow -->
+            <div class="grid md:grid-cols-4 gap-4 mb-12">
+                <div class="card rounded-xl p-5 text-center">
                     <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mx-auto mb-3">
                         <span class="text-xl">✍️</span>
                     </div>
                     <h3 class="font-bold text-sm mb-1">JD Writer</h3>
                     <p class="text-gray-500 text-xs">Sets intent</p>
                 </div>
-                
-                <!-- Arrow -->
-                <div class="hidden md:flex items-center justify-center flow-arrow">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </div>
-                
-                <!-- CV Screener -->
-                <div class="card rounded-xl p-5 text-center md:col-span-1">
+                <div class="card rounded-xl p-5 text-center">
                     <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mx-auto mb-3">
                         <span class="text-xl">📄</span>
                     </div>
                     <h3 class="font-bold text-sm mb-1">CV Screener</h3>
                     <p class="text-gray-500 text-xs">Filters signal</p>
                 </div>
-                
-                <!-- Arrow -->
-                <div class="hidden md:flex items-center justify-center flow-arrow">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </div>
-                
-                <!-- Interview Analyzer -->
-                <div class="card-flagship rounded-xl p-5 text-center md:col-span-1 relative">
+                <div class="card-flagship rounded-xl p-5 text-center relative">
                     <div class="absolute -top-2 left-1/2 -translate-x-1/2 bg-pink-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                        CORE
+                        FLAGSHIP
                     </div>
                     <div class="w-10 h-10 rounded-lg bg-pink-500/20 flex items-center justify-center mx-auto mb-3 mt-1">
                         <span class="text-xl">🎯</span>
                     </div>
-                    <h3 class="font-bold text-sm mb-1">Interview</h3>
+                    <h3 class="font-bold text-sm mb-1">Interview Analyzer</h3>
                     <p class="text-gray-500 text-xs">Reveals depth</p>
                 </div>
-                
-                <!-- Arrow -->
-                <div class="hidden md:flex items-center justify-center flow-arrow">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </div>
-                
-                <!-- Pipeline -->
-                <div class="card rounded-xl p-5 text-center md:col-span-1">
+                <div class="card rounded-xl p-5 text-center">
                     <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mx-auto mb-3">
                         <span class="text-xl">📊</span>
                     </div>
@@ -419,203 +197,189 @@
                 </div>
             </div>
             
-            <!-- Supporting Tools Detail -->
+            <!-- Interview Analyzer Highlight -->
+            <div class="card-flagship rounded-2xl p-8 mb-8">
+                <div class="flex items-start gap-4 mb-6">
+                    <div class="w-14 h-14 rounded-xl bg-pink-500/20 flex items-center justify-center flex-shrink-0">
+                        <span class="text-3xl">🎯</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1">Interview Analyzer</h3>
+                        <p class="text-gray-400">Turn conversations into structured insight. Every score backed by evidence.</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="text-pink-400">✓</span>
+                            <span><strong>6-pillar analysis</strong> — Technical, communication, culture, problem-solving, leadership, domain</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="text-pink-400">✓</span>
+                            <span><strong>Evidence-based</strong> — Every score tied to specific quotes</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="text-pink-400">✓</span>
+                            <span><strong>Hire If / Pass If</strong> — Clear recommendations with reasoning</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="text-pink-400">✓</span>
+                            <span><strong>Follow-up questions</strong> — What to ask next</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="text-pink-400">✓</span>
+                            <span><strong>PDF/DOCX export</strong> — Client-ready reports</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <span class="text-pink-400">✓</span>
+                            <span><strong>Defensible decisions</strong> — Explain to clients with confidence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 pt-6 border-t border-white/10">
+                    <a href="https://recruit.sharphuman.com" class="btn-pink text-white px-6 py-3 rounded-lg font-semibold inline-block">
+                        Analyze Your First Interview — Free →
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Other tools summary -->
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="card rounded-xl p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                            <span class="text-xl">✍️</span>
-                        </div>
-                        <h3 class="font-bold">JD Writer</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm mb-3">
-                        Give it bullet points or paste a hiring manager call transcript. Get a polished, role-specific job description in 60 seconds.
-                    </p>
-                    <p class="text-gray-500 text-xs">Unlimited on all plans</p>
+                    <h4 class="font-bold mb-2">✍️ JD Writer</h4>
+                    <p class="text-gray-400 text-sm">Give it bullet points or a call transcript. Get a polished job description in 60 seconds.</p>
                 </div>
-                
                 <div class="card rounded-xl p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                            <span class="text-xl">📄</span>
-                        </div>
-                        <h3 class="font-bold">CV Screener</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm mb-3">
-                        Upload a batch. Get a prioritized shortlist with clear reasoning. Surface hidden gems. Skip the obvious mismatches.
-                    </p>
-                    <p class="text-gray-500 text-xs">25-2,500/mo depending on plan</p>
+                    <h4 class="font-bold mb-2">📄 CV Screener</h4>
+                    <p class="text-gray-400 text-sm">Upload a batch. Get a prioritized shortlist with clear reasoning for each candidate.</p>
                 </div>
-                
                 <div class="card rounded-xl p-6">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
-                            <span class="text-xl">📊</span>
-                        </div>
-                        <h3 class="font-bold">Pipeline</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm mb-3">
-                        Drag-and-drop candidate stages. Scores and insights visible on every card. Export to PDF/DOCX for clients.
-                    </p>
-                    <p class="text-gray-500 text-xs">Full access on all plans</p>
+                    <h4 class="font-bold mb-2">📊 Pipeline</h4>
+                    <p class="text-gray-400 text-sm">Drag-and-drop stages. Scores visible on every card. Export for clients.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Preview -->
+    <!-- Pricing Preview (25/250) -->
     <section class="py-20 px-4 bg-black/40 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="text-pink-400 text-sm font-semibold mb-3 tracking-wide">PRICING</p>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple. Generous. Memorable.</h2>
-            <p class="text-gray-400 mb-10">The 25/250 pattern. 10x at each tier. No surprises.</p>
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Simple Pricing</h2>
+            <p class="text-gray-400 mb-8">The 25/250 pattern. Generous limits. No surprises.</p>
             
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Free -->
-                <div class="card rounded-2xl p-6">
-                    <h3 class="font-bold text-lg mb-1">Free</h3>
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold mb-1">Free</h3>
                     <p class="text-3xl font-bold mb-2">$0</p>
-                    <p class="text-gray-500 text-sm mb-4">Forever</p>
-                    <div class="text-left text-sm text-gray-400 space-y-2">
-                        <p>✓ 25 CV screens/mo</p>
-                        <p>✓ 5 interview analyses/mo</p>
-                        <p>✓ Unlimited JDs</p>
-                        <p>✓ Full pipeline</p>
-                        <p>✓ PDF/DOCX exports</p>
-                    </div>
+                    <p class="text-gray-500 text-sm">25 CV screens, 5 interviews, unlimited JDs</p>
                 </div>
-                
-                <!-- Solo -->
-                <div class="card-flagship rounded-2xl p-6 relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                        POPULAR
-                    </div>
-                    <h3 class="font-bold text-lg mb-1 mt-2">Solo</h3>
-                    <p class="text-3xl font-bold mb-2">$25<span class="text-lg text-gray-500">/mo</span></p>
-                    <p class="text-gray-500 text-sm mb-4">For individuals</p>
-                    <div class="text-left text-sm text-gray-300 space-y-2">
-                        <p>✓ 250 CV screens/mo</p>
-                        <p>✓ 25 interview analyses/mo</p>
-                        <p>✓ Unlimited JDs</p>
-                        <p>✓ Full pipeline</p>
-                        <p>✓ All export formats</p>
-                    </div>
+                <div class="card-flagship rounded-xl p-6">
+                    <h3 class="font-semibold mb-1">Solo</h3>
+                    <p class="text-3xl font-bold mb-2">$25<span class="text-sm text-gray-500">/mo</span></p>
+                    <p class="text-gray-400 text-sm">250 CV screens, 25 interviews, full pipeline</p>
                 </div>
-                
-                <!-- Elite -->
-                <div class="card rounded-2xl p-6">
-                    <h3 class="font-bold text-lg mb-1">Elite</h3>
-                    <p class="text-3xl font-bold mb-2">$250<span class="text-lg text-gray-500">/mo</span></p>
-                    <p class="text-gray-500 text-sm mb-4">For teams (5 users)</p>
-                    <div class="text-left text-sm text-gray-400 space-y-2">
-                        <p>✓ 2,500 CV screens/mo</p>
-                        <p>✓ 250 interview analyses/mo</p>
-                        <p>✓ Unlimited JDs</p>
-                        <p>✓ Team pipeline</p>
-                        <p>✓ Priority support</p>
-                    </div>
+                <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold mb-1">Elite</h3>
+                    <p class="text-3xl font-bold mb-2">$250<span class="text-sm text-gray-500">/mo</span></p>
+                    <p class="text-gray-500 text-sm">2,500 screens, 250 interviews, 5 users</p>
                 </div>
             </div>
             
-            <a href="/pricing.html" class="text-pink-400 hover:underline mt-8 inline-block">See full pricing details →</a>
+            <a href="/pricing.html" class="text-pink-400 hover:underline mt-6 inline-block">See full pricing details →</a>
         </div>
     </section>
 
-    <!-- Founder Section -->
-    <section class="py-20 px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-pink-400 text-sm font-semibold mb-3 tracking-wide">WHY THIS EXISTS</p>
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">Built by someone who's been on both sides.</h2>
-            
-            <div class="text-left max-w-2xl mx-auto space-y-6 text-gray-400 text-lg leading-relaxed">
-                <p>
-                    After years of being interviewed, placed, and working with recruiters across 15 cities and 6 countries — patterns became obvious.
-                </p>
-                <p>
-                    The best recruiters already think this way. They notice the small signals. They document their reasoning. They can explain exactly why someone is a fit or a risk.
-                </p>
-                <p>
-                    I built Sharp Recruit to make that thinking <span class="text-white">consistent, documented, and shareable</span> — so every recruiter and hiring manager can operate at that level, not just the naturals.
-                </p>
-            </div>
-            
-            <div class="mt-8">
-                <p class="text-gray-500">— Judd</p>
-                <p class="text-gray-600 text-sm">Nashville 🎸</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services (Bespoke) -->
-    <section id="services" class="py-20 px-4 bg-black/40 relative z-10">
-        <div class="max-w-4xl mx-auto">
+    <!-- Services Section (Sharp Sales + Bespoke moved here) -->
+    <section id="services" class="py-20 px-4 relative z-10">
+        <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <p class="text-pink-400 text-sm font-semibold mb-3 tracking-wide">SERVICES</p>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Want to go deeper?</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">
-                    Sharp Recruit works out-of-the-box. For teams that want custom tuning, we offer bespoke implementation.
-                </p>
+                <p class="text-pink-400 text-sm font-semibold mb-2">DONE-FOR-YOU</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Growth Services</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Don't want to DIY? We'll handle it.</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="card rounded-xl p-6 text-center">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-3">🤖</div>
                     <h3 class="font-semibold mb-2">Bespoke AI</h3>
-                    <p class="text-gray-500 text-sm">Trained on your best interviews, values, and hiring standards. Analysis that reflects how you hire.</p>
+                    <p class="text-gray-500 text-sm mb-3">Sharp Recruit tuned to your hiring standards. Analysis trained on your best interviews.</p>
+                    <p class="text-pink-400 font-semibold text-sm">From $5,000</p>
                 </div>
-                <div class="card rounded-xl p-6 text-center">
+                <div class="card rounded-xl p-6">
+                    <div class="text-2xl mb-3">📞</div>
+                    <h3 class="font-semibold mb-2">Sharp Sales</h3>
+                    <p class="text-gray-500 text-sm mb-3">AI sales call coaching. White-label for your team or clients.</p>
+                    <p class="text-pink-400 font-semibold text-sm">Custom pricing</p>
+                </div>
+                <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-3">📧</div>
                     <h3 class="font-semibold mb-2">Cold Email Campaigns</h3>
-                    <p class="text-gray-500 text-sm">Done-for-you outbound. We write, send, and manage. You take the meetings.</p>
+                    <p class="text-gray-500 text-sm mb-3">We write, send, and manage your outbound. You take the meetings.</p>
+                    <p class="text-pink-400 font-semibold text-sm">Monthly retainer</p>
                 </div>
-                <div class="card rounded-xl p-6 text-center">
+                <div class="card rounded-xl p-6">
                     <div class="text-2xl mb-3">📱</div>
                     <h3 class="font-semibold mb-2">META Advertising</h3>
-                    <p class="text-gray-500 text-sm">Facebook & Instagram campaigns for employer branding and candidate generation.</p>
+                    <p class="text-gray-500 text-sm mb-3">Facebook & Instagram ads for employer branding and lead generation.</p>
+                    <p class="text-pink-400 font-semibold text-sm">% of spend + fee</p>
                 </div>
             </div>
             
             <div class="text-center mt-10">
-                <a href="https://calendly.com/sharphuman/60min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sharphuman/60min'});return false;" class="btn-secondary px-6 py-3 rounded-lg font-semibold inline-block">
+                <a href="https://calendly.com/sharphuman/60min" class="btn-outline px-6 py-3 rounded-lg font-semibold inline-block" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sharphuman/60min'});return false;">
                     Book a Strategy Call →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-20 px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to hire with confidence?</h2>
-            <p class="text-gray-400 mb-8">Evidence-backed decisions. Every time. Start free.</p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a href="https://recruit.sharphuman.com" class="btn-primary text-white px-8 py-4 rounded-xl font-semibold text-lg">
-                    Analyze Your First Interview →
-                </a>
-                <a href="#sample-report" class="btn-secondary px-8 py-4 rounded-xl font-semibold text-lg">
-                    See Sample Analysis
-                </a>
+    <!-- FAQ -->
+    <section class="py-20 px-4 bg-black/40 relative z-10">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-12">FAQ</h2>
+            
+            <div class="space-y-4">
+                <div class="card rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Is the free plan really free forever?</h4>
+                    <p class="text-gray-400 text-sm">Yes. 25 CV screens, 5 interview analyses, unlimited JDs — every month, forever. No credit card required.</p>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">What's the difference between products and services?</h4>
+                    <p class="text-gray-400 text-sm">Sharp Recruit is self-serve AI you use yourself. Services are done-for-you by our team — bespoke AI, sales coaching, campaigns.</p>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Why is Interview Analyzer the flagship?</h4>
+                    <p class="text-gray-400 text-sm">Because it catches what humans miss. 6-pillar analysis with evidence tied to specific moments. It's the "holy shit" moment that makes decisions defensible.</p>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Can I try before committing?</h4>
+                    <p class="text-gray-400 text-sm">Absolutely. Free tier lets you try everything. Or <a href="https://calendly.com/sharphuman/60min" class="text-pink-400 hover:underline" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sharphuman/60min'});return false;">book a demo</a>.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-white/5 relative z-10">
+    <footer class="py-12 px-4 border-t border-white/10 relative z-10">
         <div class="max-w-5xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center space-x-2">
-                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-6 w-auto" style="mix-blend-mode: screen;">
-                    <span class="font-semibold">Sharp Recruit</span>
+                    <img src="./logo1-3.png" alt="Sharp Human" class="h-6 w-auto" style="mix-blend-mode: screen;">
+                    <span class="font-semibold">Sharp Human</span>
                 </div>
                 <div class="flex flex-wrap gap-6 text-sm text-gray-400">
-                    <a href="#interview-analyzer" class="hover:text-pink-400 transition-colors">Interview Analyzer</a>
-                    <a href="/pricing.html" class="hover:text-pink-400 transition-colors">Pricing</a>
-                    <a href="/services.html" class="hover:text-pink-400 transition-colors">Services</a>
-                    <a href="https://sharphuman.com/blog" class="hover:text-pink-400 transition-colors">Blog</a>
-                    <a href="mailto:hello@sharphuman.com" class="hover:text-pink-400 transition-colors">Contact</a>
+                    <a href="https://recruit.sharphuman.com" class="hover:text-pink-400">Sharp Recruit</a>
+                    <a href="/pricing.html" class="hover:text-white">Pricing</a>
+                    <a href="/services.html" class="hover:text-white">Services</a>
+                    <a href="https://sharphuman.com/blog" class="hover:text-white">Blog</a>
+                    <a href="mailto:hello@sharphuman.com" class="hover:text-white">Contact</a>
                 </div>
             </div>
-            <div class="text-center mt-8 text-gray-600 text-sm">
+            <div class="text-center mt-8 text-gray-500 text-sm">
                 © 2025 Sharp Human. Evidence-backed hiring, every time.
             </div>
         </div>
