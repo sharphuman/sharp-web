@@ -3,207 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | Sharp Recruit — Simple, Generous, Memorable</title>
+    <title>Pricing | Sharp Recruit - AI Recruiting Software</title>
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM04LFY3FJ"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BM04LFY3FJ');</script>
     
-    <!-- SEO Meta -->
-    <meta name="description" content="Sharp Recruit pricing: Free forever, Solo at $25/mo, Elite at $250/mo. The 25/250 pattern. Simple, generous, no surprises.">
+    <meta name="description" content="Sharp Recruit pricing: Free forever plan, Solo at $49/mo, Pro at $99/mo. Transparent pricing, no hidden fees, no sales calls required.">
     <link rel="canonical" href="https://sharphuman.com/pricing">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Pricing | Sharp Recruit">
-    <meta property="og:description" content="Free forever plan. Solo $25/mo. Elite $250/mo. Simple pricing, generous limits.">
     
     <link rel="icon" type="image/png" href="./logo1-3.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <style>
-        * { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif; }
-        body { background: #1a1a1a; overflow-x: hidden; }
-        
-        .text-gradient { 
-            background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #3b82f6 100%); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
-        }
-        
-        .btn-primary { 
-            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); 
-            transition: all 0.3s ease; 
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3); 
-        }
-        .btn-primary:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.5); 
-        }
-        
-        .btn-secondary { 
-            background: rgba(255,255,255,0.05); 
-            border: 1px solid rgba(255,255,255,0.1); 
-            transition: all 0.3s ease; 
-        }
-        .btn-secondary:hover { 
-            background: rgba(255,255,255,0.1); 
-        }
-        
-        .card { 
-            background: rgba(255,255,255,0.02); 
-            border: 1px solid rgba(255,255,255,0.08); 
-        }
-        
-        .card-popular { 
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%); 
-            border: 2px solid #ec4899; 
-        }
-        
-        /* Floating Logos */
-        .floating-logo {
-            position: absolute;
-            opacity: 0.04;
-            pointer-events: none;
-            animation: float 20s ease-in-out infinite;
-        }
-        .floating-logo:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; animation-duration: 28s; }
-        .floating-logo:nth-child(2) { top: 30%; right: 8%; animation-delay: -7s; animation-duration: 24s; }
-        .floating-logo:nth-child(3) { top: 60%; left: 3%; animation-delay: -14s; animation-duration: 30s; }
-        .floating-logo:nth-child(4) { top: 75%; right: 5%; animation-delay: -20s; animation-duration: 26s; }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-15px) rotate(1deg); }
-            50% { transform: translateY(0px) rotate(0deg); }
-            75% { transform: translateY(15px) rotate(-1deg); }
-        }
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        body { background: #0a0a0a; }
+        .text-gradient { background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-primary { background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(236, 72, 153, 0.5); }
+        .btn-secondary { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+        .card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); }
+        .pricing-popular { background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%); border: 2px solid #ec4899; }
+        .nav-blur { backdrop-filter: blur(20px); }
     </style>
 </head>
 <body class="text-white antialiased">
 
-    <!-- Floating Logos Background -->
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-28 md:w-40" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-20 md:w-32" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-24 md:w-36" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-16 md:w-28" style="mix-blend-mode: screen;">
-    </div>
-
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-white/5">
+    <nav class="fixed top-0 w-full z-50 nav-blur bg-[#0a0a0a]/80 border-b border-white/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16">
                 <a href="/" class="flex items-center space-x-2">
-                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-8 w-auto" style="mix-blend-mode: screen;">
+                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-8 w-auto">
                     <span class="text-lg font-bold">Sharp Recruit</span>
                 </a>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="/#interview-analyzer" class="text-gray-400 hover:text-white text-sm">Interview Analyzer</a>
-                    <a href="/#how-it-works" class="text-gray-400 hover:text-white text-sm">How It Works</a>
-                    <a href="/pricing.html" class="text-white text-sm font-medium">Pricing</a>
-                    <a href="https://sharphuman.com/blog" class="text-gray-400 hover:text-white text-sm">Blog</a>
-                    <a href="https://recruit.sharphuman.com" class="btn-primary text-white px-5 py-2 rounded-lg text-sm font-semibold">Start Free</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/#features" class="text-gray-400 hover:text-white text-sm">Features</a>
+                    <a href="/pricing" class="text-white text-sm font-medium">Pricing</a>
+                    <a href="/#compare" class="text-gray-400 hover:text-white text-sm">Compare</a>
+                    <a href="https://app.sharphuman.com" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">Start Free →</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-16 px-4 relative z-10">
+    <section class="pt-32 pb-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Simple. Generous. Memorable.</h1>
-            <p class="text-xl text-gray-400 mb-2">The 25/250 pattern. 10x at each tier.</p>
-            <p class="text-gray-500">Start free. Upgrade when you're ready. No surprises.</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Simple, transparent pricing</h1>
+            <p class="text-xl text-gray-400">Start free. Upgrade when you're ready. No hidden fees.</p>
         </div>
     </section>
 
     <!-- Pricing Cards -->
-    <section class="py-12 px-4 relative z-10">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-8">
+    <section class="py-12 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-6">
                 
                 <!-- Free -->
                 <div class="card rounded-2xl p-8">
                     <h3 class="text-xl font-bold mb-1">Free</h3>
-                    <p class="text-gray-500 text-sm mb-6">Get started. Forever.</p>
+                    <p class="text-gray-500 text-sm mb-6">Try it out forever</p>
                     <div class="mb-6">
                         <span class="text-5xl font-bold">$0</span>
                     </div>
-                    <a href="https://recruit.sharphuman.com" class="block w-full btn-secondary text-center py-3 rounded-xl font-semibold mb-8 text-white">
-                        Start Free
+                    <a href="https://app.sharphuman.com" class="block w-full btn-secondary text-center py-3 rounded-xl font-semibold mb-8">
+                        Get Started
                     </a>
                     <div class="space-y-4 text-sm">
                         <p class="text-gray-400 font-medium">Includes:</p>
                         <div class="space-y-3">
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">25 CV screens/month</span>
+                                <span class="text-gray-400">2 pipelines</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">5 interview analyses/month</span>
+                                <span class="text-gray-400">10 CV screens/month</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">Unlimited JD generations</span>
+                                <span class="text-gray-400">5 JD generations/month</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">Full pipeline access</span>
+                                <span class="text-gray-400">5 interview preps/month</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">PDF & DOCX exports</span>
-                            </div>
-                            <div class="flex items-start gap-2">
-                                <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">Email support</span>
+                                <span class="text-gray-400">Basic outreach templates</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Solo - Popular -->
-                <div class="card-popular rounded-2xl p-8 relative">
+                <div class="pricing-popular rounded-2xl p-8 relative">
                     <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                         MOST POPULAR
                     </div>
-                    <h3 class="text-xl font-bold mb-1 mt-2">Solo</h3>
-                    <p class="text-gray-500 text-sm mb-6">For recruiters who want an edge</p>
+                    <h3 class="text-xl font-bold mb-1">Solo</h3>
+                    <p class="text-gray-500 text-sm mb-6">For independent recruiters</p>
                     <div class="mb-6">
-                        <span class="text-5xl font-bold">$25</span>
+                        <span class="text-5xl font-bold">$49</span>
                         <span class="text-gray-500">/mo</span>
                     </div>
-                    <a href="https://recruit.sharphuman.com" class="block w-full btn-primary text-center py-3 rounded-xl font-semibold mb-8 text-white">
-                        Start Free
+                    <a href="https://app.sharphuman.com" class="block w-full btn-primary text-center py-3 rounded-xl font-semibold mb-8">
+                        Start 14-Day Trial
                     </a>
                     <div class="space-y-4 text-sm">
                         <p class="text-gray-300 font-medium">Everything in Free, plus:</p>
                         <div class="space-y-3">
                             <div class="flex items-start gap-2">
-                                <span class="text-pink-400 mt-0.5">✓</span>
-                                <span class="text-gray-300">250 CV screens/month</span>
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-300">10 pipelines</span>
                             </div>
                             <div class="flex items-start gap-2">
-                                <span class="text-pink-400 mt-0.5">✓</span>
-                                <span class="text-gray-300">25 interview analyses/month</span>
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-300">100 CV screens/month</span>
                             </div>
                             <div class="flex items-start gap-2">
-                                <span class="text-pink-400 mt-0.5">✓</span>
+                                <span class="text-green-500 mt-0.5">✓</span>
                                 <span class="text-gray-300">Unlimited JD generations</span>
                             </div>
                             <div class="flex items-start gap-2">
-                                <span class="text-pink-400 mt-0.5">✓</span>
-                                <span class="text-gray-300">Full pipeline access</span>
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-300">50 interview analyses</span>
                             </div>
                             <div class="flex items-start gap-2">
-                                <span class="text-pink-400 mt-0.5">✓</span>
-                                <span class="text-gray-300">All export formats</span>
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-300">100 outreach messages</span>
                             </div>
                             <div class="flex items-start gap-2">
-                                <span class="text-pink-400 mt-0.5">✓</span>
-                                <span class="text-gray-300">Priority support</span>
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-300">25 GitHub searches/month</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-300">5 automation workflows</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-300">Email support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro -->
+                <div class="card rounded-2xl p-8">
+                    <h3 class="text-xl font-bold mb-1">Pro</h3>
+                    <p class="text-gray-500 text-sm mb-6">For power users</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold">$99</span>
+                        <span class="text-gray-500">/mo</span>
+                    </div>
+                    <a href="https://app.sharphuman.com" class="block w-full btn-secondary text-center py-3 rounded-xl font-semibold mb-8">
+                        Start 14-Day Trial
+                    </a>
+                    <div class="space-y-4 text-sm">
+                        <p class="text-gray-400 font-medium">Everything in Solo, plus:</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Unlimited pipelines</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">500 CV screens/month</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Sales CRM + deals</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Call analyzer (50/mo)</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Market intelligence</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Revenue tracking</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">25 automation workflows</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Priority support</span>
                             </div>
                         </div>
                     </div>
@@ -212,78 +204,208 @@
                 <!-- Elite -->
                 <div class="card rounded-2xl p-8">
                     <h3 class="text-xl font-bold mb-1">Elite</h3>
-                    <p class="text-gray-500 text-sm mb-6">For teams who hire seriously</p>
+                    <p class="text-gray-500 text-sm mb-6">For teams & agencies</p>
                     <div class="mb-6">
-                        <span class="text-5xl font-bold">$250</span>
+                        <span class="text-5xl font-bold">$149</span>
                         <span class="text-gray-500">/mo</span>
                     </div>
-                    <a href="https://recruit.sharphuman.com" class="block w-full btn-secondary text-center py-3 rounded-xl font-semibold mb-8 text-white">
-                        Start Free
+                    <a href="https://app.sharphuman.com" class="block w-full btn-secondary text-center py-3 rounded-xl font-semibold mb-8">
+                        Start 14-Day Trial
                     </a>
                     <div class="space-y-4 text-sm">
-                        <p class="text-gray-400 font-medium">Everything in Solo, plus:</p>
+                        <p class="text-gray-400 font-medium">Everything in Pro, plus:</p>
                         <div class="space-y-3">
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">2,500 CV screens/month</span>
+                                <span class="text-gray-400">Unlimited everything</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">250 interview analyses/month</span>
+                                <span class="text-gray-400">Ghost blog publishing</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">5 team members</span>
+                                <span class="text-gray-400">AI daily briefings</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">Team pipeline sharing</span>
+                                <span class="text-gray-400">Client health scores</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">Branded exports</span>
+                                <span class="text-gray-400">Candidate intelligence</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <span class="text-green-500 mt-0.5">✓</span>
-                                <span class="text-gray-400">Priority support + Slack</span>
+                                <span class="text-gray-400">API access</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Onboarding call</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-green-500 mt-0.5">✓</span>
+                                <span class="text-gray-400">Slack support</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
 
-    <!-- The 25 Pattern Explanation -->
-    <section class="py-16 px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-4">Why 25 and 250?</h2>
-            <p class="text-gray-400 mb-6">
-                Because it's simple, memorable, and honest.
-            </p>
-            <div class="inline-flex flex-wrap items-center justify-center gap-3 text-sm mb-6">
-                <span class="bg-white/5 px-3 py-1.5 rounded-lg text-gray-400">Free: 25 CVs</span>
-                <span class="text-pink-500">→</span>
-                <span class="bg-white/5 px-3 py-1.5 rounded-lg text-gray-300">Solo: 250 CVs</span>
-                <span class="text-pink-500">→</span>
-                <span class="bg-white/5 px-3 py-1.5 rounded-lg text-white">Elite: 2,500 CVs</span>
+    <!-- Feature Comparison Table -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-12">Detailed feature comparison</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="py-4 px-4 text-gray-400 font-medium">Feature</th>
+                            <th class="py-4 px-4 text-center text-gray-400">Free</th>
+                            <th class="py-4 px-4 text-center text-pink-500 font-semibold">Solo</th>
+                            <th class="py-4 px-4 text-center text-gray-400">Pro</th>
+                            <th class="py-4 px-4 text-center text-gray-400">Elite</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-400">
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4 font-medium text-white" colspan="5">Recruiting</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Pipelines</td>
+                            <td class="py-3 px-4 text-center">2</td>
+                            <td class="py-3 px-4 text-center text-pink-400">10</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">CV Screens</td>
+                            <td class="py-3 px-4 text-center">10/mo</td>
+                            <td class="py-3 px-4 text-center text-pink-400">100/mo</td>
+                            <td class="py-3 px-4 text-center">500/mo</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">JD Generations</td>
+                            <td class="py-3 px-4 text-center">5/mo</td>
+                            <td class="py-3 px-4 text-center text-pink-400">Unlimited</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Interview Analysis</td>
+                            <td class="py-3 px-4 text-center">5/mo</td>
+                            <td class="py-3 px-4 text-center text-pink-400">50/mo</td>
+                            <td class="py-3 px-4 text-center">200/mo</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">GitHub Sourcing</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center text-pink-400">25/mo</td>
+                            <td class="py-3 px-4 text-center">100/mo</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4 font-medium text-white" colspan="5">Sales & CRM</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Client CRM</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Deal Pipeline</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Call Analyzer</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">50/mo</td>
+                            <td class="py-3 px-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Revenue Tracking</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4 font-medium text-white" colspan="5">Intelligence</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">AI Assistant</td>
+                            <td class="py-3 px-4 text-center">Basic</td>
+                            <td class="py-3 px-4 text-center text-pink-400">Full</td>
+                            <td class="py-3 px-4 text-center">Full</td>
+                            <td class="py-3 px-4 text-center">Full</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Market Intelligence</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Candidate Intelligence</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Daily Briefings</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center">—</td>
+                            <td class="py-3 px-4 text-center text-green-400">✓</td>
+                        </tr>
+                        
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4 font-medium text-white" colspan="5">Support</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Support Channel</td>
+                            <td class="py-3 px-4 text-center">Help docs</td>
+                            <td class="py-3 px-4 text-center text-pink-400">Email</td>
+                            <td class="py-3 px-4 text-center">Priority email</td>
+                            <td class="py-3 px-4 text-center">Slack</td>
+                        </tr>
+                        <tr class="border-b border-white/5">
+                            <td class="py-3 px-4">Onboarding</td>
+                            <td class="py-3 px-4 text-center">Self-serve</td>
+                            <td class="py-3 px-4 text-center text-pink-400">Self-serve</td>
+                            <td class="py-3 px-4 text-center">Video call</td>
+                            <td class="py-3 px-4 text-center">Dedicated</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <p class="text-gray-500 text-sm max-w-xl mx-auto">
-                $25/month is less than most people spend on coffee. $250/month for a team of 5 is still cheaper than enterprise tools. We want you to feel good about paying, not resentful.
-            </p>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-20 px-4 bg-black/30 relative z-10">
+    <section class="py-20 px-4 bg-white/[0.01] border-y border-white/5">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-2xl font-bold text-center mb-12">Frequently asked questions</h2>
             
             <div class="space-y-6">
                 <div class="card rounded-xl p-6">
-                    <h3 class="font-semibold mb-2">Is the free plan really free forever?</h3>
-                    <p class="text-gray-400 text-sm">Yes. 25 CV screens, 5 interview analyses, unlimited JDs — every month, forever. No credit card required. No trial period. No catch.</p>
+                    <h3 class="font-semibold mb-2">Is there really a free forever plan?</h3>
+                    <p class="text-gray-400 text-sm">Yes! Our Free plan never expires. You get 2 pipelines, 10 CV screens, and 5 JD generations per month—forever. No credit card required.</p>
                 </div>
                 
                 <div class="card rounded-xl p-6">
@@ -292,57 +414,52 @@
                 </div>
                 
                 <div class="card rounded-xl p-6">
+                    <h3 class="font-semibold mb-2">Do you offer annual discounts?</h3>
+                    <p class="text-gray-400 text-sm">Yes! Pay annually and get 2 months free (17% discount). Contact us for annual billing options.</p>
+                </div>
+                
+                <div class="card rounded-xl p-6">
                     <h3 class="font-semibold mb-2">What happens if I hit my limits?</h3>
-                    <p class="text-gray-400 text-sm">We'll let you know when you're approaching limits. You can upgrade anytime, or wait until next month when limits reset. We're not trying to trap you.</p>
+                    <p class="text-gray-400 text-sm">We'll let you know when you're approaching limits. You can upgrade anytime, or wait until next month when limits reset.</p>
                 </div>
                 
                 <div class="card rounded-xl p-6">
-                    <h3 class="font-semibold mb-2">Do you offer annual billing?</h3>
-                    <p class="text-gray-400 text-sm">Coming soon. When we add it, you'll get 2 months free (pay for 10, get 12).</p>
-                </div>
-                
-                <div class="card rounded-xl p-6">
-                    <h3 class="font-semibold mb-2">What about custom/enterprise plans?</h3>
-                    <p class="text-gray-400 text-sm">For teams that want bespoke AI tuning or volume beyond Elite, <a href="https://calendly.com/sharphuman/60min" class="text-pink-400 hover:underline">book a call</a>. We'll build something that fits.</p>
-                </div>
-                
-                <div class="card rounded-xl p-6">
-                    <h3 class="font-semibold mb-2">Can I export reports to PDF/DOCX?</h3>
-                    <p class="text-gray-400 text-sm">Yes, on all plans including Free. Interview analyses, CV screenings, and pipeline reports can all be exported to share with clients or hiring managers.</p>
+                    <h3 class="font-semibold mb-2">Do you offer team or agency pricing?</h3>
+                    <p class="text-gray-400 text-sm">Yes! For teams of 5+ or agencies, contact us for custom pricing with volume discounts and dedicated support.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-20 px-4 relative z-10">
+    <section class="py-20 px-4">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Ready to hire with confidence?</h2>
-            <p class="text-gray-400 mb-8">Evidence-backed decisions. Every time. Start free.</p>
-            <a href="https://recruit.sharphuman.com" class="btn-primary inline-block text-white px-8 py-4 rounded-xl font-semibold text-lg">
-                Analyze Your First Interview — Free →
+            <h2 class="text-3xl font-bold mb-4">Ready to hire faster?</h2>
+            <p class="text-gray-400 mb-8">Start free. No credit card required. Setup in 2 minutes.</p>
+            <a href="https://app.sharphuman.com" class="btn-primary inline-block text-white px-8 py-4 rounded-xl font-semibold text-lg">
+                Start Screening Free →
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-white/5 relative z-10">
-        <div class="max-w-5xl mx-auto">
+    <footer class="py-12 px-4 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
             <div class="flex flex-wrap justify-between items-center gap-4">
                 <div class="flex items-center space-x-2">
-                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-6 w-auto" style="mix-blend-mode: screen;">
+                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-6 w-auto">
                     <span class="font-semibold">Sharp Recruit</span>
                 </div>
                 <div class="flex flex-wrap gap-6 text-sm text-gray-500">
                     <a href="/" class="hover:text-pink-400">Home</a>
-                    <a href="/#interview-analyzer" class="hover:text-pink-400">Interview Analyzer</a>
-                    <a href="/pricing.html" class="hover:text-pink-400">Pricing</a>
-                    <a href="https://sharphuman.com/blog" class="hover:text-pink-400">Blog</a>
-                    <a href="mailto:hello@sharphuman.com" class="hover:text-pink-400">Contact</a>
+                    <a href="/#features" class="hover:text-pink-400">Features</a>
+                    <a href="/pricing" class="hover:text-pink-400">Pricing</a>
+                    <a href="/blog" class="hover:text-pink-400">Blog</a>
+                    <a href="/#contact" class="hover:text-pink-400">Contact</a>
                 </div>
             </div>
-            <div class="text-center mt-8 text-gray-600 text-sm">
-                © 2025 Sharp Human. Evidence-backed hiring, every time.
+            <div class="border-t border-white/5 mt-8 pt-8 text-center text-gray-600 text-sm">
+                <p>© 2025 Sharp Human. All rights reserved.</p>
             </div>
         </div>
     </footer>

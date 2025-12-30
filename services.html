@@ -3,88 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Sharp Human — Bespoke AI & Growth Marketing</title>
+    <title>Growth Services | Sharp Human</title>
     
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM04LFY3FJ"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BM04LFY3FJ');</script>
     
-    <!-- SEO Meta -->
-    <meta name="description" content="Sharp Human services: Bespoke AI implementation, cold email campaigns, and META advertising. Done-for-you growth solutions.">
+    <meta name="description" content="Done-for-you growth services: cold email campaigns, META advertising, and bespoke AI solutions.">
     <link rel="canonical" href="https://sharphuman.com/services">
     
     <link rel="icon" type="image/png" href="./logo1-3.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Calendly -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     
     <style>
         * { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif; }
-        body { background: #1a1a1a; overflow-x: hidden; }
-        
-        .btn-primary { 
-            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); 
-            transition: all 0.3s ease; 
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3); 
-        }
-        .btn-primary:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.5); 
-        }
-        
-        .btn-secondary { 
-            background: transparent; 
-            border: 1px solid rgba(236, 72, 153, 0.5); 
-            color: #ec4899; 
-            transition: all 0.3s ease; 
-        }
-        .btn-secondary:hover { 
-            background: rgba(236, 72, 153, 0.1); 
-        }
-        
-        .card { 
-            background: rgba(255,255,255,0.02); 
-            border: 1px solid rgba(255,255,255,0.08); 
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            border-color: rgba(236, 72, 153, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        /* Floating Logos */
-        .floating-logo {
-            position: absolute;
-            opacity: 0.04;
-            pointer-events: none;
-            animation: float 20s ease-in-out infinite;
-        }
-        .floating-logo:nth-child(1) { top: 15%; left: 5%; animation-delay: 0s; animation-duration: 28s; }
-        .floating-logo:nth-child(2) { top: 40%; right: 8%; animation-delay: -10s; animation-duration: 24s; }
-        .floating-logo:nth-child(3) { top: 70%; left: 3%; animation-delay: -18s; animation-duration: 30s; }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-15px) rotate(1deg); }
-            50% { transform: translateY(0px) rotate(0deg); }
-            75% { transform: translateY(15px) rotate(-1deg); }
-        }
+        body { background: #1a1a1a; }
+        .text-gradient { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .btn-pink { background: #ec4899; transition: all 0.3s ease; }
+        .btn-pink:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4); }
+        .btn-outline { background: transparent; border: 1px solid #ec4899; color: #ec4899; transition: all 0.3s ease; }
+        .btn-outline:hover { background: rgba(236, 72, 153, 0.1); }
+        .card { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .card:hover { border-color: rgba(236, 72, 153, 0.5); transform: translateY(-2px); }
     </style>
 </head>
-<body class="text-white antialiased">
-
-    <!-- Floating Logos Background -->
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-28 md:w-40" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-20 md:w-32" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-24 md:w-36" style="mix-blend-mode: screen;">
-    </div>
+<body class="text-white">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-white/5">
+    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16">
                 <a href="/" class="flex items-center space-x-2">
@@ -92,169 +41,200 @@
                     <span class="text-lg font-bold">Sharp Human</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="/" class="text-gray-400 hover:text-white text-sm">Sharp Recruit</a>
+                    <a href="/#products" class="text-gray-400 hover:text-white text-sm">Products</a>
+                    <a href="/services.html" class="text-white text-sm font-semibold">Services</a>
                     <a href="/pricing.html" class="text-gray-400 hover:text-white text-sm">Pricing</a>
-                    <a href="/services.html" class="text-white text-sm font-medium">Services</a>
                     <a href="https://sharphuman.com/blog" class="text-gray-400 hover:text-white text-sm">Blog</a>
-                    <a href="https://calendly.com/sharphuman/60min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sharphuman/60min'});return false;" class="btn-primary text-white px-5 py-2 rounded-lg text-sm font-semibold">
-                        Book a Call
-                    </a>
+                    <a href="https://recruit.sharphuman.com" class="btn-pink text-white px-4 py-2 rounded-lg text-sm font-semibold">Try Free</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-16 px-4 relative z-10">
+    <section class="pt-32 pb-16 px-4">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="text-pink-400 text-sm font-semibold mb-4 tracking-wide">DONE-FOR-YOU</p>
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Services that move the needle.</h1>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                Sharp Recruit is self-serve. These services are for teams who want expert execution.
+            <p class="text-pink-400 text-sm font-semibold mb-4">DONE-FOR-YOU</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Growth Services
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                Don't want to DIY? Our team handles cold email campaigns, paid advertising, and custom AI builds so you can focus on closing deals.
             </p>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="py-16 px-4 relative z-10">
+    <!-- Services -->
+    <section class="py-16 px-4">
         <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-1 gap-8">
-                
-                <!-- Bespoke AI -->
-                <div class="card rounded-2xl p-8 md:p-10">
-                    <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-xl bg-pink-500/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl">🤖</span>
-                        </div>
-                        <div class="flex-1">
-                            <h2 class="text-2xl font-bold mb-3">Bespoke AI Implementation</h2>
-                            <p class="text-gray-400 mb-4">
-                                Sharp Recruit works out-of-the-box. But for teams with specific hiring standards, we can go deeper.
-                            </p>
-                            <div class="space-y-3 mb-6">
-                                <div class="flex items-start gap-2">
-                                    <span class="text-pink-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Analysis trained on your best interviews and hiring criteria</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-pink-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Custom scoring pillars aligned to your company values</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-pink-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Role-specific evaluation templates</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-pink-400 mt-1">✓</span>
-                                    <span class="text-gray-300">White-glove onboarding and configuration</span>
-                                </div>
+            
+            <!-- Cold Email -->
+            <div class="card rounded-2xl p-8 mb-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3">
+                        <div class="text-4xl mb-4">📧</div>
+                        <h2 class="text-2xl font-bold mb-2">Cold Email Campaigns</h2>
+                        <p class="text-pink-400 font-semibold">$2,000/mo retainer</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-gray-300 mb-6">We handle your entire outbound operation. You just take the meetings.</p>
+                        
+                        <h4 class="font-semibold mb-3">What's Included:</h4>
+                        <div class="grid md:grid-cols-2 gap-3 mb-6 text-sm">
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Domain setup & warming (we buy domains for you)</span>
                             </div>
-                            <p class="text-gray-500 text-sm">Starting at $5,000 • Project-based</p>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Lead list building (your ICP)</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Copywriting & A/B testing</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Sequence management & optimization</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Reply handling & meeting booking</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Weekly reporting</span>
+                            </div>
                         </div>
+                        
+                        <p class="text-gray-500 text-sm">Best for: Recruiting agencies, SaaS companies, B2B services</p>
                     </div>
                 </div>
-                
-                <!-- Cold Email -->
-                <div class="card rounded-2xl p-8 md:p-10">
-                    <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl">📧</span>
-                        </div>
-                        <div class="flex-1">
-                            <h2 class="text-2xl font-bold mb-3">Cold Email Campaigns</h2>
-                            <p class="text-gray-400 mb-4">
-                                Done-for-you outbound. We write the sequences, manage the infrastructure, and deliver meetings to your calendar.
-                            </p>
-                            <div class="space-y-3 mb-6">
-                                <div class="flex items-start gap-2">
-                                    <span class="text-blue-400 mt-1">✓</span>
-                                    <span class="text-gray-300">ICP research and list building</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-blue-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Multi-touch email sequences written for your voice</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-blue-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Deliverability management and warm-up</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-blue-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Weekly reporting on opens, replies, and meetings</span>
-                                </div>
-                            </div>
-                            <p class="text-gray-500 text-sm">Monthly retainer • Volume-based pricing</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- META Advertising -->
-                <div class="card rounded-2xl p-8 md:p-10">
-                    <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 rounded-xl bg-purple-500/20 flex items-center justify-center flex-shrink-0">
-                            <span class="text-3xl">📱</span>
-                        </div>
-                        <div class="flex-1">
-                            <h2 class="text-2xl font-bold mb-3">META Advertising</h2>
-                            <p class="text-gray-400 mb-4">
-                                Facebook and Instagram campaigns for employer branding, candidate generation, or client acquisition.
-                            </p>
-                            <div class="space-y-3 mb-6">
-                                <div class="flex items-start gap-2">
-                                    <span class="text-purple-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Campaign strategy and audience targeting</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-purple-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Ad creative and copy development</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-purple-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Ongoing optimization and A/B testing</span>
-                                </div>
-                                <div class="flex items-start gap-2">
-                                    <span class="text-purple-400 mt-1">✓</span>
-                                    <span class="text-gray-300">Monthly performance reviews</span>
-                                </div>
-                            </div>
-                            <p class="text-gray-500 text-sm">Management fee + % of ad spend</p>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
+            
+            <!-- META Ads -->
+            <div class="card rounded-2xl p-8 mb-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3">
+                        <div class="text-4xl mb-4">📱</div>
+                        <h2 class="text-2xl font-bold mb-2">META Advertising</h2>
+                        <p class="text-pink-400 font-semibold">15% of ad spend + $500/mo</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-gray-300 mb-6">Facebook & Instagram ads for employer branding, candidate generation, and lead generation.</p>
+                        
+                        <h4 class="font-semibold mb-3">What's Included:</h4>
+                        <div class="grid md:grid-cols-2 gap-3 mb-6 text-sm">
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Campaign strategy & setup</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Audience research & targeting</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Ad creative (copy + basic graphics)</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Landing page recommendations</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Ongoing optimization</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Monthly reporting + strategy calls</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-500 text-sm">Minimum ad spend: $1,000/mo. Best for: Employer branding, candidate sourcing, B2B lead gen</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bespoke AI -->
+            <div class="card rounded-2xl p-8 mb-8">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h2 class="text-2xl font-bold mb-2">Bespoke AI Solutions</h2>
+                        <p class="text-pink-400 font-semibold">Starting at $5,000</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-gray-300 mb-6">Custom AI tools built for your specific workflow. Integrations, automations, dashboards.</p>
+                        
+                        <h4 class="font-semibold mb-3">Examples:</h4>
+                        <div class="grid md:grid-cols-2 gap-3 mb-6 text-sm">
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Custom CV parsing for your ATS</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>AI chatbot for candidate screening</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Automated reporting dashboards</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>CRM integrations (Salesforce, HubSpot)</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>Internal tools & process automation</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-pink-400 mt-1">✓</span>
+                                <span>AI training on your company data</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-500 text-sm">Timeline: 2-6 weeks depending on scope. Includes documentation & training.</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-20 px-4 bg-black/30 relative z-10">
+    <section class="py-20 px-4 bg-black/30">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Not sure which service fits?</h2>
-            <p class="text-gray-400 mb-8">Book a 30-minute call. We'll figure it out together — no pressure.</p>
-            <a href="https://calendly.com/sharphuman/60min" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sharphuman/60min'});return false;" class="btn-primary inline-block text-white px-8 py-4 rounded-xl font-semibold text-lg">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Grow?</h2>
+            <p class="text-gray-400 mb-8">Book a 60-minute strategy call. We'll discuss your goals and recommend the right approach.</p>
+            
+            <a href="https://calendly.com/sharphuman/60min" class="btn-pink text-white px-8 py-4 rounded-lg font-semibold text-lg inline-block" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sharphuman/60min'});return false;">
                 Book a Strategy Call →
             </a>
+            
+            <p class="text-gray-500 text-sm mt-4">No commitment. No pitch. Just a conversation about your growth.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-white/5 relative z-10">
+    <footer class="py-12 px-4 border-t border-white/10">
         <div class="max-w-5xl mx-auto">
-            <div class="flex flex-wrap justify-between items-center gap-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center space-x-2">
                     <img src="./logo1-3.png" alt="Sharp Human" class="h-6 w-auto" style="mix-blend-mode: screen;">
                     <span class="font-semibold">Sharp Human</span>
                 </div>
-                <div class="flex flex-wrap gap-6 text-sm text-gray-500">
-                    <a href="/" class="hover:text-pink-400">Sharp Recruit</a>
-                    <a href="/pricing.html" class="hover:text-pink-400">Pricing</a>
-                    <a href="/services.html" class="hover:text-pink-400">Services</a>
-                    <a href="https://sharphuman.com/blog" class="hover:text-pink-400">Blog</a>
-                    <a href="mailto:hello@sharphuman.com" class="hover:text-pink-400">Contact</a>
+                <div class="flex flex-wrap gap-6 text-sm text-gray-400">
+                    <a href="https://recruit.sharphuman.com" class="hover:text-pink-400">Sharp Recruit</a>
+                    <a href="https://sales.sharphuman.com" class="hover:text-blue-400">Sharp Sales</a>
+                    <a href="/pricing.html" class="hover:text-white">Pricing</a>
+                    <a href="/services.html" class="hover:text-white">Services</a>
+                    <a href="https://sharphuman.com/blog" class="hover:text-white">Blog</a>
                 </div>
             </div>
-            <div class="text-center mt-8 text-gray-600 text-sm">
-                © 2025 Sharp Human. Evidence-backed hiring, every time.
+            <div class="text-center mt-8 text-gray-500 text-sm">
+                © 2025 Sharp Human. Less admin. More human.
             </div>
         </div>
     </footer>

@@ -1,13 +1,4 @@
 # Sharp Human - Cloudflare Pages Redirects
 
-# Comparison pages - serve HTML without extension
-/vs/manatal /vs/manatal.html 200
-/vs/loxo /vs/loxo.html 200
-/vs/workable /vs/workable.html 200
-/vs /vs/index.html 200
-
-# Blog handled by Cloudflare Worker or Ghost
-# /blog/* https://sharphuman.ghost.io/:splat 200
-
 # SPA fallback
 /* /index.html 200

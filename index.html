@@ -37,26 +37,27 @@
             background-blend-mode: lighten;
         }
         
-        /* Floating Logos */
+        /* Floating logos */
         .floating-logo {
             position: absolute;
-            opacity: 0.07;
+            opacity: 0.05;
             pointer-events: none;
-            animation: float 20s ease-in-out infinite;
-            filter: brightness(1.2);
+            animation: float 30s ease-in-out infinite;
         }
-        .floating-logo:nth-child(1) { top: 8%; left: 3%; animation-delay: 0s; animation-duration: 28s; }
-        .floating-logo:nth-child(2) { top: 22%; right: 5%; animation-delay: -5s; animation-duration: 24s; }
-        .floating-logo:nth-child(3) { top: 50%; left: 5%; animation-delay: -10s; animation-duration: 30s; }
-        .floating-logo:nth-child(4) { top: 68%; right: 4%; animation-delay: -15s; animation-duration: 26s; }
+        .floating-logo:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .floating-logo:nth-child(2) { top: 30%; right: 8%; animation-delay: -8s; }
+        .floating-logo:nth-child(3) { top: 60%; left: 4%; animation-delay: -15s; }
+        .floating-logo:nth-child(4) { top: 80%; right: 6%; animation-delay: -22s; }
         
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            25% { transform: translateY(-20px) rotate(2deg); }
-            50% { transform: translateY(0px) rotate(0deg); }
-            75% { transform: translateY(20px) rotate(-2deg); }
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(15px, -15px) rotate(2deg); }
+            66% { transform: translate(-10px, 10px) rotate(-2deg); }
         }
         
+        @media (prefers-reduced-motion: reduce) {
+            .floating-logo { animation: none; }
+        }
         .text-gradient-pink { background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .text-gradient-blue { background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .btn-pink { background: #ec4899; transition: all 0.3s ease; }
@@ -73,16 +74,16 @@
 </head>
 <body class="text-white">
 
-    <!-- Floating Logos Background -->
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-28 md:w-40" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-20 md:w-32" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-24 md:w-36" style="mix-blend-mode: screen;">
-        <img src="./logo1-3.png" alt="" class="floating-logo w-16 md:w-28" style="mix-blend-mode: screen;">
+    <!-- Floating Logos -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <img src="./logo1-3.png" alt="" class="floating-logo w-32 md:w-40" style="mix-blend-mode: screen;">
+        <img src="./logo1-3.png" alt="" class="floating-logo w-24 md:w-32" style="mix-blend-mode: screen;">
+        <img src="./logo1-3.png" alt="" class="floating-logo w-28 md:w-36" style="mix-blend-mode: screen;">
+        <img src="./logo1-3.png" alt="" class="floating-logo w-20 md:w-28" style="mix-blend-mode: screen;">
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-white/10">
+    <nav class="fixed top-0 w-full z-50 bg-[#1a1a1a]/95 backdrop-blur-lg border-b border-white/10 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex justify-between items-center h-16">
                 <a href="/" class="flex items-center space-x-2">
@@ -162,23 +163,19 @@
                     <div class="space-y-3 mb-8">
                         <div class="flex items-center gap-3 text-sm">
                             <span class="text-pink-400">✓</span>
-                            <span><strong>CV Screener</strong> – 50 resumes in 10 minutes with evidence mapping</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-sm">
-                            <span class="text-pink-400">✓</span>
-                            <span><strong>Interview Analyzer</strong> – AI scoring + interviewer coaching</span>
-                        </div>
-                        <div class="flex items-center gap-3 text-sm">
-                            <span class="text-pink-400">✓</span>
                             <span><strong>JD Writer</strong> – Generate job descriptions in 2 minutes</span>
                         </div>
                         <div class="flex items-center gap-3 text-sm">
                             <span class="text-pink-400">✓</span>
-                            <span><strong>Candidate Pipeline</strong> – Kanban board for hiring</span>
+                            <span><strong>CV Screener</strong> – 50 resumes in 10 minutes with evidence mapping</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm bg-pink-500/10 -mx-2 px-2 py-2 rounded-lg border border-pink-500/30">
+                            <span class="text-pink-400">★</span>
+                            <span><strong>Interview Analyzer</strong> – 6-pillar analysis with evidence-based scoring <span class="text-pink-400 text-xs ml-1">FLAGSHIP</span></span>
                         </div>
                         <div class="flex items-center gap-3 text-sm">
                             <span class="text-pink-400">✓</span>
-                            <span><strong>Content Generator</strong> – LinkedIn posts, outreach emails</span>
+                            <span><strong>Pipeline</strong> – Intelligence that travels with each candidate</span>
                         </div>
                     </div>
                     
@@ -237,7 +234,7 @@
     <section class="py-20 px-4 bg-black/30 relative z-10">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-4">Simple Pricing</h2>
-            <p class="text-gray-400 mb-8">The 25/250 pattern. Generous limits. No surprises.</p>
+            <p class="text-gray-400 mb-8">Same pricing for both apps. Use one or both.</p>
             
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="card rounded-xl p-6">
@@ -316,6 +313,18 @@
                 <div class="card rounded-xl p-6">
                     <h4 class="font-semibold mb-2">What's the difference between products and services?</h4>
                     <p class="text-gray-400 text-sm">Products (Sharp Recruit, Sharp Sales) are self-serve AI tools you use yourself. Services are done-for-you by our team.</p>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">How does Interview Analyzer work?</h4>
+                    <p class="text-gray-400 text-sm">Upload or paste an interview transcript. Sharp Recruit analyzes it across six pillars with evidence-based scoring, Hire If/Pass If recommendations, and follow-up questions.</p>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Do I need to replace my ATS?</h4>
+                    <p class="text-gray-400 text-sm">No. Sharp Recruit is an intelligence layer, not an ATS replacement. It works alongside your existing tools.</p>
+                </div>
+                <div class="card rounded-xl p-6">
+                    <h4 class="font-semibold mb-2">Why $25 and $250?</h4>
+                    <p class="text-gray-400 text-sm">Simple, memorable, honest. The 25/250 pattern — 10x at each tier. We're not here to nickel-and-dime you.</p>
                 </div>
                 <div class="card rounded-xl p-6">
                     <h4 class="font-semibold mb-2">Can I try before committing?</h4>
