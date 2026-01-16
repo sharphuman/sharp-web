@@ -120,6 +120,13 @@
         .card-flag { background: linear-gradient(135deg, rgba(236,72,153,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(236,72,153,0.25); }
         section { scroll-margin-top: 80px; }
         
+        /* Smooth scroll animations */
+        @media (prefers-reduced-motion: no-preference) {
+            html { scroll-behavior: smooth; }
+            .fade-in { animation: fadeIn 0.6s ease-in; }
+            @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        }
+        
         /* Skip link styling */
         .sr-only {
             position: absolute;
@@ -373,6 +380,196 @@
         </div>
     </section>
 
+    <!-- USE CASES -->
+    <section class="py-20 px-4 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-pink-400 text-xs font-semibold uppercase tracking-wide mb-3">How It's Used</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Real scenarios. Real results.</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">See how recruiters and hiring managers use Sharp Recruit to make better decisions faster.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-lg">1</div>
+                        <h3 class="font-bold text-lg">Agency Recruiter</h3>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">The Challenge:</strong> Screening 50+ CVs per role, need to shortlist fast without missing strong candidates.
+                    </p>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">How Sharp Recruit Helps:</strong> Upload CVs against the JD. Get a ranked shortlist with clear explanations. Junior recruiters make senior-quality calls in minutes, not hours.
+                    </p>
+                    <p class="text-pink-400 text-sm font-medium">Result: 3x faster shortlisting, better candidate quality</p>
+                </div>
+
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-lg">2</div>
+                        <h3 class="font-bold text-lg">Hiring Manager</h3>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">The Challenge:</strong> Conducted 8 interviews, need to compare candidates objectively and justify decisions to leadership.
+                    </p>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">How Sharp Recruit Helps:</strong> Upload interview transcripts. Get six-pillar scores with exact quotes. Clear Hire If / Pass If logic you can present to stakeholders.
+                    </p>
+                    <p class="text-pink-400 text-sm font-medium">Result: Evidence-based decisions, faster consensus</p>
+                </div>
+
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-lg">3</div>
+                        <h3 class="font-bold text-lg">Technical Recruiter</h3>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">The Challenge:</strong> Need to assess technical skills from interviews, but not a developer yourself.
+                    </p>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">How Sharp Recruit Helps:</strong> Interview Analyzer scores technical competency with supporting quotes. See exactly what signals the technical strength (or weakness).
+                    </p>
+                    <p class="text-pink-400 text-sm font-medium">Result: Confident technical assessments without technical background</p>
+                </div>
+
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-lg">4</div>
+                        <h3 class="font-bold text-lg">Small Agency</h3>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">The Challenge:</strong> Limited budget, need to compete with larger agencies on quality and speed.
+                    </p>
+                    <p class="text-gray-300 text-sm mb-3">
+                        <strong class="text-white">How Sharp Recruit Helps:</strong> $25/mo gets you enterprise-quality analysis. Every recruiter on your team makes better decisions, faster. Pipeline keeps all insights attached.
+                    </p>
+                    <p class="text-pink-400 text-sm font-medium">Result: Level playing field, better margins</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 px-4 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-pink-400 text-xs font-semibold uppercase tracking-wide mb-3">What Recruiters Say</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Trusted by recruiters who value evidence</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">See how Sharp Recruit helps teams make better hiring decisions.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-white">S</div>
+                        <div>
+                            <p class="font-semibold text-sm">Sarah M.</p>
+                            <p class="text-gray-500 text-xs">Agency Recruiter</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                        "I used to spend hours screening CVs. Now I upload them, get a ranked list with explanations, and I can actually justify my shortlist to clients. The quote-backed scoring is a game changer."
+                    </p>
+                    <div class="flex gap-1">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                    </div>
+                </div>
+
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-white">J</div>
+                        <div>
+                            <p class="font-semibold text-sm">James K.</p>
+                            <p class="text-gray-500 text-xs">Hiring Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                        "The Interview Analyzer saved me so much time. Instead of trying to remember what each candidate said, I have the exact quotes. Makes it easy to compare and present to my team."
+                    </p>
+                    <div class="flex gap-1">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                    </div>
+                </div>
+
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-white">M</div>
+                        <div>
+                            <p class="font-semibold text-sm">Maria L.</p>
+                            <p class="text-gray-500 text-xs">Technical Recruiter</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                        "I'm not a developer, but I need to assess technical skills. Sharp Recruit shows me exactly what signals technical strength — I can have confident conversations with hiring managers now."
+                    </p>
+                    <div class="flex gap-1">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                    </div>
+                </div>
+
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold text-white">D</div>
+                        <div>
+                            <p class="font-semibold text-sm">David R.</p>
+                            <p class="text-gray-500 text-xs">Small Agency Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                        "For $25/month, I get enterprise-quality analysis. My whole team makes better decisions. It's like having a senior recruiter review every candidate, but at scale."
+                    </p>
+                    <div class="flex gap-1">
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                        <span class="text-yellow-400">★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST INDICATORS -->
+    <section class="py-16 px-4 bg-black/40 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">Built for trust</h2>
+                <p class="text-gray-400">Transparency, security, and compliance you can count on.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-pink-400 mb-2">100%</div>
+                    <p class="text-gray-300 text-sm mb-1">Transparent</p>
+                    <p class="text-gray-500 text-xs">Every score shows the exact quote behind it</p>
+                </div>
+                <div class="card rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-pink-400 mb-2">GDPR</div>
+                    <p class="text-gray-300 text-sm mb-1">Compliant</p>
+                    <p class="text-gray-500 text-xs">EU & AU Privacy Act ready</p>
+                </div>
+                <div class="card rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-pink-400 mb-2">0</div>
+                    <p class="text-gray-300 text-sm mb-1">Data Sales</p>
+                    <p class="text-gray-500 text-xs">We never sell your data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PRICING -->
     <section id="pricing" class="py-20 px-4 relative z-10">
         <div class="max-w-4xl mx-auto">
@@ -504,6 +701,26 @@
                 <div class="card rounded-xl p-5">
                     <h3 class="font-semibold mb-2">Can I cancel anytime?</h3>
                     <p class="text-gray-400 text-sm">Yes. No contracts. Cancel in one click.</p>
+                </div>
+                <div class="card rounded-xl p-5">
+                    <h3 class="font-semibold mb-2">How accurate is the analysis?</h3>
+                    <p class="text-gray-400 text-sm">The analysis is based on the content you provide. It's designed to surface signals and patterns that experienced recruiters look for. You always have the final say — the AI shows its reasoning so you can verify it.</p>
+                </div>
+                <div class="card rounded-xl p-5">
+                    <h3 class="font-semibold mb-2">Can I export my data?</h3>
+                    <p class="text-gray-400 text-sm">Yes. You can export all your analyses, CV screenings, and pipeline data at any time. Your data belongs to you.</p>
+                </div>
+                <div class="card rounded-xl p-5">
+                    <h3 class="font-semibold mb-2">What file formats do you support?</h3>
+                    <p class="text-gray-400 text-sm">CVs: PDF, DOC, DOCX. Interview transcripts: Text, PDF, or paste directly. Job descriptions: Any text format.</p>
+                </div>
+                <div class="card rounded-xl p-5">
+                    <h3 class="font-semibold mb-2">Do you integrate with my ATS?</h3>
+                    <p class="text-gray-400 text-sm">Sharp Recruit works alongside your ATS. You can export analyses and import them, or use our pipeline. We're not trying to replace what you already use.</p>
+                </div>
+                <div class="card rounded-xl p-5">
+                    <h3 class="font-semibold mb-2">What languages are supported?</h3>
+                    <p class="text-gray-400 text-sm">Currently optimized for English. We're working on additional language support based on user demand.</p>
                 </div>
             </div>
         </div>
