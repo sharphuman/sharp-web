@@ -1,4 +1,11 @@
 # Sharp Human - Cloudflare Pages Redirects
 
-# SPA fallback
+# 404 handling
+/* /404.html 404
+
+# Specific page redirects
+/pricing /pricing.html 200
+/privacy /privacy.html 200
+
+# SPA fallback (must be last)
 /* /index.html 200
