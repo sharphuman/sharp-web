@@ -6,6 +6,7 @@
 # Specific page redirects
 /pricing /pricing.html 200
 /privacy /privacy.html 200
+/terms /terms.html 200
 
 # SPA fallback (must be last)
 /* /index.html 200

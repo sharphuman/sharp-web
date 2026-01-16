@@ -25,6 +25,12 @@
         <priority>0.5</priority>
     </url>
     <url>
+        <loc>https://sharphuman.com/terms.html</loc>
+        <lastmod>2026-01-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://sharphuman.com/vs/</loc>
         <lastmod>2026-01-16</lastmod>
         <changefreq>monthly</changefreq>
