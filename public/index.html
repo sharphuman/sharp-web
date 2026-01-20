@@ -578,12 +578,28 @@
 
         // Turnstile callback - enables submit button
         function onTurnstileSuccess(token) {
+            // #region agent log
+            console.log('Turnstile success callback fired', {
+                hasToken: !!token,
+                tokenLength: token ? token.length : 0,
+                timestamp: Date.now()
+            });
+            // #endregion
             turnstileToken = token;
-            document.getElementById('turnstile_token').value = token;
+            const tokenInput = document.getElementById('turnstile_token');
+            if (tokenInput) {
+                tokenInput.value = token;
+            }
             
             const submitButton = document.getElementById('submitButton');
             if (submitButton) {
                 submitButton.disabled = false;
+                // #region agent log
+                console.log('Submit button enabled', {
+                    disabled: submitButton.disabled,
+                    timestamp: Date.now()
+                });
+                // #endregion
             }
         }
 
@@ -604,11 +620,18 @@
             // Check if widget initialized after a delay
             setTimeout(function() {
                 const widgetElement = document.getElementById('turnstile-widget');
-                if (widgetElement && !widgetElement.hasAttribute('data-cf-turnstile-widget-id')) {
-                    // #region agent log
-                    console.error('Turnstile widget not initialized - likely domain whitelist issue');
-                    // #endregion
-                    console.error('Turnstile Error: Widget not initialized. Check that sharphuman.com is whitelisted in Cloudflare Turnstile dashboard.');
+                const hasWidgetId = widgetElement && widgetElement.hasAttribute('data-cf-turnstile-widget-id');
+                // #region agent log
+                console.log('Turnstile widget check after 3s', {
+                    widgetExists: !!widgetElement,
+                    hasWidgetId: hasWidgetId,
+                    turnstileExists: typeof window.turnstile !== 'undefined',
+                    hasToken: !!turnstileToken,
+                    submitButtonDisabled: submitButton ? submitButton.disabled : 'N/A'
+                });
+                // #endregion
+                if (widgetElement && !hasWidgetId) {
+                    console.warn('Turnstile widget not initialized - may still be loading or domain issue');
                 }
             }, 3000);
             
