@@ -30,7 +30,7 @@
     <meta name="theme-color" content="#ec4899">
     
     <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     
     <!-- Schema.org: Organization + Website -->
     <script type="application/ld+json">
@@ -600,45 +600,17 @@
             });
             // #endregion
             
-            // Explicitly render Turnstile widget if script is loaded
-            if (typeof window.turnstile !== 'undefined') {
+            // Wait for Turnstile script to load (implicit rendering should auto-initialize)
+            // Check if widget initialized after a delay
+            setTimeout(function() {
                 const widgetElement = document.getElementById('turnstile-widget');
                 if (widgetElement && !widgetElement.hasAttribute('data-cf-turnstile-widget-id')) {
                     // #region agent log
-                    console.log('Rendering Turnstile widget explicitly');
+                    console.error('Turnstile widget not initialized - likely domain whitelist issue');
                     // #endregion
-                    window.turnstile.render(widgetElement, {
-                        sitekey: '0x4AAAAAACM1uSSbLeft9zy7',
-                        callback: onTurnstileSuccess,
-                        theme: 'dark'
-                    });
+                    console.error('Turnstile Error: Widget not initialized. Check that sharphuman.com is whitelisted in Cloudflare Turnstile dashboard.');
                 }
-            } else {
-                // #region agent log
-                console.error('Turnstile script not loaded - widget will not appear');
-                // #endregion
-                // Fallback: wait for script to load
-                const checkTurnstile = setInterval(function() {
-                    if (typeof window.turnstile !== 'undefined') {
-                        clearInterval(checkTurnstile);
-                        const widgetElement = document.getElementById('turnstile-widget');
-                        if (widgetElement) {
-                            window.turnstile.render(widgetElement, {
-                                sitekey: '0x4AAAAAACM1uSSbLeft9zy7',
-                                callback: onTurnstileSuccess,
-                                theme: 'dark'
-                            });
-                        }
-                    }
-                }, 100);
-                // Stop checking after 10 seconds
-                setTimeout(function() {
-                    clearInterval(checkTurnstile);
-                    if (typeof window.turnstile === 'undefined') {
-                        console.error('Turnstile script failed to load after 10 seconds');
-                    }
-                }, 10000);
-            }
+            }, 3000);
             
             const form = document.querySelector('form[action="/api/contact"]');
             const submitButton = document.getElementById('submitButton');
