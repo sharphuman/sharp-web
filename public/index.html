@@ -754,19 +754,59 @@
                                 fullResponse: result
                             });
                             
-                            alert(`Error: ${errorMsg}${errorDetails ? '\nDetails: ' + errorDetails : ''}`);
+                            // CRITICAL: Reset Turnstile widget on error - tokens are single-use!
+                            // If we don't reset, the same token will be reused and fail
+                            turnstileToken = null;
+                            const tokenInput = document.getElementById('turnstile_token');
+                            if (tokenInput) {
+                                tokenInput.value = '';
+                            }
+                            
+                            // Reset Turnstile widget to generate new token
+                            if (window.turnstile) {
+                                try {
+                                    window.turnstile.reset();
+                                    // #region agent log
+                                    console.log('Turnstile widget reset after error');
+                                    // #endregion
+                                } catch (e) {
+                                    console.warn('Failed to reset Turnstile widget:', e);
+                                }
+                            }
+                            
+                            // Disable submit button until new Turnstile completes
                             if (submitButton) {
-                                submitButton.disabled = false;
+                                submitButton.disabled = true;
                                 submitButton.textContent = 'Send Message';
                             }
+                            
+                            alert(`Error: ${errorMsg}${errorDetails ? '\nDetails: ' + errorDetails : ''}\n\nPlease complete the security check again and try submitting.`);
                         }
                     } catch (error) {
                         console.error('Contact form error:', error);
-                        alert('Network error. Please try again or email us directly at hello@sharphuman.com');
+                        
+                        // Reset Turnstile widget on network error too - tokens are single-use
+                        turnstileToken = null;
+                        const tokenInput = document.getElementById('turnstile_token');
+                        if (tokenInput) {
+                            tokenInput.value = '';
+                        }
+                        
+                        if (window.turnstile) {
+                            try {
+                                window.turnstile.reset();
+                            } catch (e) {
+                                console.warn('Failed to reset Turnstile widget:', e);
+                            }
+                        }
+                        
+                        // Disable submit button until new Turnstile completes
                         if (submitButton) {
-                            submitButton.disabled = false;
+                            submitButton.disabled = true;
                             submitButton.textContent = 'Send Message';
                         }
+                        
+                        alert('Network error. Please complete the security check again and try submitting, or email us directly at hello@sharphuman.com');
                     }
                 });
             }
