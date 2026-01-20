@@ -76,22 +76,31 @@ export async function onRequestPost(context: {
     
     // Basic validation
     if (!data.name || !data.email || !data.message) {
-      return Response.redirect('https://sharphuman.com/?contact=error&reason=missing', 302);
+      return new Response(JSON.stringify({ error: 'Missing required fields', details: ['name', 'email', 'message'].filter(f => !data[f as keyof ContactFormData]) }), {
+        status: 422,
+        headers: { 'Content-Type': 'application/json' }
+      });
     }
     
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
-      return Response.redirect('https://sharphuman.com/?contact=error&reason=email', 302);
+      return new Response(JSON.stringify({ error: 'Invalid email address', details: ['invalid-email'] }), {
+        status: 422,
+        headers: { 'Content-Type': 'application/json' }
+      });
     }
     
     // Turnstile validation (CRITICAL for security)
     if (env.TURNSTILE_SECRET_KEY) {
       if (!turnstileToken) {
         // #region agent log
-        console.log(JSON.stringify({location:'contact.ts:67',message:'Turnstile token missing - rejecting',data:{ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+        console.log(JSON.stringify({location:'contact.ts:90',message:'Turnstile token missing - rejecting',data:{ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'H1'}));
         // #endregion
-        return Response.redirect('https://sharphuman.com/?contact=error&reason=security', 302);
+        return new Response(JSON.stringify({ error: 'Turnstile token missing', details: ['missing-token'] }), {
+          status: 422,
+          headers: { 'Content-Type': 'application/json' }
+        });
       }
       
       // Verify token with Cloudflare
@@ -107,17 +116,31 @@ export async function onRequestPost(context: {
       
       const verifyResult = await verifyResponse.json();
       // #region agent log
-      console.log(JSON.stringify({location:'contact.ts:82',message:'Turnstile verification result',data:{success:verifyResult.success,errors:verifyResult['error-codes'],ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+      console.log(JSON.stringify({location:'contact.ts:89',message:'Turnstile verification result',data:{success:verifyResult.success,errors:verifyResult['error-codes'],ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'H1'}));
       // #endregion
       
       if (!verifyResult.success) {
         // Invalid or expired token - reject submission
-        return Response.redirect('https://sharphuman.com/?contact=error&reason=security', 302);
+        // #region agent log
+        console.log(JSON.stringify({location:'contact.ts:95',message:'Turnstile verification failed - rejecting',data:{errors:verifyResult['error-codes'],ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'H1'}));
+        // #endregion
+        return new Response(JSON.stringify({ error: 'Turnstile verification failed', details: verifyResult['error-codes'] }), {
+          status: 422,
+          headers: { 'Content-Type': 'application/json' }
+        });
       }
     } else {
       // #region agent log
-      console.log(JSON.stringify({location:'contact.ts:90',message:'Turnstile secret key not configured - validation skipped',data:{hasToken:!!turnstileToken},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+      console.log(JSON.stringify({location:'contact.ts:102',message:'Turnstile secret key not configured - validation skipped',data:{hasToken:!!turnstileToken,envKeys:Object.keys(env)},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'H1'}));
       // #endregion
+      // If secret key not configured but token provided, still reject for security
+      if (turnstileToken) {
+        console.warn('Turnstile token provided but secret key not configured - rejecting for security');
+        return new Response(JSON.stringify({ error: 'Turnstile validation not configured' }), {
+          status: 422,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      }
     }
     
     // Rate limiting by IP (simple in-memory, resets on deploy)

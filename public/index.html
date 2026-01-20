@@ -680,6 +680,13 @@
                     }
                     
                     try {
+                        // #region agent log
+                        console.log('Submitting form', {
+                            hasToken: !!data.turnstile_token,
+                            tokenLength: data.turnstile_token ? data.turnstile_token.length : 0,
+                            dataKeys: Object.keys(data)
+                        });
+                        // #endregion
                         // Submit to backend API
                         const response = await fetch('https://api.sharphuman.com/api/contact', {
                             method: 'POST',
@@ -688,6 +695,19 @@
                             },
                             body: JSON.stringify(data)
                         });
+                        
+                        // #region agent log
+                        console.log('Response received', {
+                            status: response.status,
+                            statusText: response.statusText,
+                            ok: response.ok
+                        });
+                        // #endregion
+                        
+                        const result = await response.json().catch(() => ({ error: 'Failed to parse response' }));
+                        // #region agent log
+                        console.log('Response body', result);
+                        // #endregion
                         
                         if (response.ok) {
                             // Success - reset form
@@ -707,7 +727,10 @@
                             
                             alert('Thanks for reaching out! We\'ll respond within 24 hours.');
                         } else {
-                            alert('Something went wrong. Please try again.');
+                            // Show detailed error message
+                            const errorMsg = result.error || result.details || `Server error (${response.status}). Please try again.`;
+                            console.error('Form submission failed:', errorMsg, result);
+                            alert(`Error: ${errorMsg}${result.details ? '\nDetails: ' + JSON.stringify(result.details) : ''}`);
                             if (submitButton) {
                                 submitButton.disabled = false;
                                 submitButton.textContent = 'Send Message';
