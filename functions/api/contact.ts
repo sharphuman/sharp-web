@@ -28,6 +28,7 @@ export async function onRequestPost(context: {
     MAILGUN_API_KEY?: string;
     MAILGUN_DOMAIN?: string;
     SENDGRID_API_KEY?: string;
+    TURNSTILE_SECRET_KEY?: string;
   };
 }) {
   const { request, env } = context;
@@ -63,6 +64,41 @@ export async function onRequestPost(context: {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
       return Response.redirect('https://sharphuman.com/?contact=error&reason=email', 302);
+    }
+    
+    // Turnstile validation (CRITICAL for security)
+    if (env.TURNSTILE_SECRET_KEY) {
+      if (!turnstileToken) {
+        // #region agent log
+        console.log(JSON.stringify({location:'contact.ts:67',message:'Turnstile token missing - rejecting',data:{ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+        // #endregion
+        return Response.redirect('https://sharphuman.com/?contact=error&reason=security', 302);
+      }
+      
+      // Verify token with Cloudflare
+      const verifyResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          secret: env.TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+          remoteip: request.headers.get('CF-Connecting-IP') || '',
+        }),
+      });
+      
+      const verifyResult = await verifyResponse.json();
+      // #region agent log
+      console.log(JSON.stringify({location:'contact.ts:82',message:'Turnstile verification result',data:{success:verifyResult.success,errors:verifyResult['error-codes'],ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+      // #endregion
+      
+      if (!verifyResult.success) {
+        // Invalid or expired token - reject submission
+        return Response.redirect('https://sharphuman.com/?contact=error&reason=security', 302);
+      }
+    } else {
+      // #region agent log
+      console.log(JSON.stringify({location:'contact.ts:90',message:'Turnstile secret key not configured - validation skipped',data:{hasToken:!!turnstileToken},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+      // #endregion
     }
     
     // Rate limiting by IP (simple in-memory, resets on deploy)
