@@ -34,19 +34,38 @@ export async function onRequestPost(context: {
   const { request, env } = context;
   
   try {
-    // Parse form data
-    const formData = await request.formData();
-    const turnstileToken = formData.get('turnstile_token')?.toString() || '';
+    // Parse request - handle both JSON and FormData
+    const contentType = request.headers.get('content-type') || '';
+    let turnstileToken = '';
+    let data: ContactFormData;
+    
+    if (contentType.includes('application/json')) {
+      // Handle JSON request
+      const jsonData = await request.json();
+      turnstileToken = jsonData.turnstile_token?.toString() || '';
+      data = {
+        name: jsonData.name?.toString() || '',
+        email: jsonData.email?.toString() || '',
+        company: jsonData.company?.toString() || '',
+        message: jsonData.message?.toString() || '',
+        website: jsonData.website?.toString() || '', // Honeypot
+      };
+    } else {
+      // Handle FormData request
+      const formData = await request.formData();
+      turnstileToken = formData.get('turnstile_token')?.toString() || '';
+      data = {
+        name: formData.get('name')?.toString() || '',
+        email: formData.get('email')?.toString() || '',
+        company: formData.get('company')?.toString() || '',
+        message: formData.get('message')?.toString() || '',
+        website: formData.get('website')?.toString() || '', // Honeypot
+      };
+    }
+    
     // #region agent log
-    console.log(JSON.stringify({location:'contact.ts:37',message:'Backend received request',data:{hasTurnstileToken:!!turnstileToken,tokenLength:turnstileToken.length,ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+    console.log(JSON.stringify({location:'contact.ts:37',message:'Backend received request',data:{contentType,hasTurnstileToken:!!turnstileToken,tokenLength:turnstileToken.length,ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'H1'}));
     // #endregion
-    const data: ContactFormData = {
-      name: formData.get('name')?.toString() || '',
-      email: formData.get('email')?.toString() || '',
-      company: formData.get('company')?.toString() || '',
-      message: formData.get('message')?.toString() || '',
-      website: formData.get('website')?.toString() || '', // Honeypot
-    };
     
     // Honeypot check - if filled, it's a bot
     if (data.website) {
