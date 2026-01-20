@@ -704,9 +704,18 @@
                         });
                         // #endregion
                         
-                        const result = await response.json().catch(() => ({ error: 'Failed to parse response' }));
+                        let result;
+                        try {
+                            const text = await response.text();
+                            // #region agent log
+                            console.log('Response raw text', text);
+                            // #endregion
+                            result = JSON.parse(text);
+                        } catch (e) {
+                            result = { error: 'Failed to parse response', raw: e.message };
+                        }
                         // #region agent log
-                        console.log('Response body', result);
+                        console.log('Response body parsed', result);
                         // #endregion
                         
                         if (response.ok) {
@@ -727,10 +736,25 @@
                             
                             alert('Thanks for reaching out! We\'ll respond within 24 hours.');
                         } else {
-                            // Show detailed error message
-                            const errorMsg = result.error || result.details || `Server error (${response.status}). Please try again.`;
-                            console.error('Form submission failed:', errorMsg, result);
-                            alert(`Error: ${errorMsg}${result.details ? '\nDetails: ' + JSON.stringify(result.details) : ''}`);
+                            // Show detailed error message - handle different error formats
+                            let errorMsg = result.error || result.message || `Server error (${response.status}). Please try again.`;
+                            let errorDetails = result.details || result.detail || result['error-codes'] || null;
+                            
+                            // If detail is an array, format it
+                            if (Array.isArray(errorDetails)) {
+                                errorDetails = errorDetails.join(', ');
+                            } else if (errorDetails && typeof errorDetails === 'object') {
+                                errorDetails = JSON.stringify(errorDetails);
+                            }
+                            
+                            console.error('Form submission failed:', {
+                                status: response.status,
+                                error: errorMsg,
+                                details: errorDetails,
+                                fullResponse: result
+                            });
+                            
+                            alert(`Error: ${errorMsg}${errorDetails ? '\nDetails: ' + errorDetails : ''}`);
                             if (submitButton) {
                                 submitButton.disabled = false;
                                 submitButton.textContent = 'Send Message';

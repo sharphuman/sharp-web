@@ -176,8 +176,16 @@ export async function onRequestPost(context: {
     return Response.redirect('https://sharphuman.com/?contact=success', 302);
     
   } catch (error) {
-    console.error('Contact form error:', error);
-    return Response.redirect('https://sharphuman.com/?contact=error', 302);
+    // #region agent log
+    console.error(JSON.stringify({location:'contact.ts:178',message:'Contact form error caught',data:{error:error instanceof Error ? error.message : String(error),stack:error instanceof Error ? error.stack : undefined},timestamp:Date.now(),sessionId:'debug-session',runId:'run2',hypothesisId:'H1'}));
+    // #endregion
+    return new Response(JSON.stringify({ 
+      error: 'Internal server error', 
+      details: error instanceof Error ? error.message : String(error)
+    }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }
 
