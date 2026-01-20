@@ -995,6 +995,22 @@
                         return;
                     }
                     
+                    // Validate message length (minimum 10 characters)
+                    if (data.message.trim().length < 10) {
+                        if (formMessage) {
+                            formMessage.textContent = 'Message must be at least 10 characters long. Please provide more details.';
+                            formMessage.classList.remove('hidden');
+                        }
+                        if (successMessage) {
+                            successMessage.classList.add('hidden');
+                        }
+                        if (submitButton) {
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Send Message';
+                        }
+                        return;
+                    }
+                    
                     try {
                         // #region agent log
                         fetch('http://127.0.0.1:7244/ingest/8426813f-dc08-4955-a690-963ad8170d2d',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:1017',message:'Sending request to backend',data:{hasToken:!!data.turnstile_token,tokenIncluded:!!data.turnstile_token},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'})}).catch(()=>{});

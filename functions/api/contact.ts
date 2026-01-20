@@ -82,6 +82,21 @@ export async function onRequestPost(context: {
       });
     }
     
+    // Message length validation (minimum 10 characters to prevent spam)
+    if (data.message.trim().length < 10) {
+      return new Response(JSON.stringify({ 
+        detail: [{
+          type: 'value_error',
+          loc: ['body', 'message'],
+          msg: 'Value error, Message must be at least 10 characters',
+          input: data.message
+        }]
+      }), {
+        status: 422,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+    
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {

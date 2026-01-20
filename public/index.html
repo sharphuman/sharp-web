@@ -679,6 +679,22 @@
                         return;
                     }
                     
+                    // Validate message length (minimum 10 characters)
+                    if (data.message.trim().length < 10) {
+                        alert('Message must be at least 10 characters long. Please provide more details.');
+                        // #region agent log
+                        console.log('Message too short on submit - rejecting', {
+                            messageLength: data.message.trim().length,
+                            timestamp: Date.now()
+                        });
+                        // #endregion
+                        if (submitButton) {
+                            submitButton.disabled = false;
+                            submitButton.textContent = 'Send Message';
+                        }
+                        return;
+                    }
+                    
                     try {
                         // #region agent log
                         console.log('Submitting form', {
