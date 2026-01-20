@@ -35,6 +35,10 @@ export async function onRequestPost(context: {
   try {
     // Parse form data
     const formData = await request.formData();
+    const turnstileToken = formData.get('turnstile_token')?.toString() || '';
+    // #region agent log
+    console.log(JSON.stringify({location:'contact.ts:37',message:'Backend received request',data:{hasTurnstileToken:!!turnstileToken,tokenLength:turnstileToken.length,ip:request.headers.get('CF-Connecting-IP')||'unknown'},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'}));
+    // #endregion
     const data: ContactFormData = {
       name: formData.get('name')?.toString() || '',
       email: formData.get('email')?.toString() || '',
