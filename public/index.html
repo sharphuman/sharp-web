@@ -1,834 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Recruit | Evidence-Based Hiring Intelligence</title>
-    <meta name="description" content="Sharp Recruit is evidence-based hiring intelligence. Its flagship Interview Analyzer scores transcripts across six pillars with exact quotes behind every rating. Not an ATS — works alongside your existing tools.">
-    <meta name="keywords" content="interview analysis, CV screening, hiring intelligence, evidence-based hiring, recruitment AI, interview scoring">
-    <link rel="canonical" href="https://sharphuman.com">
-    
-    <!-- Robots -->
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sharphuman.com">
-    <meta property="og:title" content="Sharp Recruit | Evidence-Based Hiring Intelligence">
-    <meta property="og:description" content="Interview analysis and CV screening with the reasoning shown. See the exact quotes behind every decision.">
-    <meta property="og:image" content="https://sharphuman.com/og-image.png">
-    <meta property="og:site_name" content="Sharp Human">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sharp Recruit | Evidence-Based Hiring Intelligence">
-    <meta name="twitter:description" content="Interview analysis and CV screening with the reasoning shown.">
-    
-    <!-- Favicon (comprehensive for Google cache fix) -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="theme-color" content="#ec4899">
-    
-    <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-    
-    <!-- Schema.org: Organization + Website -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Organization",
-                "@id": "https://sharphuman.com/#org",
-                "name": "Sharp Human",
-                "url": "https://sharphuman.com/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://sharphuman.com/logo1-3.png"
-                },
-                "description": "Sharp Human builds AI tools for evidence-based hiring. Flagship product: Sharp Recruit.",
-                "foundingDate": "2024",
-                "founder": {
-                    "@type": "Person",
-                    "name": "Judd"
-                }
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://sharphuman.com/#website",
-                "url": "https://sharphuman.com/",
-                "name": "Sharp Recruit by Sharp Human",
-                "publisher": { "@id": "https://sharphuman.com/#org" }
-            }
-        ]
-    }
-    </script>
-    
-    <!-- Schema.org: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Sharp Recruit",
-        "url": "https://sharphuman.com/",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
-        "isAccessibleForFree": true,
-        "softwareVersion": "1",
-        "description": "Evidence-based hiring intelligence. Interview Analyzer scores transcripts across six pillars with exact quotes. CV Screener ranks candidates with clear reasoning. Not an ATS — works alongside your existing tools.",
-        "offers": [
-            {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "25 CV screens, 5 interview analyses, unlimited JDs per month"},
-            {"@type": "Offer", "name": "Solo", "price": "25", "priceCurrency": "USD", "description": "250 CV screens, 25 interview analyses per month"},
-            {"@type": "Offer", "name": "Team", "price": "125", "priceCurrency": "USD", "description": "1250 CV screens, 125 interview analyses, 3 users"},
-            {"@type": "Offer", "name": "Elite", "price": "250", "priceCurrency": "USD", "description": "2500 CV screens, 250 interview analyses, 5 users"}
-        ],
-        "featureList": ["Six-pillar interview analysis", "Evidence-backed scoring with quotes", "Hire If / Pass If frameworks", "CV screening with reasoning", "Pipeline with persistent intelligence"],
-        "creator": {"@type": "Organization", "name": "Sharp Human", "url": "https://sharphuman.com"}
-    }
-    </script>
-    
-    <!-- Schema.org: FAQPage -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {"@type": "Question", "name": "What is Sharp Recruit?", "acceptedAnswer": {"@type": "Answer", "text": "Sharp Recruit is evidence-based hiring intelligence. Its flagship Interview Analyzer scores interview transcripts across six pillars with the exact quotes behind every rating. It also screens CVs with clear reasoning. It is not an ATS — it works alongside the tools you already use."}},
-            {"@type": "Question", "name": "What does Interview Analyzer do?", "acceptedAnswer": {"@type": "Answer", "text": "You upload an interview transcript. Sharp Recruit scores it across six pillars — technical, communication, problem-solving, culture fit, leadership, and domain knowledge. Every score comes with the exact quote that supports it. You also get Hire If / Pass If logic, flags, and follow-up questions."}},
-            {"@type": "Question", "name": "Is Sharp Recruit an ATS?", "acceptedAnswer": {"@type": "Answer", "text": "No. Sharp Recruit is an intelligence layer. It sits alongside whatever you already use — your ATS, your spreadsheets, your process. We make decisions better, not replace your workflow."}},
-            {"@type": "Question", "name": "Is there a free plan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sharp Recruit offers a 7-day free trial with 5 CV screens, 2 interview analyses, and unlimited JDs. No credit card required."}},
-            {"@type": "Question", "name": "Is my data safe?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. GDPR and AU Privacy Act compliant. We don't sell your data. You control what's stored and can export or delete anytime."}},
-            {"@type": "Question", "name": "Who uses Sharp Recruit?", "acceptedAnswer": {"@type": "Answer", "text": "Recruiters at agencies (any industry, any size) and hiring managers at companies building teams. Anyone who wants evidence behind their hiring decisions."}}
-        ]
-    }
-    </script>
-    
-    <!-- Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM04LFY3FJ"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-BM04LFY3FJ');</script>
-    
-    <!-- Fonts & Styles -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>SHARP HUMAN | Infrastructure & Systems</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
-    <style>
-        * { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif; }
-        body { background-color: #1a1a1a; }
-        
-        .text-gradient { background: linear-gradient(135deg, #ec4899, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .btn-primary { background: linear-gradient(135deg, #ec4899, #be185d); box-shadow: 0 4px 20px rgba(236,72,153,0.25); transition: all 0.2s; }
-        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 25px rgba(236,72,153,0.35); }
-        .btn-secondary { border: 1px solid rgba(236,72,153,0.4); color: #ec4899; transition: all 0.2s; }
-        .btn-secondary:hover { background: rgba(236,72,153,0.08); border-color: #ec4899; }
-        .card { background: rgba(10,10,10,0.85); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); transition: border-color 0.2s; }
-        .card:hover { border-color: rgba(236,72,153,0.2); }
-        .card-flag { background: linear-gradient(135deg, rgba(236,72,153,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(236,72,153,0.25); }
-        section { scroll-margin-top: 80px; }
-        
-        .form-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; }
-        .form-input:focus { border-color: #ec4899; outline: none; box-shadow: 0 0 0 2px rgba(236,72,153,0.2); }
-        .form-input::placeholder { color: rgba(255,255,255,0.4); }
-        .ohnohoney { opacity: 0; position: absolute; top: 0; left: 0; height: 0; width: 0; z-index: -1; }
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@900&display=swap" rel="stylesheet">
 </head>
-<body class="text-white">
+<body>
 
-    <!-- LLM Context Block (hidden but crawlable) -->
-    <div hidden aria-hidden="true" id="llm-context">
-        What is Sharp Recruit? Sharp Recruit is evidence-based hiring intelligence. Its flagship Interview Analyzer scores interview transcripts across six pillars with the exact quotes behind every rating. It also screens CVs with clear reasoning. It is not an ATS — it works alongside the tools you already use.
-        
-        Who is Sharp Recruit for? Recruiters (agency and in-house), hiring managers, and anyone who wants evidence behind hiring decisions.
-        
-        Is there a free plan? Yes. 7-day free trial includes 5 CV screens, 2 interview analyses, and unlimited JDs. No credit card required.
-        
-        Pricing: Free ($0, 25 CVs, 5 interviews, 1 user), Solo ($25/mo, 250 CVs, 25 interviews, 1 user), Team ($125/mo, 1250 CVs, 125 interviews, 3 users), Elite ($250/mo, 2500 CVs, 250 interviews, 5 users).
-        
-        What makes Interview Analyzer different? Six-pillar scoring (technical, communication, problem-solving, culture fit, leadership, domain knowledge) with exact quotes from the transcript. Includes Hire If / Pass If frameworks, red and yellow flags, and follow-up questions.
-        
-        Built by Sharp Human.
-    </div>
+    <main class="command-center">
+        <div class="logo-container">
+            <img src="logo1-3.png" alt="Sharp Human Logo" class="main-logo">
+        </div>
 
-    <!-- Background -->
-
-    <!-- NAV -->
-    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-5xl mx-auto px-4 py-3">
-            <div class="flex items-center justify-between">
-                <a href="/" class="flex items-center gap-2">
-                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-7" style="mix-blend-mode:screen;">
-                    <span class="font-bold text-lg">Sharp Recruit</span>
-                </a>
-                <div class="hidden md:flex items-center gap-6">
-                    <a href="#how-it-works" class="text-gray-400 text-sm hover:text-pink-400 transition">How It Works</a>
-                    <a href="#interview-analyzer" class="text-gray-400 text-sm hover:text-pink-400 transition">Interview Analyzer</a>
-                    <a href="#pricing" class="text-gray-400 text-sm hover:text-pink-400 transition">Pricing</a>
-                    <a href="https://sharphuman.com/blog" target="_blank" rel="noopener noreferrer" class="text-gray-400 text-sm hover:text-pink-400 transition">Blog</a>
-                    <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">Start Free</a>
-                </div>
-                <button class="md:hidden" onclick="document.getElementById('mob-menu').classList.toggle('hidden')" aria-label="Menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"/></svg>
-                </button>
-            </div>
-            <div id="mob-menu" class="hidden md:hidden pb-4 space-y-2 mt-4">
-                <a href="#how-it-works" class="block py-2 text-gray-400 text-sm">How It Works</a>
-                <a href="#interview-analyzer" class="block py-2 text-gray-400 text-sm">Interview Analyzer</a>
-                <a href="#pricing" class="block py-2 text-gray-400 text-sm">Pricing</a>
-                <a href="https://sharphuman.com/blog" target="_blank" rel="noopener noreferrer" class="block py-2 text-gray-400 text-sm">Blog</a>
-                <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="block py-2 btn-primary text-white text-center rounded-lg text-sm font-semibold">Start Free</a>
+        <div class="branding">
+            <h1 class="glitch-text">SHARP HUMAN <span class="cyan-accent">SYSTEMS</span></h1>
+            <div class="terminal-loader">
+                <span class="prompt">></span>
+                <span id="typewriter"></span><span class="cursor">_</span>
             </div>
         </div>
-    </nav>
 
-    <!-- HERO -->
-    <section class="pt-32 pb-20 px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-pink-400 text-xs font-semibold uppercase tracking-wide mb-4">Evidence-Based Hiring Intelligence</p>
-            
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                Evidence-based hiring decisions — <span class="text-gradient">with the reasoning shown.</span>
-            </h1>
-            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-                Sharp Recruit analyzes CVs and interview transcripts, scores them across clear criteria, and shows the exact quotes behind every decision. Built for recruiters who want confidence, not guesswork.
-            </p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold">Start Free</a>
-                <a href="https://calendly.com/sharphuman/60min" target="_blank" rel="noopener noreferrer" onclick="Calendly.initPopupWidget({url:'https://calendly.com/sharphuman/60min'});return false;" class="btn-secondary px-6 py-3 rounded-lg font-semibold">Book a Demo</a>
+        <div class="service-grid">
+            <div class="service-card" data-index="01">
+                <h2>INFRASTRUCTURE</h2>
+                <p>Active Directory, Hybrid-Cloud, & Zero Trust Architecture.</p>
             </div>
-            <p class="text-gray-600 text-sm mt-6">7-Day Free Trial · No credit card · Cancel anytime</p>
-        </div>
-    </section>
-
-    <!-- VALUE PROP -->
-    <section class="py-12 px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-gray-300 text-lg leading-relaxed">
-                The best recruiters have frameworks in their heads. They know what to look for, how to weigh signals, and when something doesn't add up. <span class="text-white font-medium">Sharp Recruit makes that framework visible</span> — so you can see the reasoning, trust the outcome, and move faster.
-            </p>
-        </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section id="how-it-works" class="py-20 px-4 bg-black/40 relative z-10">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-14">
-                <p class="text-pink-400 text-xs font-semibold uppercase tracking-wide mb-3">How It Works</p>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Intelligence that follows the candidate</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">How does Sharp Recruit work? From JD to offer, every insight stays attached. Screen CVs, analyze interviews, track progress — all connected.</p>
+            <div class="service-card" data-index="02">
+                <h2>CLOUD OPS</h2>
+                <p>Modern full-stack orchestration via Vercel, Railway, & Supabase.</p>
             </div>
-
-            <div class="space-y-6">
-                <!-- JD Writer -->
-                <div class="flex gap-5">
-                    <div class="flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold flex-shrink-0">1</div>
-                        <div class="w-0.5 flex-1 bg-gradient-to-b from-pink-500/30 to-transparent mt-2"></div>
-                    </div>
-                    <div class="card rounded-xl p-6 flex-1">
-                        <h3 class="font-bold text-lg mb-1">JD Writer</h3>
-                        <p class="text-gray-500 text-sm mb-2">Describe the role. Get a job description.</p>
-                        <p class="text-gray-300 text-sm">Bullet points, notes, voice memo transcript — whatever you have. Get a job description that reflects the actual job, ready to post.</p>
-                    </div>
-                </div>
-
-                <!-- CV Screener -->
-                <div class="flex gap-5">
-                    <div class="flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold flex-shrink-0">2</div>
-                        <div class="w-0.5 flex-1 bg-gradient-to-b from-pink-500/30 to-transparent mt-2"></div>
-                    </div>
-                    <div class="card rounded-xl p-6 flex-1">
-                        <h3 class="font-bold text-lg mb-1">CV Screener</h3>
-                        <p class="text-gray-500 text-sm mb-2">Fast signal, clear reasoning.</p>
-                        <p class="text-gray-300 text-sm">Upload CVs against your JD. Get a ranked shortlist with explanations — not just "85% match" but <em>why</em> they match or don't.</p>
-                    </div>
-                </div>
-
-                <!-- Interview Analyzer (Flagship) -->
-                <div class="flex gap-5">
-                    <div class="flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold flex-shrink-0">3</div>
-                        <div class="w-0.5 flex-1 bg-gradient-to-b from-pink-500/30 to-transparent mt-2"></div>
-                    </div>
-                    <div class="card-flag rounded-xl p-6 flex-1 relative">
-                        <span class="absolute -top-3 left-6 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">FLAGSHIP</span>
-                        <h3 class="font-bold text-lg mb-1 mt-1">Interview Analyzer</h3>
-                        <p class="text-gray-500 text-sm mb-2">Evidence you can cite.</p>
-                        <p class="text-gray-300 text-sm">Upload a transcript. Get six-pillar scoring backed by exact quotes from the interview. This is where Sharp Recruit earns its name.</p>
-                        <a href="#interview-analyzer" class="text-pink-400 text-sm mt-3 inline-block hover:underline">See full breakdown →</a>
-                    </div>
-                </div>
-
-                <!-- Pipeline -->
-                <div class="flex gap-5">
-                    <div class="flex flex-col items-center">
-                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center font-bold flex-shrink-0">4</div>
-                    </div>
-                    <div class="card rounded-xl p-6 flex-1">
-                        <h3 class="font-bold text-lg mb-1">Pipeline</h3>
-                        <p class="text-gray-500 text-sm mb-2">Everything in one place.</p>
-                        <p class="text-gray-300 text-sm">Drag candidates through stages. Screening scores, interview analysis, notes — all visible at every step. When you're ready to decide, everything's there.</p>
-                    </div>
-                </div>
+            <div class="service-card" data-index="03">
+                <h2>AI SYSTEMS</h2>
+                <p>Custom LLM deployment and local agent automation.</p>
             </div>
         </div>
-    </section>
 
-    <!-- INTERVIEW ANALYZER DEEP DIVE -->
-    <section id="interview-analyzer" class="py-20 px-4 relative z-10">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <p class="text-pink-400 text-xs font-semibold uppercase tracking-wide mb-3">Flagship Feature</p>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Interview Analyzer</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">What does Interview Analyzer do? It scores interview transcripts across six pillars with the exact quotes behind every rating. Includes Hire If / Pass If frameworks, flags, and follow-up questions.</p>
-            </div>
-
-            <!-- Six Pillars -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-10">
-                <div class="card rounded-lg p-4 text-center"><p class="text-pink-400 mb-1">●</p><p class="text-sm font-medium">Technical</p></div>
-                <div class="card rounded-lg p-4 text-center"><p class="text-pink-400 mb-1">●</p><p class="text-sm font-medium">Communication</p></div>
-                <div class="card rounded-lg p-4 text-center"><p class="text-pink-400 mb-1">●</p><p class="text-sm font-medium">Problem-Solving</p></div>
-                <div class="card rounded-lg p-4 text-center"><p class="text-pink-400 mb-1">●</p><p class="text-sm font-medium">Culture Fit</p></div>
-                <div class="card rounded-lg p-4 text-center"><p class="text-pink-400 mb-1">●</p><p class="text-sm font-medium">Leadership</p></div>
-                <div class="card rounded-lg p-4 text-center"><p class="text-pink-400 mb-1">●</p><p class="text-sm font-medium">Domain Knowledge</p></div>
-            </div>
-
-            <!-- What You Get -->
-            <div class="card-flag rounded-xl p-8">
-                <h3 class="font-bold text-lg mb-6">Every analysis includes:</h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <p class="font-semibold mb-1 flex items-center gap-2"><span class="text-green-400">✓</span> Scores with evidence</p>
-                        <p class="text-gray-400 text-sm">Not just "7/10" — the exact quote that earned that score. You can verify it yourself.</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1 flex items-center gap-2"><span class="text-green-400">✓</span> Hire If / Pass If</p>
-                        <p class="text-gray-400 text-sm">Clear logic: "Hire if you need senior leadership. Pass if immediate hands-on is critical."</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1 flex items-center gap-2"><span class="text-yellow-400">⚠</span> Red & yellow flags</p>
-                        <p class="text-gray-400 text-sm">Deflections, inconsistencies, gaps — surfaced with the evidence, not hunches.</p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1 flex items-center gap-2"><span class="text-blue-400">?</span> Follow-up questions</p>
-                        <p class="text-gray-400 text-sm">What to dig into next. Ranked by importance.</p>
-                    </div>
-                </div>
-                <div class="mt-8 pt-6 border-t border-white/10 text-center">
-                    <p class="text-gray-400 text-sm mb-4">This is what experienced recruiters do instinctively. Now it's documented, shareable, and consistent.</p>
-                    <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block">Analyze an Interview — Free</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NOT AN ATS -->
-    <section class="py-16 px-4 bg-black/40 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-gray-500 text-sm mb-4">Is Sharp Recruit an ATS?</p>
-            <h2 class="text-xl md:text-2xl font-bold mb-4">This isn't another ATS.</h2>
-            <p class="text-gray-400 mb-8">Sharp Recruit is an intelligence layer. It works alongside whatever you already use — your ATS, your spreadsheets, your process. We make decisions better. We don't replace your workflow.</p>
-            <div class="grid md:grid-cols-3 gap-4 text-sm">
-                <div class="card rounded-lg p-4"><p class="font-medium mb-1">Sits alongside</p><p class="text-gray-500">Your tools, your way</p></div>
-                <div class="card rounded-lg p-4"><p class="font-medium mb-1">No migration</p><p class="text-gray-500">Start in 2 minutes</p></div>
-                <div class="card rounded-lg p-4"><p class="font-medium mb-1">Shows its work</p><p class="text-gray-500">Evidence, not black boxes</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES (Moved up, before pricing) -->
-    <section id="services" class="py-20 px-4 relative z-10">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-10">
-                <p class="text-gray-500 text-xs font-semibold uppercase tracking-wide mb-3">Done-For-You</p>
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Need hands-on help?</h2>
-                <p class="text-gray-400 max-w-xl mx-auto">Alongside Sharp Recruit, Sharp Human offers optional done-for-you services for teams that want direct execution support.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="card rounded-xl p-6">
-                    <h3 class="font-bold text-lg mb-2">Cold Email Campaigns</h3>
-                    <p class="text-gray-400 text-sm mb-4">Outbound sequences that book meetings. We handle copy, targeting, and deliverability.</p>
-                    <a href="https://calendly.com/sharphuman/60min" target="_blank" rel="noopener noreferrer" onclick="Calendly.initPopupWidget({url:'https://calendly.com/sharphuman/60min'});return false;" class="text-pink-400 text-sm hover:underline">Book a call →</a>
-                </div>
-                <div class="card rounded-xl p-6">
-                    <h3 class="font-bold text-lg mb-2">META Advertising</h3>
-                    <p class="text-gray-400 text-sm mb-4">Facebook and Instagram ads that convert. Creative, targeting, optimization — handled.</p>
-                    <a href="https://calendly.com/sharphuman/60min" target="_blank" rel="noopener noreferrer" onclick="Calendly.initPopupWidget({url:'https://calendly.com/sharphuman/60min'});return false;" class="text-pink-400 text-sm hover:underline">Book a call →</a>
-                </div>
-                <div class="card rounded-xl p-6">
-                    <h3 class="font-bold text-lg mb-2">Bespoke AI Solutions</h3>
-                    <p class="text-gray-400 text-sm mb-4">Custom workflows, integrations, and automations built for your specific hiring process.</p>
-                    <a href="https://calendly.com/sharphuman/60min" target="_blank" rel="noopener noreferrer" onclick="Calendly.initPopupWidget({url:'https://calendly.com/sharphuman/60min'});return false;" class="text-pink-400 text-sm hover:underline">Book a call →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="py-20 px-4 bg-black/40 relative z-10">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-12">
-                <p class="text-pink-400 text-xs font-semibold uppercase tracking-wide mb-3">Pricing</p>
-                <h2 class="text-2xl md:text-3xl font-bold mb-2">Honest pricing. 10x at every tier.</h2>
-                <p class="text-gray-400">Is there a free plan? Yes — 7-day free trial with 5 CV screens, 2 interview analyses, unlimited JDs. No credit card required.</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-                <!-- Free -->
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-bold text-lg mb-1">Free</h3>
-                    <p class="text-gray-500 text-sm mb-3">Curious / light users</p>
-                    <p class="text-3xl font-bold mb-5">$0</p>
-                    <ul class="space-y-2 text-sm text-gray-400 mb-5">
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 25 CV screens/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 5 interviews/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Unlimited JDs</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 user</li>
-                    </ul>
-                    <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="block w-full btn-secondary text-center py-2 rounded-lg font-semibold text-sm">Start Free</a>
-                </div>
-                
-                <!-- Solo -->
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-bold text-lg mb-1">Solo</h3>
-                    <p class="text-gray-500 text-sm mb-3">Solo recruiter</p>
-                    <p class="text-3xl font-bold mb-5">$25<span class="text-base text-gray-500">/mo</span></p>
-                    <ul class="space-y-2 text-sm text-gray-400 mb-5">
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 250 CV screens/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 25 interviews/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Unlimited JDs</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 1 user</li>
-                    </ul>
-                    <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="block w-full btn-secondary text-center py-2 rounded-lg font-semibold text-sm">Start Free</a>
-                </div>
-                
-                <!-- Team (Popular) -->
-                <div class="card-flag rounded-xl p-5 relative">
-                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
-                    <h3 class="font-bold text-lg mb-1 mt-1">Team</h3>
-                    <p class="text-gray-500 text-sm mb-3">Small agency / hiring pod</p>
-                    <p class="text-3xl font-bold mb-5">$125<span class="text-base text-gray-500">/mo</span></p>
-                    <ul class="space-y-2 text-sm text-gray-300 mb-5">
-                        <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> 1,250 CV screens/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> 125 interviews/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> Unlimited JDs</li>
-                        <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> 3 users</li>
-                    </ul>
-                    <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="block w-full btn-primary text-center py-2 rounded-lg font-semibold text-white text-sm">Start Free</a>
-                </div>
-                
-                <!-- Elite -->
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-bold text-lg mb-1">Elite</h3>
-                    <p class="text-gray-500 text-sm mb-3">Serious teams</p>
-                    <p class="text-3xl font-bold mb-5">$250<span class="text-base text-gray-500">/mo</span></p>
-                    <ul class="space-y-2 text-sm text-gray-400 mb-5">
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 2,500 CV screens/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 250 interviews/mo</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> Unlimited JDs</li>
-                        <li class="flex items-center gap-2"><span class="text-green-400">✓</span> 5 users</li>
-                    </ul>
-                    <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="block w-full btn-secondary text-center py-2 rounded-lg font-semibold text-sm">Start Free</a>
-                </div>
-            </div>
-            
-            <div class="text-center mt-10">
-                <p class="text-gray-500 text-sm mb-4">Want to see it in action first?</p>
-                <a href="https://calendly.com/sharphuman/60min" target="_blank" rel="noopener noreferrer" onclick="Calendly.initPopupWidget({url:'https://calendly.com/sharphuman/60min'});return false;" class="btn-secondary px-6 py-3 rounded-lg font-semibold inline-block">Book a Demo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOUNDER (Softened) -->
-    <section class="py-16 px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-xl font-bold mb-6">Why this exists</h2>
-            <p class="text-gray-400 leading-relaxed mb-4">
-                After years working closely with recruiters and hiring managers across multiple industries and countries, a clear pattern emerged. The best recruiters had strong internal frameworks. They knew how to weigh signals, spot inconsistencies, and ask better follow-up questions.
-            </p>
-            <p class="text-gray-400 leading-relaxed">
-                Sharp Recruit makes that framework visible. The reasoning is clear, the evidence is traceable, and hiring decisions are easier to stand behind.
-            </p>
-            <p class="text-gray-600 mt-6">— Judd · Nashville 🎸</p>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-20 px-4 bg-black/40 relative z-10">
-        <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
-                <p class="text-pink-400 text-xs font-semibold uppercase tracking-wide mb-3">FAQ</p>
-                <h2 class="text-2xl font-bold">Questions people actually ask</h2>
-            </div>
-            
-            <div class="space-y-4">
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-semibold mb-2">What is Sharp Recruit?</h3>
-                    <p class="text-gray-400 text-sm">Sharp Recruit is evidence-based hiring intelligence. Its flagship Interview Analyzer scores interview transcripts across six pillars with the exact quotes behind every rating. It also screens CVs with clear reasoning. It is not an ATS — it works alongside the tools you already use.</p>
-                </div>
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-semibold mb-2">What does Interview Analyzer actually do?</h3>
-                    <p class="text-gray-400 text-sm">You upload a transcript. Sharp Recruit scores it across six pillars — technical, communication, problem-solving, culture fit, leadership, domain knowledge. Every score comes with the exact quote that supports it. Plus Hire If / Pass If logic, flags, and follow-up questions.</p>
-                </div>
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-semibold mb-2">Is this trying to replace my ATS?</h3>
-                    <p class="text-gray-400 text-sm">No. Sharp Recruit sits alongside whatever you already use. We make decisions better, not replace your workflow.</p>
-                </div>
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-semibold mb-2">What's the catch with free?</h3>
-                    <p class="text-gray-400 text-sm">No catch. 25 CV screens, 5 interview analyses, unlimited JDs — every month, forever. If that's enough, stay free.</p>
-                </div>
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-semibold mb-2">Is my data safe?</h3>
-                    <p class="text-gray-400 text-sm">Yes. GDPR and AU Privacy Act compliant. We don't sell data. You control what's stored.</p>
-                </div>
-                <div class="card rounded-xl p-5">
-                    <h3 class="font-semibold mb-2">Why should I trust the analysis?</h3>
-                    <p class="text-gray-400 text-sm">Because you can see the work. Every score links to a quote. If you disagree, you know exactly why the AI thought what it thought.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="py-20 px-4 relative z-10">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-4">See the evidence. Make the call.</h2>
-            <p class="text-gray-400 mb-8">Start with a free interview analysis. You'll know in 2 minutes if this is for you.</p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a href="https://recruit.sharphuman.com" target="_blank" rel="noopener noreferrer" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold text-lg">Start Free</a>
-                <a href="https://calendly.com/sharphuman/60min" target="_blank" rel="noopener noreferrer" onclick="Calendly.initPopupWidget({url:'https://calendly.com/sharphuman/60min'});return false;" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg">Book a Demo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT FORM -->
-    <section id="contact" class="py-16 px-4 bg-black/40 relative z-10">
-        <div class="max-w-xl mx-auto">
-            <div class="text-center mb-8">
-                <h2 class="text-xl font-bold mb-2">Get in touch</h2>
-                <p class="text-gray-500 text-sm">Questions? Ideas? Just want to say hi?</p>
-            </div>
-            <form action="/api/contact" method="POST" class="space-y-4">
-                <input type="text" name="website" class="ohnohoney" tabindex="-1" autocomplete="off">
-                <div>
-                    <label for="name" class="block text-sm text-gray-400 mb-1">Name</label>
-                    <input type="text" id="name" name="name" required class="form-input w-full px-4 py-2.5 rounded-lg">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm text-gray-400 mb-1">Email</label>
-                    <input type="email" id="email" name="email" required class="form-input w-full px-4 py-2.5 rounded-lg">
-                </div>
-                <div>
-                    <label for="company" class="block text-sm text-gray-400 mb-1">Company</label>
-                    <input type="text" id="company" name="company" class="form-input w-full px-4 py-2.5 rounded-lg">
-                </div>
-                <div>
-                    <label for="message" class="block text-sm text-gray-400 mb-1">Message</label>
-                    <textarea id="message" name="message" rows="4" required class="form-input w-full px-4 py-2.5 rounded-lg resize-none"></textarea>
-                </div>
-                
-                <!-- Cloudflare Turnstile Widget -->
-                <div 
-                    id="turnstile-widget"
-                    class="cf-turnstile" 
-                    data-sitekey="0x4AAAAAACM1uSSbLeft9zy7"
-                    data-callback="onTurnstileSuccess"
-                    data-theme="dark"
-                    data-mode="interactive"
-                    style="min-height: 65px;"
-                ></div>
-                
-                <!-- Hidden field for Turnstile token -->
-                <input type="hidden" id="turnstile_token" name="turnstile_token" />
-                
-                <button type="submit" id="submitButton" class="btn-primary text-white w-full py-3 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed" disabled>Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-12 px-4 border-t border-white/5 relative z-10">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-                <div class="flex items-center gap-2">
-                    <img src="./logo1-3.png" alt="Sharp Recruit" class="h-6" style="mix-blend-mode:screen;">
-                    <span class="font-semibold">Sharp Recruit</span>
-                    <span class="text-gray-600 text-sm">by Sharp Human</span>
-                </div>
-                <div class="flex flex-wrap gap-6 text-sm text-gray-400">
-                    <a href="#how-it-works" class="hover:text-pink-400">How It Works</a>
-                    <a href="#interview-analyzer" class="hover:text-pink-400">Interview Analyzer</a>
-                    <a href="#pricing" class="hover:text-pink-400">Pricing</a>
-                    <a href="https://sharphuman.com/blog" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400">Blog</a>
-                    <a href="#contact" class="hover:text-pink-400">Contact</a>
-                </div>
-            </div>
-            <div class="text-center text-gray-600 text-sm">
-                <p class="mb-2">GDPR & AU Privacy ready · Evidence-based AI · Built for people who hire</p>
-                <p>© 2025 Sharp Human. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        <footer class="minimal-footer">
+            <a href="mailto:hello@sharphuman.com" class="status-link">[ CONNECT SYSTEM ]</a>
+        </footer>
+    </main>
 
     <script>
-        // Contact Form Handler with Turnstile
-        let turnstileToken = null;
+        const textElement = document.getElementById('typewriter');
+        const phrases = [
+            "Initializing secure protocols...",
+            "Designing Active Directory architecture...",
+            "Deploying hybrid-cloud infrastructure...",
+            "Orchestrating AI-driven workflows...",
+            "System Status: OPTIMAL"
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
 
-        // Turnstile callback - enables submit button
-        function onTurnstileSuccess(token) {
-            // #region agent log
-            console.log('Turnstile success callback fired', {
-                hasToken: !!token,
-                tokenLength: token ? token.length : 0,
-                timestamp: Date.now()
-            });
-            // #endregion
-            turnstileToken = token;
-            const tokenInput = document.getElementById('turnstile_token');
-            if (tokenInput) {
-                tokenInput.value = token;
-            }
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
             
-            const submitButton = document.getElementById('submitButton');
-            if (submitButton) {
-                submitButton.disabled = false;
-                // #region agent log
-                console.log('Submit button enabled', {
-                    disabled: submitButton.disabled,
-                    timestamp: Date.now()
-                });
-                // #endregion
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
             }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
         }
 
-        // Make callback available globally for Turnstile
-        window.onTurnstileSuccess = onTurnstileSuccess;
-
-        // Form submission handler
-        document.addEventListener('DOMContentLoaded', function() {
-            // #region agent log
-            console.log('DOMContentLoaded - checking Turnstile', {
-                turnstileExists: typeof window.turnstile !== 'undefined',
-                widgetExists: !!document.getElementById('turnstile-widget'),
-                scriptLoaded: !!document.querySelector('script[src*="turnstile"]')
-            });
-            // #endregion
-            
-            // Wait for Turnstile script to load (implicit rendering should auto-initialize)
-            // Check if widget initialized after a delay
-            setTimeout(function() {
-                const widgetElement = document.getElementById('turnstile-widget');
-                const hasWidgetId = widgetElement && widgetElement.hasAttribute('data-cf-turnstile-widget-id');
-                // #region agent log
-                console.log('Turnstile widget check after 3s', {
-                    widgetExists: !!widgetElement,
-                    hasWidgetId: hasWidgetId,
-                    turnstileExists: typeof window.turnstile !== 'undefined',
-                    hasToken: !!turnstileToken,
-                    submitButtonDisabled: submitButton ? submitButton.disabled : 'N/A'
-                });
-                // #endregion
-                if (widgetElement && !hasWidgetId) {
-                    console.warn('Turnstile widget not initialized - may still be loading or domain issue');
-                }
-            }, 3000);
-            
-            const form = document.querySelector('form[action="/api/contact"]');
-            const submitButton = document.getElementById('submitButton');
-            
-            // Keep submit disabled until Turnstile completes
-            if (submitButton) {
-                submitButton.disabled = true;
-            }
-            
-            if (form) {
-                form.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    
-                    // Validate Turnstile token
-                    if (!turnstileToken) {
-                        alert('Please complete the security check');
-                        return;
-                    }
-                    
-                    // Disable button during submission
-                    if (submitButton) {
-                        submitButton.disabled = true;
-                        submitButton.textContent = 'Sending...';
-                    }
-                    
-                    // Prepare form data
-                    const formData = new FormData(form);
-                    const data = {
-                        name: formData.get('name')?.trim() || '',
-                        email: formData.get('email')?.trim() || '',
-                        company: formData.get('company')?.trim() || '',
-                        message: formData.get('message')?.trim() || '',
-                        turnstile_token: turnstileToken
-                    };
-                    
-                    // Validate required fields
-                    if (!data.name || !data.email || !data.message) {
-                        alert('Please fill in all required fields.');
-                        if (submitButton) {
-                            submitButton.disabled = false;
-                            submitButton.textContent = 'Send Message';
-                        }
-                        return;
-                    }
-                    
-                    // Validate message length (minimum 10 characters)
-                    if (data.message.trim().length < 10) {
-                        alert('Message must be at least 10 characters long. Please provide more details.');
-                        // #region agent log
-                        console.log('Message too short on submit - rejecting', {
-                            messageLength: data.message.trim().length,
-                            timestamp: Date.now()
-                        });
-                        // #endregion
-                        if (submitButton) {
-                            submitButton.disabled = false;
-                            submitButton.textContent = 'Send Message';
-                        }
-                        return;
-                    }
-                    
-                    try {
-                        // #region agent log
-                        console.log('Submitting form', {
-                            hasToken: !!data.turnstile_token,
-                            tokenLength: data.turnstile_token ? data.turnstile_token.length : 0,
-                            dataKeys: Object.keys(data)
-                        });
-                        // #endregion
-                        // Submit to backend API
-                        const response = await fetch('https://api.sharphuman.com/api/contact', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify(data)
-                        });
-                        
-                        // #region agent log
-                        console.log('Response received', {
-                            status: response.status,
-                            statusText: response.statusText,
-                            ok: response.ok
-                        });
-                        // #endregion
-                        
-                        let result;
-                        try {
-                            const text = await response.text();
-                            // #region agent log
-                            console.log('Response raw text', text);
-                            // #endregion
-                            result = JSON.parse(text);
-                        } catch (e) {
-                            result = { error: 'Failed to parse response', raw: e.message };
-                        }
-                        // #region agent log
-                        console.log('Response body parsed', result);
-                        // #endregion
-                        
-                        if (response.ok) {
-                            // Success - reset form
-                            form.reset();
-                            turnstileToken = null;
-                            
-                            // Reset Turnstile widget
-                            if (window.turnstile) {
-                                window.turnstile.reset();
-                            }
-                            
-                            // Disable submit button again until new Turnstile
-                            if (submitButton) {
-                                submitButton.disabled = true;
-                                submitButton.textContent = 'Send Message';
-                            }
-                            
-                            alert('Thanks for reaching out! We\'ll respond within 24 hours.');
-                        } else {
-                            // Show detailed error message - handle different error formats
-                            let errorMsg = result.error || result.message || `Server error (${response.status}). Please try again.`;
-                            let errorDetails = result.details || result.detail || result['error-codes'] || null;
-                            
-                            // If detail is an array, format it
-                            if (Array.isArray(errorDetails)) {
-                                errorDetails = errorDetails.join(', ');
-                            } else if (errorDetails && typeof errorDetails === 'object') {
-                                errorDetails = JSON.stringify(errorDetails);
-                            }
-                            
-                            console.error('Form submission failed:', {
-                                status: response.status,
-                                error: errorMsg,
-                                details: errorDetails,
-                                fullResponse: result
-                            });
-                            
-                            // CRITICAL: Reset Turnstile widget on error - tokens are single-use!
-                            // If we don't reset, the same token will be reused and fail
-                            turnstileToken = null;
-                            const tokenInput = document.getElementById('turnstile_token');
-                            if (tokenInput) {
-                                tokenInput.value = '';
-                            }
-                            
-                            // Reset Turnstile widget to generate new token
-                            if (window.turnstile) {
-                                try {
-                                    window.turnstile.reset();
-                                    // #region agent log
-                                    console.log('Turnstile widget reset after error');
-                                    // #endregion
-                                } catch (e) {
-                                    console.warn('Failed to reset Turnstile widget:', e);
-                                }
-                            }
-                            
-                            // Disable submit button until new Turnstile completes
-                            if (submitButton) {
-                                submitButton.disabled = true;
-                                submitButton.textContent = 'Send Message';
-                            }
-                            
-                            alert(`Error: ${errorMsg}${errorDetails ? '\nDetails: ' + errorDetails : ''}\n\nPlease complete the security check again and try submitting.`);
-                        }
-                    } catch (error) {
-                        console.error('Contact form error:', error);
-                        
-                        // Reset Turnstile widget on network error too - tokens are single-use
-                        turnstileToken = null;
-                        const tokenInput = document.getElementById('turnstile_token');
-                        if (tokenInput) {
-                            tokenInput.value = '';
-                        }
-                        
-                        if (window.turnstile) {
-                            try {
-                                window.turnstile.reset();
-                            } catch (e) {
-                                console.warn('Failed to reset Turnstile widget:', e);
-                            }
-                        }
-                        
-                        // Disable submit button until new Turnstile completes
-                        if (submitButton) {
-                            submitButton.disabled = true;
-                            submitButton.textContent = 'Send Message';
-                        }
-                        
-                        alert('Network error. Please complete the security check again and try submitting, or email us directly at hello@sharphuman.com');
-                    }
-                });
-            }
-        });
+        document.addEventListener('DOMContentLoaded', type);
     </script>
-
 </body>
 </html>
