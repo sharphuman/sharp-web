@@ -3,55 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHARP HUMAN | Infrastructure & Systems</title>
+    <title>SHARP HUMAN | CORE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="system-bg">
 
-    <main class="command-center">
-        <div class="logo-container">
-            <img src="logo1-3.png" alt="Sharp Human Logo" class="main-logo">
+    <div class="scanlines"></div>
+
+    <main class="core-interface">
+        <div class="logo-wrapper">
+            <img src="logo1-3.png" alt="SHARP HUMAN" class="head-logo">
+            <div class="logo-aura"></div>
         </div>
 
-        <div class="branding">
-            <h1 class="glitch-text">SHARP HUMAN <span class="cyan-accent">SYSTEMS</span></h1>
-            <div class="terminal-loader">
-                <span class="prompt">></span>
-                <span id="typewriter"></span><span class="cursor">_</span>
-            </div>
+        <div class="terminal-container">
+            <span class="prefix">SYSTEM_LOG_//</span>
+            <span id="typewriter"></span><span class="blink">_</span>
         </div>
 
-        <div class="service-grid">
-            <div class="service-card" data-index="01">
-                <h2>INFRASTRUCTURE</h2>
-                <p>Active Directory, Hybrid-Cloud, & Zero Trust Architecture.</p>
-            </div>
-            <div class="service-card" data-index="02">
-                <h2>CLOUD OPS</h2>
-                <p>Modern full-stack orchestration via Vercel, Railway, & Supabase.</p>
-            </div>
-            <div class="service-card" data-index="03">
-                <h2>AI SYSTEMS</h2>
-                <p>Custom LLM deployment and local agent automation.</p>
-            </div>
-        </div>
-
-        <footer class="minimal-footer">
-            <a href="mailto:hello@sharphuman.com" class="status-link">[ CONNECT SYSTEM ]</a>
-        </footer>
+        <nav class="system-nav">
+            <a href="mailto:hello@sharphuman.com">DIRECT_COMMS</a>
+            <span class="divider">|</span>
+            <a href="https://recruit.sharphuman.com">RECRUIT_MODULE</a>
+        </nav>
     </main>
 
     <script>
         const textElement = document.getElementById('typewriter');
         const phrases = [
-            "Initializing secure protocols...",
-            "Designing Active Directory architecture...",
-            "Deploying hybrid-cloud infrastructure...",
-            "Orchestrating AI-driven workflows...",
-            "System Status: OPTIMAL"
+            "ACTIVE DIRECTORY ARCHITECTURE LOADED...",
+            "HYBRID-CLOUD INFRASTRUCTURE SECURED...",
+            "ZERO TRUST PROTOCOLS ACTIVE...",
+            "AI AGENT ORCHESTRATION IN PROGRESS...",
+            "SHARP HUMAN CORE: STATUS OPTIMAL"
         ];
         
         let phraseIndex = 0;
@@ -69,11 +56,11 @@
                 charIndex++;
             }
 
-            let typeSpeed = isDeleting ? 50 : 100;
+            let typeSpeed = isDeleting ? 30 : 70;
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // Pause at end
+                typeSpeed = 3000; 
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
